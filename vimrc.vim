@@ -17,7 +17,7 @@ map ;n :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'tmp$[[dir]]']
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
-autocmd BufEnter,BufRead *.ex set ft=elixir
+autocmd BufEnter,BufRead *.ex,*.exs set ft=elixir sw=2
 
 let g:startify_custom_header = ['']
 let g:test#strategy = 'dispatch'
