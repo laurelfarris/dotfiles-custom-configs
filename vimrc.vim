@@ -1,9 +1,14 @@
+call neobundle#begin()
+
 NeoBundle 'alfredodeza/pytest.vim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'janko-m/vim-test'
 NeoBundle 'rstacruz/sparkup'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-dispatch'
+
+call neobundle#end()
+
 
 set cursorline
 set nu
@@ -12,7 +17,6 @@ hi CursorLineNr ctermfg=yellow ctermbg=233
 hi NonText ctermbg=black
 hi ColorColumn ctermbg=234
 hi CursorLine ctermbg=234
-nnoremap <Leader>j :Unite file file_rec/async -start-insert -buffer-name=files -winheight=18<CR>
 map ;n :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'tmp$[[dir]]']
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
