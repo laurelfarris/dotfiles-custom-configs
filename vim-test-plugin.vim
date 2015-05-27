@@ -13,7 +13,7 @@ let g:test#python#runner = 'pytest'
 " Plugin Keymappings
 "===============================================================================
 nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>i :TestNearest -s<CR>
+nmap <silent> <leader>i :TestNearest -s --pdb<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>r :TestLast<CR>
 
