@@ -2,7 +2,7 @@ python << EOF
 import vim
 import re
 
-pdb_breakpoint = 'import pdb; pdb.set_trace()'
+pdb_breakpoint = 'import ipdb; ipdb.set_trace()'
 
 def set_breakpoint():
     breakpoint_line = int(vim.eval('line(".")')) - 1
