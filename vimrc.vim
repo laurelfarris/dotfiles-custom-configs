@@ -15,3 +15,6 @@ let g:delimitMate_expand_cr = 1
 
 " Override and use file_rec/git instead of file_rec/async (it is much faster)
 nnoremap <Leader>ff :Unite file file_rec/git -start-insert -buffer-name=files -winheight=18<CR>
+
+" Not-so-hardtime
+let g:hardtime_maxcount = 10
