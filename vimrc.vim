@@ -17,4 +17,4 @@ let g:delimitMate_expand_cr = 1
 nnoremap <Leader>ff :Unite file file_rec/git -start-insert -buffer-name=files -winheight=18<CR>
 
 " Not-so-hardtime
-let g:hardtime_maxcount = 10
+let g:hardtime_maxcount = 100
