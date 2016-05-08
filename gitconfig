@@ -14,3 +14,7 @@
     email = dustin.farris@gmail.com
 [push]
     default = matching
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
