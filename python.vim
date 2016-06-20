@@ -4,16 +4,24 @@
 " Original Author:  David Bustos <bustos@caltech.edu>
 " Last Change:      2004 Jun 07
 
+
 " Only load this indent file when no other was loaded.
 if exists("b:did_indent")
     finish
 endif
 let b:did_indent = 1
 
+"syn region pythonDocstring start=+^\s*[uU]\?[rR]\?"""+ end=+"""+ keepend excludenl
+"syn region pythonDocstring start=+^\s*[uU]\?[rR]\?'''+ end=+'''+ keepend excludenl
+"hi def link pythonDocstring pythonComment
+"
+"syn region pythonString start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend
+"syn region Comment start=/"""/ end=/"""/
+
 setlocal expandtab
 setlocal nolisp
-setlocal autoindent
-setlocal indentexpr=GetPythonIndent(v:lnum)
+"setlocal autoindent
+"setlocal indentexpr=GetPythonIndent(v:lnum)
 setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
 
 let s:maxoff = 50
