@@ -1,2 +1,2 @@
-let g:exclude = ["delimitMate.vim"]
-"let g:exclude = ["jedi-vim.vim"]
+"let g:exclude = ["vim-reflection.vim", "jedi-vim.vim"]
+"let g:exclude = ["easy-align.vim"]
