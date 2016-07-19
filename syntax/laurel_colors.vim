@@ -23,7 +23,6 @@ hi IncSearch ctermfg=16 ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=N
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE guifg=#9a9a9a guibg=#182227 gui=NONE
-
 hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
 hi Boolean ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Character ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
@@ -74,6 +73,7 @@ hi MatchParen ctermfg=227
 hi NonText ctermbg=black
 hi Operator ctermfg=68
 hi PreProc ctermfg=180
+hi shQuote ctermfg=255
 hi Special ctermfg=60
 hi Statement ctermfg=107
 hi String ctermfg=139
@@ -113,7 +113,7 @@ hi texTypeSize ctermfg=67
 hi texLength ctermfg=74
 
 hi texRefZone ctermfg=180
-hi texParen ctermfg=200
+"hi texParen ctermfg=200
 " All verbatim text?
 hi texZone ctermfg=245
 hi texString ctermfg=250
@@ -124,8 +124,8 @@ hi texSubscript ctermfg=250
 hi texMathSymbol ctermfg=67
 hi texMathOper ctermfg=67
 hi texMathMatcher ctermfg=255
-hi texMathZoneY ctermfg=200
-hi texMathZoneX ctermfg=28
+hi texMathZoneY ctermfg=255
+hi texMathZoneX ctermfg=255
 hi texMathZoneAS ctermfg=200
 hi texMathZoneE ctermfg=200
 
