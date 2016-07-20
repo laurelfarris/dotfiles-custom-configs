@@ -1,12 +1,12 @@
-. /home/local/etc/bashrc
+#. /home/local/etc/bashrc
 
 export TERM=xterm-256color
 
-export MESA_DIR=/home/hyades/jasonj/mesa
-export PGPLOT_DIR=/home/hyades/jasonj/mesa/utils/pgplot
-export MESASDK_ROOT=/home/hyades/jasonj/mesa/utils/mesasdk
-source $MESASDK_ROOT/bin/mesasdk_init.sh
-export OMP_NUM_THREADS=2
+#export MESA_DIR=/home/hyades/jasonj/mesa
+#export PGPLOT_DIR=/home/hyades/jasonj/mesa/utils/pgplot
+#export MESASDK_ROOT=/home/hyades/jasonj/mesa/utils/mesasdk
+#source $MESASDK_ROOT/bin/mesasdk_init.sh
+#export OMP_NUM_THREADS=2
 
 # Alias list
 alias open='gnome-open'
@@ -59,13 +59,15 @@ Segment=$'\U2500'
 Arrow=$'\U25BA'
 
 # Enable tab completion
-source ~/git-completion.bash
+#source ~/git-completion.bash
 
 # Change command prompt
-source ~/git-prompt.sh
+#source ~/git-prompt.sh
 
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
-export GIT_PS1_SHOWDIRTYSTATE=1
+#export GIT_PS1_SHOWDIRTYSTATE=1
+
+bv=$(echo $BASH_VERSION | awk '{print substr($0,3,1)}')
 
 PROMPT_COMMAND=set_prompt
 set_prompt () {
@@ -77,8 +79,10 @@ set_prompt () {
         MY_LINE="$MY_LINE$PIECE"
         #MY_LINE="${MY_LINE}${Segment}"
     done
-    
-PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n\
-${Char}mqq${Text}> ${wh}"
+    if [ $bv -ge 2 ]; then
+        PS1="${green}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n${Char}${Arrow}${Text} ${wh}"
+    else
+        PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n${Char}mqq${Text}> ${wh}"
+    fi
 }
 #${Char}qqq${Text}\$(__git_ps1)\n\
