@@ -36,6 +36,18 @@ LS_COLORS=$LS_COLORS:'di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=3
 export LS_COLORS
 
 # Make a sweet prompt
+
+green="\[\033[1;32m\]"
+blue="\[\033[1;34m\]"
+purple="\[\033[1;35m\]"
+reset="\[\033[0m\]"
+cyan="\[\033[36m\]"
+cyan="\e[1;36m"  # Bold
+green="\e[1;32m"
+purple="\e[1;35m"
+blue="\e[0;34m"
+Yellow='\e[0;33m'
+
 Text='\[\e(B\]'
 Char='\[\e(0\]'
 Line1='\e(0q\e(B'
@@ -45,6 +57,16 @@ Bottom=$'\U2514\U2500\U2500'
 Line=$'\U2500\U2500\U2500'
 Segment=$'\U2500'
 Arrow=$'\U25BA'
+
+# Enable tab completion
+source ~/git-completion.bash
+
+# Change command prompt
+source ~/git-prompt.sh
+
+# Unstaged (*) and staged (+) changes will be shown next to the branch name.
+export GIT_PS1_SHOWDIRTYSTATE=1
+
 PROMPT_COMMAND=set_prompt
 set_prompt () {
     length=$(($(tput cols)-13))
@@ -55,33 +77,8 @@ set_prompt () {
         MY_LINE="$MY_LINE$PIECE"
         #MY_LINE="${MY_LINE}${Segment}"
     done
-    PS1="${gray}${MY_LINE}${Text}(${gray}\t${gray})${Char}qqq\r${Char}${gray}lqq${Text}(${gray}\u@\h:\w)\n${Char}mqq${Text}> ${wh}"
+    
+PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n\
+${Char}qqq${Text}\$(__git_ps1)\n\
+${Char}mqq${Text}> ${wh}"
 }
-    #PS1="${gray}${Char}${MY_LINE}${Text}(\t)${Char}${Line}${Text}\r${Char}${Top}${Text}(\u@\h:\w)\n${Char}${Bottom}${Arrow}${Text}${wh} "
-#${Mid}\n\
-
-# colors!
-#green="\[\033[1;32m\]"
-#blue="\[\033[1;34m\]"
-#purple="\[\033[1;35m\]"
-#reset="\[\033[0m\]"
-#cyan="\[\033[36m\]"
-#cyan="\e[1;36m"  # Bold
-#green="\e[1;32m"
-#purple="\e[1;35m"
-#blue="\e[0;34m"
-#Yellow='\e[0;33m'
-# Git commands
-# Enable tab completion
-#source ~/git-completion.bash
-# Change command prompt
-#source ~/.git-prompt.sh
-#export GIT_PS1_SHOWDIRTYSTATE=1
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-# export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[1;32m\]\W\[\033[0m\] \$ "
-#export PS1="[ $cyan\u$Yellow\$(__git_ps1):$green\W $reset]$ "
-#export GIT_EDITOR=vim
-#PROMPT_COMMAND='__git_ps1 "\u@h:\w" "\\\$ "'
-
