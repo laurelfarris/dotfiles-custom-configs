@@ -79,6 +79,6 @@ set_prompt () {
     done
     
 PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n\
-${Char}qqq${Text}\$(__git_ps1)\n\
 ${Char}mqq${Text}> ${wh}"
 }
+#${Char}qqq${Text}\$(__git_ps1)\n\
