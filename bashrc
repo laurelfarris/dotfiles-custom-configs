@@ -28,7 +28,7 @@ wh=`EXT_COLOR 254`
 gray=`EXT_COLOR 245`
 orange=`EXT_COLOR 215`
 pur=`EXT_COLOR 097`
-blue=`EXT_COLOR 074`
+blue=`EXT_COLOR 060`
 green=`EXT_COLOR 071`
 
 # Create my own dir_colors file, echo here and turn into a variable somehow?
@@ -37,37 +37,28 @@ export LS_COLORS
 
 # Make a sweet prompt
 
-green="\[\033[1;32m\]"
-blue="\[\033[1;34m\]"
-purple="\[\033[1;35m\]"
-reset="\[\033[0m\]"
-cyan="\[\033[36m\]"
-cyan="\e[1;36m"  # Bold
-green="\e[1;32m"
-purple="\e[1;35m"
-blue="\e[0;34m"
-Yellow='\e[0;33m'
-
 Text='\[\e(B\]'
 Char='\[\e(0\]'
 Line1='\e(0q\e(B'
 Top=$'\U250C\U2500\U2500'
 Mid=$'\U251C\U2500\U2500'
-Bottom=$'\U2514\U2500\U2500'
 Line=$'\U2500\U2500\U2500'
 Segment=$'\U2500'
-Arrow=$'\U25BA'
+#Arrow=$'\U25BA'
+#Arrow=$(perl -C0 -le 'print "\x{26}"')
+#Arrow=$(echo -e "\x26")
+#Arrow=$'\x26'
+Arrow=$'☠'
+Bottom=$'\U2514\U2500\U2500'
 
 # Enable tab completion
-#source ~/git-completion.bash
+source ~/git-completion.bash
 
 # Change command prompt
-#source ~/git-prompt.sh
+source ~/git-prompt.sh
 
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
-#export GIT_PS1_SHOWDIRTYSTATE=1
-
-bv=$(echo $BASH_VERSION | awk '{print substr($0,3,1)}')
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 PROMPT_COMMAND=set_prompt
 set_prompt () {
@@ -79,10 +70,24 @@ set_prompt () {
         MY_LINE="$MY_LINE$PIECE"
         #MY_LINE="${MY_LINE}${Segment}"
     done
-    if [ $bv -ge 2 ]; then
+PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n\
+${Char}tqq${Text}(${blue}$(__git_ps1) ${gray})\n\
+${Char}mqq${Text}${Arrow} ${wh}"
+
+}
+bv=$(echo $BASH_VERSION | awk '{print substr($0,1,1)}')
+set_prompt_old () {
+    length=$(($(tput cols)-13))
+    MY_LINE=""
+    for ((i=1; i<=$length; i++))
+    do
+        printf -v PIECE '%b' ${Line1}
+        MY_LINE="$MY_LINE$PIECE"
+        #MY_LINE="${MY_LINE}${Segment}"
+    done
+    if [ $bv -ge 5 ]; then
         PS1="${green}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n${Char}${Arrow}${Text} ${wh}"
     else
         PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(\u@\h:\w)\n${Char}mqq${Text}> ${wh}"
     fi
 }
-#${Char}qqq${Text}\$(__git_ps1)\n\

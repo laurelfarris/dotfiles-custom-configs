@@ -43,9 +43,8 @@ hi LineNr ctermbg=black
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
 hi NonText ctermfg=59 ctermbg=black cterm=NONE guifg=#414e58 guibg=#232c31 gui=NONE
 "hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
-hi Number ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi Operator ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-hi Operator ctermfg=68
+hi Number ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
+hi Operator ctermfg=67 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
 hi PreProc ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
@@ -69,7 +68,7 @@ hi Type ctermfg=255
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#252c31 guibg=#252c31 gui=NONE
 hi vimNotation ctermfg=180
-hi vimMapModKey ctermfg=215
+hi vimMapModKey ctermfg=180
 hi vimSynContains ctermfg=180
 hi vimSynRegOpt ctermfg=180
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
@@ -180,15 +179,15 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi PythonBuiltIn ctermfg=107
-hi PythonConditional ctermfg=215
-hi PythonFunction ctermfg=80
+hi PythonConditional ctermfg=180
+hi PythonFunction ctermfg=180
 hi PythonInclude ctermfg=146
-hi PythonNumber ctermfg=75
-hi PythonOperator ctermfg=215
+hi PythonNumber ctermfg=67
+hi PythonOperator ctermfg=180
 hi PythonQuotes ctermfg=247
-hi PythonRepeat ctermfg=215
-hi PythonStatement ctermfg=215
-hi PythonString ctermfg=200
+hi PythonRepeat ctermfg=180
+hi PythonStatement ctermfg=107
+hi PythonString ctermfg=67
 hi PythonTripleQuotes ctermfg=248
 
 hi IDLangConditional ctermfg=215
