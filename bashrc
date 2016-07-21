@@ -47,8 +47,7 @@ Segment=$'\U2500'
 #Arrow=$'\U25BA'
 #Arrow=$(perl -C0 -le 'print "\x{26}"')
 #Arrow=$(echo -e "\x26")
-#Arrow=$'\x26'
-Arrow=$'☠'
+Arrow=$'\xE2\x9e\x9e'
 Bottom=$'\U2514\U2500\U2500'
 
 # Enable tab completion
