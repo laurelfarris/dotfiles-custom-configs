@@ -1,5 +1,13 @@
 #. /home/local/etc/bashrc
 
+# SSW IDL
+export QUIET=1
+export IDL_STARTUP='/home/users/laurel07/idl/idl_startup.pro' 
+if [ -z "$prompt" ]; then 
+    export SSW_INSTR="BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
+    source $SSW/gen/setup/setup.ssw
+fi
+
 export TERM=xterm-256color
 
 #export MESA_DIR=/home/hyades/jasonj/mesa
@@ -76,16 +84,9 @@ set_prompt () {
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
 PS1="${MY_LINE}(\t)${Char}qqq\rlqq${Text}\
-(${W})${Char}qqq${Text}(${H})\n\
+(@${H}:${W})\n\
 ${Char}tqq${Text}(${blue}$(__git_ps1) )${dgray}\n\
 ${Char}mqq${Text}${Arrow} ${wh}"
-}
-
-backup_func () {
-    PS1="${gray}${MY_LINE}(\t)${Char}qqq\rlqq${Text}\
-    (\w)${Char}qqq${Text}(\h)\n\
-    ${Char}tqq${Text}(${blue}$(__git_ps1) ${gray})\n\
-    ${Char}mqq${Text}${Arrow} ${wh}"
 }
 
 bv=$(echo $BASH_VERSION | awk '{print substr($0,3,1)}')

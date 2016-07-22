@@ -61,7 +61,6 @@ hi String ctermfg=139
 hi String ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
 hi Tag ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f0f0f0 guibg=NONE gui=bold
-hi Todo cterm=none ctermbg=none ctermfg=243
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold guifg=#9a9a9a guibg=NONE gui=inverse,bold,italic
 hi Type ctermfg=153 ctermbg=NONE cterm=NONE guifg=#b5d8f6 guibg=NONE gui=NONE
 hi Type ctermfg=255
@@ -190,12 +189,13 @@ hi PythonStatement ctermfg=107
 hi PythonString ctermfg=67
 hi PythonTripleQuotes ctermfg=248
 
-hi IDLangConditional ctermfg=215
+hi IDLangConditional ctermfg=180
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=60
 hi IDLangKeyword ctermfg=146
-hi IDLangNumber ctermfg=75
+hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=75
-hi IDLangOperator ctermfg=215
+hi IDLangOperator ctermfg=180
 hi IDLangRoutine ctermfg=107
-hi IDLangStatement ctermfg=80
+hi IDLangStatement ctermfg=107
 hi IDLangString ctermfg=67
 
