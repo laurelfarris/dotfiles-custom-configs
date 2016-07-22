@@ -1,13 +1,5 @@
 #. /home/local/etc/bashrc
 
-# SSW IDL
-export QUIET=1
-export IDL_STARTUP='/home/users/laurel07/idl/idl_startup.pro' 
-if [ -z "$prompt" ]; then 
-    export SSW_INSTR="BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
-    source $SSW/gen/setup/setup.ssw
-fi
-
 export TERM=xterm-256color
 
 #export MESA_DIR=/home/hyades/jasonj/mesa
@@ -83,8 +75,9 @@ set_prompt () {
         printf -v PIECE '%b' ${Line1}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
+    echo -ne "\033]0; @${HOSTNAME%%.*}\007"
 PS1="${MY_LINE}(\t)${Char}qqq\rlqq${Text}\
-(@${H}:${W})\n\
+(${W})\n\
 ${Char}tqq${Text}(${blue}$(__git_ps1) )${dgray}\n\
 ${Char}mqq${Text}${Arrow} ${wh}"
 }
