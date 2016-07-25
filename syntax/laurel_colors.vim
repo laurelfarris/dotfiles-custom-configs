@@ -118,7 +118,7 @@ hi texMathOper ctermfg=67
 hi texMathMatcher ctermfg=255
 hi texMathZoneY ctermfg=255
 hi texMathZoneX ctermfg=255
-hi texMathZoneAS ctermfg=200
+hi texMathZoneAS ctermfg=255
 hi texMathZoneE ctermfg=200
 
 " Latex things I probably won't use
