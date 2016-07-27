@@ -68,6 +68,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 PROMPT_COMMAND=set_prompt
 set_prompt () {
+    echo -ne "\033]0; @${HOSTNAME%%.*}\007"
     length=$(($(tput cols)-13))
     MY_LINE=""
     for ((i=1; i<=$length; i++))
@@ -75,7 +76,6 @@ set_prompt () {
         printf -v PIECE '%b' ${Line1}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
-    echo -ne "\033]0; @${HOSTNAME%%.*}\007"
 PS1="${MY_LINE}(\t)${Char}qqq\rlqq${Text}\
 (${W})\n\
 ${Char}tqq${Text}(${blue}$(__git_ps1) )${dgray}\n\
