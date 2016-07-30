@@ -28,13 +28,14 @@ export LS_COLORS
 # Colors
 function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
 wh=`EXT_COLOR 254`
-#gray=`EXT_COLOR 240`
 lgray=`EXT_COLOR 248`
 dgray=`EXT_COLOR 240`
 orange=`EXT_COLOR 215`
 pur=`EXT_COLOR 097`
 blue=`EXT_COLOR 060`
 green=`EXT_COLOR 071`
+yellow=`EXT_COLOR 229`
+
 
 ### Make a sweet prompt
 
@@ -49,22 +50,23 @@ Bold="\[\e[1m\]"
 Normal="\[\e[0m\]"
 Text="\[\e(B\]"
 Char="\[\e(0\]"
-Line1="\e(0q\e(B"
+MY_RULE="\e(0q\e(B"
 #Arrow=$(echo -e "\x26")
-#Arrow=$'\xE2\x9e\x9e'  # Works, but too small
-Arrow=${dgray}$'>'
+# ❤ ❂ ✱ ❖ ❇
+pic=${Normal}${yellow}❤${dgray}${Bold}
+Arrow=❱
 
 PROMPT_COMMAND=set_prompt
 set_prompt () {
     echo -ne "\033]0; @${HOSTNAME%%.*}\007"
-    length=$(($(tput cols)-13))
+    length=$(($(tput cols)-5))
     MY_LINE=""
     for ((i=1; i<=$length; i++))
     do
-        printf -v PIECE '%b' ${Line1}
+        printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
-    LINE1="${Bold}${MY_LINE}(\t)${Char}qqq\rlqq${Text}(${W})\n"
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${lgray}\w${dgray})\n"
     LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     if [ -d .git ]; then
