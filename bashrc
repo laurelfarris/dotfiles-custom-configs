@@ -8,6 +8,8 @@
 #source $MESASDK_ROOT/bin/mesasdk_init.sh
 #export OMP_NUM_THREADS=2
 
+export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
+
 # Alias list
 alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
@@ -16,7 +18,8 @@ alias src='source ~/.bashrc'
 alias ls='ls -FGH --color=auto'
 alias ll='ls -FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
 alias lll='ls -1FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-alias rm='rm'
+alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
+#alias rm='rm'
 
 # Functions
 function mypath() { echo "${PATH//:/$'\n'}"; }
@@ -29,7 +32,7 @@ export LS_COLORS
 function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
 wh=`EXT_COLOR 254`
 lgray=`EXT_COLOR 248`
-dgray=`EXT_COLOR 240`
+dgray=`EXT_COLOR 238`
 orange=`EXT_COLOR 215`
 pur=`EXT_COLOR 097`
 blue=`EXT_COLOR 060`
@@ -66,7 +69,7 @@ set_prompt () {
         printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
-    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${lgray}\w${dgray})\n"
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${green}\w${dgray})\n"
     LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     if [ -d .git ]; then
