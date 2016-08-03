@@ -9,7 +9,7 @@
 #export OMP_NUM_THREADS=2
 
 export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
-
+    
 # Alias list
 alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
