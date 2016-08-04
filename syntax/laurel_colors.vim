@@ -7,7 +7,7 @@ endif
 
 let g:colors_name = "laurel_colors"
 
-hi bibKey ctermfg=215
+hi bibKey ctermfg=180
 hi Boolean ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Character ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
@@ -191,7 +191,7 @@ hi IDLangConditional ctermfg=180
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=60
 hi IDLangKeyword ctermfg=146
 hi IDLangNumber ctermfg=67
-hi IDLangRealNumber ctermfg=75
+hi IDLangRealNumber ctermfg=67
 hi IDLangOperator ctermfg=180
 hi IDLangRoutine ctermfg=107
 hi IDLangStatement ctermfg=107
