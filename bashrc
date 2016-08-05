@@ -38,6 +38,7 @@ pur=`EXT_COLOR 097`
 blue=`EXT_COLOR 060`
 green=`EXT_COLOR 071`
 yellow=`EXT_COLOR 229`
+pmt=`EXT_COLOR 60`
 
 
 ### Make a sweet prompt
@@ -69,7 +70,7 @@ set_prompt () {
         printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
-    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${green}\w${dgray})\n"
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${pmt}\w${dgray})\n"
     LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     if [ -d .git ]; then
