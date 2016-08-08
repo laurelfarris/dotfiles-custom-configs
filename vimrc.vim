@@ -1,11 +1,12 @@
+"set spellfile=./en.utf-8.add
+
 set number
 set cursorline
 set conceallevel=0
-"syntax on
+set splitbelow
 
 nnoremap K i<CR><ESC>
 nnoremap Y y$
-nmap <TAB> i<TAB><ESC>l
 
 ":echo synIDattr(synID(line("."), col("."), 1), "name"))))
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
