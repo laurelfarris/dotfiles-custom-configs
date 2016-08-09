@@ -1,12 +1,11 @@
 #. /home/local/etc/bashrc
 
 export TERM=xterm-256color
-#ps --no-headers -o comm $PPID
 
-#export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
-#set -o history -o histexpand
+export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
 
 # Alias list
+alias vi='vim'
 alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias solar='ssh -Y laurel07@solarstorm.nmsu.edu'
@@ -37,7 +36,7 @@ blue=`EXT_COLOR 060`
 green=`EXT_COLOR 071`
 yellow=`EXT_COLOR 229`
 pmt=`EXT_COLOR 60`
-end="\[\033[0m\]"
+end="\[\e[0m\]"
 
 
 ### Make a sweet prompt
@@ -61,7 +60,7 @@ Arrow=❱
 
 PROMPT_COMMAND=set_prompt
 set_prompt () {
-    echo -ne "\033]0; @${HOSTNAME%%.*}\007"
+    echo -ne "\e]0; @${HOSTNAME%%.*}: ${PWD}\007"
     length=$(($(tput cols)-4))
     MY_LINE=""
     for ((i=1; i<=$length; i++))

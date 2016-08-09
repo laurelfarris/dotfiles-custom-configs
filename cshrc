@@ -22,6 +22,7 @@ setenv PATH ${PATH}:/home/user/laurel07/bin
 setenv PYTHONPATH /home/users/laurel07/python:/home/holtz/a575/isochrone:/home/users/laurel07/a575/myrepo/q22/isochrones
 
 # Alias list
+alias vi vim
 alias virgo  ssh -Y laurel07@virgo.nmsu.edu
 alias hyades ssh -Y laurel07@hyades.nmsu.edu
 alias praesepe ssh -Y laurel07@praesepe.nmsu.edu
