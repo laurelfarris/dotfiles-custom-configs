@@ -81,6 +81,9 @@ hi shFunctionKey ctermfg=107
 hi shFunction ctermfg=255
 hi shQuote ctermfg=255
 "hi shStatement
+
+hi cshDblQuote ctermfg=147
+
 hi texSpecialChar ctermfg=60
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=74

@@ -1,14 +1,10 @@
 #. /home/local/etc/bashrc
 
-#export TERM=xterm-256color
-
-#export MESA_DIR=/home/hyades/jasonj/mesa
-#export PGPLOT_DIR=/home/hyades/jasonj/mesa/utils/pgplot
-#export MESASDK_ROOT=/home/hyades/jasonj/mesa/utils/mesasdk
-#source $MESASDK_ROOT/bin/mesasdk_init.sh
-#export OMP_NUM_THREADS=2
+export TERM=xterm-256color
+#ps --no-headers -o comm $PPID
 
 #export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
+#set -o history -o histexpand
 
 # Alias list
 alias open='gnome-open'
@@ -17,7 +13,8 @@ alias solar='ssh -Y laurel07@solarstorm.nmsu.edu'
 alias src='source ~/.bashrc'
 alias ls='ls -FGH --color=auto'
 alias ll='ls -FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-alias lll='ls -1FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
+alias l1='ls -1FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
+alias lsd='ls --group-directories-first'
 alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
 #alias rm='rm'
 
@@ -25,11 +22,12 @@ alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
 function mypath() { echo "${PATH//:/$'\n'}"; }
 
 # Create my own dir_colors file, echo here and turn into a variable somehow?
-LS_COLORS=$LS_COLORS:"di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+#LS_COLORS=$LS_COLORS:"di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 # Colors
-function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
+function EXT_COLOR () { echo -ne "\[\e[38;5;$1m\]"; }
 wh=`EXT_COLOR 254`
 lgray=`EXT_COLOR 248`
 dgray=`EXT_COLOR 238`
@@ -39,14 +37,15 @@ blue=`EXT_COLOR 060`
 green=`EXT_COLOR 071`
 yellow=`EXT_COLOR 229`
 pmt=`EXT_COLOR 60`
+end="\[\033[0m\]"
 
 
 ### Make a sweet prompt
 
 # Enable tab completion
-source ~/git-completion.bash
+source ~/dotfiles-custom-configs/git-completion.bash
 # Change command prompt
-source ~/git-prompt.sh
+source ~/dotfiles-custom-configs/git-prompt.sh
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
 
@@ -63,14 +62,14 @@ Arrow=❱
 PROMPT_COMMAND=set_prompt
 set_prompt () {
     echo -ne "\033]0; @${HOSTNAME%%.*}\007"
-    length=$(($(tput cols)-5))
+    length=$(($(tput cols)-4))
     MY_LINE=""
     for ((i=1; i<=$length; i++))
     do
         printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${dgray}$MY_LINE$PIECE"
     done
-    LINE1="${Bold}${MY_LINE}(${pic})${Char}qq\rlqq${Text}(${pmt}\w${dgray})\n"
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}\w${dgray})\n"
     LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     if [ -d .git ]; then
