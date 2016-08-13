@@ -1,21 +1,24 @@
 #. /home/local/etc/bashrc
 
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
+export IPYTHONDIR="/home/users/laurel07/.ipython"
 
-# Alias list
-alias vi='vim'
+#alias vi='my_vim'
 alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
+alias acrux='ssh -Y laurel07@acrux.nmsu.edu'
 alias solar='ssh -Y laurel07@solarstorm.nmsu.edu'
 alias src='source ~/.bashrc'
-alias ls='ls -FGH --color=auto'
-alias ll='ls -FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-alias l1='ls -1FGH --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-alias lsd='ls --group-directories-first'
+alias ls='ls -FGH --group-directories-first --color=auto'
+alias ll='ls -FGH --group-directories-first --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
+alias l1='ls -1FGH --group-directories-first --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
+#alias lsd='ls --group-directories-first'
 alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
-#alias rm='rm'
+
+function safe_rm() { mv $1 ~/.trash; }
+alias rm='safe_rm'
 
 # Functions
 function mypath() { echo "${PATH//:/$'\n'}"; }
@@ -38,16 +41,6 @@ yellow=`EXT_COLOR 229`
 pmt=`EXT_COLOR 60`
 end="\[\e[0m\]"
 
-
-### Make a sweet prompt
-
-# Enable tab completion
-source ~/dotfiles-custom-configs/git-completion.bash
-# Change command prompt
-source ~/dotfiles-custom-configs/git-prompt.sh
-# Unstaged (*) and staged (+) changes will be shown next to the branch name.
-export GIT_PS1_SHOWDIRTYSTATE=1
-
 Bold="\[\e[1m\]"
 Normal="\[\e[0m\]"
 Text="\[\e(B\]"
@@ -58,22 +51,41 @@ MY_RULE="\e(0q\e(B"
 pic=${Normal}${yellow}❤${dgray}${Bold}
 Arrow=❱
 
-PROMPT_COMMAND=set_prompt
+function vi() {
+    #arg="${Text}${orange}${HOSTNAME}${end}"
+    arg=$1
+    echo -ne "\e]0; VIM: ${arg} \007"
+    #vim $1
+}
+
+
+# Enable tab completion
+source ~/dotfiles-custom-configs/git-completion.bash
+# Change command prompt
+source ~/dotfiles-custom-configs/git-prompt.sh
+# Unstaged (*) and staged (+) changes will be shown next to the branch name.
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+#function make_title() { echo -ne "\e]0;@${HOSTNAME%%.*}: \w \007"; }
+
+### Make a sweet prompt
+my_title=$(echo -ne "\e]0;@${HOSTNAME%%.*}: \W \007")
+length=$(($(tput cols)-4))
+MY_LINE=""
+for ((i=1; i<=$length; i++))
+do
+    printf -v PIECE '%b' ${MY_RULE}
+    MY_LINE="${dgray}$MY_LINE$PIECE"
+done
+LINE1="${orange}${my_title}${end}${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}@\h:\w${dgray})\n"
+LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
+LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
+
 set_prompt () {
-    echo -ne "\e]0; @${HOSTNAME%%.*}: ${PWD}\007"
-    length=$(($(tput cols)-4))
-    MY_LINE=""
-    for ((i=1; i<=$length; i++))
-    do
-        printf -v PIECE '%b' ${MY_RULE}
-        MY_LINE="${dgray}$MY_LINE$PIECE"
-    done
-    LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}\w${dgray})\n"
-    LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
-    LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     if [ -d .git ]; then
         PS1=${LINE1}${LINE2}${LINE3};
     else
         PS1=${LINE1}${LINE3};
     fi;
 }
+PROMPT_COMMAND=set_prompt

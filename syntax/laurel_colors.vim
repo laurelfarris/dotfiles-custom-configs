@@ -33,7 +33,7 @@ hi Float ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE guifg=#9a9a9a guibg=#182227 gui=NONE
 hi Function ctermfg=107
 hi Identifier ctermfg=255 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi IncSearch ctermfg=16 ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=NONE
+hi IncSearch ctermfg=black ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Keyword ctermfg=208
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
