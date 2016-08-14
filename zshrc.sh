@@ -15,6 +15,11 @@ alias lll='ls -dFHGP ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias ll='ls -dFHGP1 ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
 
+function safe_rm() {
+    mv $1 ~/.Trash/
+    }
+alias rm='safe_rm'
+
 autoload -U zmv
 alias mmv='noglob zmv -W'
 
