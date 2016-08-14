@@ -2,10 +2,14 @@
 
 #export TERM=xterm-256color
 
+set -o vi
 export PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
 export IPYTHONDIR="/home/users/laurel07/.ipython"
 
 #alias vi='my_vim'
+alias term='gnome-terminal'
+alias term1='gnome-terminal --window --geometry 102x54+0+0 -c exec bash &'
+alias term2='gnome-terminal --window --geometry 102x54-0-0 &'
 alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias acrux='ssh -Y laurel07@acrux.nmsu.edu'
@@ -51,13 +55,14 @@ MY_RULE="\e(0q\e(B"
 pic=${Normal}${yellow}❤${dgray}${Bold}
 Arrow=❱
 
-function vi() {
-    #arg="${Text}${orange}${HOSTNAME}${end}"
-    arg=$1
-    echo -ne "\e]0; VIM: ${arg} \007"
-    #vim $1
-}
-
+#function vi() {
+#    echo -ne "\e]0; ${1} \007";
+#    vim ${1}
+#}
+#function ipython() {
+#    echo -ne "\e]0; iPython \007";
+#    ipython
+#}
 
 # Enable tab completion
 source ~/dotfiles-custom-configs/git-completion.bash
@@ -69,23 +74,31 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 #function make_title() { echo -ne "\e]0;@${HOSTNAME%%.*}: \w \007"; }
 
 ### Make a sweet prompt
-my_title=$(echo -ne "\e]0;@${HOSTNAME%%.*}: \W \007")
-length=$(($(tput cols)-4))
-MY_LINE=""
-for ((i=1; i<=$length; i++))
-do
-    printf -v PIECE '%b' ${MY_RULE}
-    MY_LINE="${dgray}$MY_LINE$PIECE"
-done
-LINE1="${orange}${my_title}${end}${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}@\h:\w${dgray})\n"
-LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
-LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
 
 set_prompt () {
+    #function my_title() {
+    #history 2 | head -1 | awk '{if ($2 == "vi") {print $2;}}'
+    my_command=$(history 1 | head -1 | awk '{print $2;}')
+    #my_title=$(echo -ne "\e]0; ${my_command}\007")
+    my_title=$(echo -ne "\e]0; @${HOSTNAME%%.*}: \w\007")
+    length=$(($(tput cols)-4))
+    MY_LINE=""
+    for ((i=1; i<=$length; i++))
+    do
+        printf -v PIECE '%b' ${MY_RULE}
+        MY_LINE="${dgray}$MY_LINE$PIECE"
+    done
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}@\h:\w${dgray})\n"
+    #LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
+    LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
+    # if git then Line2 as below, else Line2 = \r
     if [ -d .git ]; then
-        PS1=${LINE1}${LINE2}${LINE3};
+        LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
+        #PS1=${LINE1}${LINE2}${LINE3};
     else
-        PS1=${LINE1}${LINE3};
+        LINE2="\r"
+        #PS1=${LINE1}${LINE3};
     fi;
+    PS1=${my_title}${LINE1}${LINE2}${LINE3};
 }
 PROMPT_COMMAND=set_prompt

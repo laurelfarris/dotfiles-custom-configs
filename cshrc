@@ -1,4 +1,5 @@
 source /home/local/etc/cshrc
+echo "reading .cshrc"
 
 # SSW IDL
 setenv QUIET 1
@@ -22,6 +23,8 @@ setenv PATH ${PATH}:/home/user/laurel07/bin
 setenv PYTHONPATH /home/users/laurel07/python:/home/holtz/a575/isochrone:/home/users/laurel07/a575/myrepo/q22/isochrones
 
 # Alias list
+alias term1 gnome-terminal -e bash --window --geometry 102x54+0+0
+#alias bash exec bash
 alias vi vim
 alias virgo  ssh -Y laurel07@virgo.nmsu.edu
 alias hyades ssh -Y laurel07@hyades.nmsu.edu
