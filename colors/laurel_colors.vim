@@ -66,8 +66,10 @@ hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NON
 
 hi vimCommentTitle ctermfg=243
 hi vimFgBgAttrib ctermfg=180
+hi vimFuncName ctermfg=180
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
+hi vimOption ctermfg=180
 hi vimSynContains ctermfg=180
 hi vimSynRegOpt ctermfg=180
 
@@ -77,7 +79,7 @@ hi zshKeyword ctermfg=180
 hi zshTypes ctermfg=147
 
 hi shConditional ctermfg=180
-hi shDerefSimple ctermfg=228
+hi shDerefSimple ctermfg=186
 hi shDerefVar ctermfg=231
 hi shDoubleQuote ctermfg=67
 hi shFunctionKey ctermfg=107

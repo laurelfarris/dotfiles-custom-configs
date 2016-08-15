@@ -1,27 +1,9 @@
 #. /home/local/etc/bashrc
 
-#export TERM=xterm-256color
-
-set -o vi
-PYTHONPATH="${PYTHONPATH}:/home/users/laurel07/research/Modules/"
-export PYTHONPATH
-IPYTHONDIR="/home/users/laurel07/.ipython"
-export IPYTHONDIR
-
-#alias vi='my_vim'
-alias term='gnome-terminal'
-alias term1='gnome-terminal --window --geometry 102x54+0+0 -c exec bash &'
-alias term2='gnome-terminal --window --geometry 102x54-0-0 &'
-alias open='gnome-open'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias acrux='ssh -Y laurel07@acrux.nmsu.edu'
 alias solar='ssh -Y laurel07@solarstorm.nmsu.edu'
 alias src='source ~/.bashrc'
-#alias ls='ls -FGH --group-directories-first --color=auto'
-alias ls='ls -FGH'
-alias ll='ls -FGH --group-directories-first --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-alias l1='ls -1FGH --group-directories-first --color=auto --ignore=*.{aux,bbl,blg,log,nav,out,snm,toc}'
-#alias lsd='ls --group-directories-first'
 alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
 
 function safe_rm() { mv $1 ~/.trash; }
@@ -29,8 +11,7 @@ alias rm='safe_rm'
 
 function mypath() { echo "${PATH//:/$'\n'}"; }
 
-# Create my own dir_colors file, echo here and turn into a variable somehow?
-#LS_COLORS=$LS_COLORS:"di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+export CLICOLOR=1
 LS_COLORS="di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 

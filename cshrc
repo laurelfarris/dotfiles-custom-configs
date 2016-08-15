@@ -24,7 +24,7 @@ setenv PYTHONPATH /home/users/laurel07/python:/home/holtz/a575/isochrone:/home/u
 
 # Alias list
 #alias term1 gnome-terminal -e bash --window --geometry 102x54+0+0
-#alias bash exec bash
+alias bash exec bash
 alias vi vim
 alias virgo  ssh -Y laurel07@virgo.nmsu.edu
 alias hyades ssh -Y laurel07@hyades.nmsu.edu
@@ -54,15 +54,6 @@ set blue="%{\033[38;5;081m%}"
 set white="%{\033[3;37m%}"
 set end="%{\033[0m%}" # This is needed at the end... :(
 
-#set prompt="\n${white}%n${white}@%m ${white}%c%#${end} "
-switch ($TERM)
-    case "xterm*":
-        set prompt="%{\033]0;@%m: %~\007%}${lgray}%n@%m: %~/\n%#${end} "
-        breaksw
-    default:
-        set prompt="tcsh%# "
-        breaksw
-endsw
 # # Clean up after ourselves...
  unset orange green yellow blue purple yellow white dgray lgray end
 #
