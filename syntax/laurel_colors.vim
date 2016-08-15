@@ -44,18 +44,16 @@ hi Number ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-hi PreProc ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi Special ctermfg=60
 hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
+" Purples: 96, 104, 97, 103
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
-hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi Statement ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-hi Statement ctermfg=107
+hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#f0f0f0 guibg=#575e61 gui=bold
 hi StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE guifg=#f0f0f0 guibg=#575e61 gui=NONE
-hi String ctermfg=139
-hi String ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
+hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
+hi String ctermfg=231 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
 hi Tag ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f0f0f0 guibg=NONE gui=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold guifg=#9a9a9a guibg=NONE gui=inverse,bold,italic
@@ -63,23 +61,32 @@ hi Type ctermfg=153 ctermbg=NONE cterm=NONE guifg=#b5d8f6 guibg=NONE gui=NONE
 hi Type ctermfg=255
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#252c31 guibg=#252c31 gui=NONE
+hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
+hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+hi vimCommentTitle ctermfg=243
+hi vimFgBgAttrib ctermfg=180
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimSynContains ctermfg=180
 hi vimSynRegOpt ctermfg=180
-hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi zshCommands ctermfg=87
 hi zshDelimiter ctermfg=147
-hi zshKeyword ctermfg=215
+hi zshKeyword ctermfg=180
 hi zshTypes ctermfg=147
 
 hi shConditional ctermfg=180
+hi shDerefSimple ctermfg=228
+hi shDerefVar ctermfg=231
+hi shDoubleQuote ctermfg=67
 hi shFunctionKey ctermfg=107
-hi shFunction ctermfg=255
+hi shFunction ctermfg=180
+hi shParen ctermfg=231
 hi shQuote ctermfg=255
-"hi shStatement
+hi shSingleQuote ctermfg=67
+hi shSetList ctermfg=180
+hi shVariable ctermfg=138
 
 hi cshDblQuote ctermfg=67
 hi tcshDQuote ctermfg=67
@@ -178,18 +185,19 @@ hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gu
 hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
-hi PythonBuiltIn ctermfg=107
-hi PythonConditional ctermfg=180
-hi PythonExceptions ctermfg=124
-hi PythonFunction ctermfg=180
-hi PythonInclude ctermfg=146
-hi PythonNumber ctermfg=67
-hi PythonOperator ctermfg=180
-hi PythonQuotes ctermfg=247
-hi PythonRepeat ctermfg=180
-hi PythonStatement ctermfg=107
-hi PythonString ctermfg=67
-hi PythonTripleQuotes ctermfg=248
+hi pythonBuiltIn ctermfg=107
+hi pythonConditional ctermfg=180
+hi pythonDocstring ctermfg=243
+hi pythonExceptions ctermfg=124
+hi pythonFunction ctermfg=180
+hi pythonInclude ctermfg=146
+hi pythonNumber ctermfg=67
+hi pythonOperator ctermfg=180
+hi pythonQuotes ctermfg=67
+hi pythonRepeat ctermfg=180
+hi pythonStatement ctermfg=107
+hi pythonString ctermfg=67
+hi pythonTripleQuotes ctermfg=248
 
 hi IDLangConditional ctermfg=180
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=60

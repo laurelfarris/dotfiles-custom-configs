@@ -3,9 +3,9 @@ echo "reading .cshrc"
 
 # SSW IDL
 setenv QUIET 1
-setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro' 
+setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro'
 # Test for existance of a prompt... so we don't break interactive shells?
-if ($?prompt) then 
+if ($?prompt) then
 setenv SSW_INSTR "BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
 source $SSW/gen/setup/setup.ssw endif
 
@@ -23,15 +23,15 @@ setenv PATH ${PATH}:/home/user/laurel07/bin
 setenv PYTHONPATH /home/users/laurel07/python:/home/holtz/a575/isochrone:/home/users/laurel07/a575/myrepo/q22/isochrones
 
 # Alias list
-alias term1 gnome-terminal -e bash --window --geometry 102x54+0+0
+#alias term1 gnome-terminal -e bash --window --geometry 102x54+0+0
 #alias bash exec bash
 alias vi vim
 alias virgo  ssh -Y laurel07@virgo.nmsu.edu
 alias hyades ssh -Y laurel07@hyades.nmsu.edu
 alias praesepe ssh -Y laurel07@praesepe.nmsu.edu
 alias solar  ssh -Y laurel07@solarstorm.nmsu.edu
-alias acrux  ssh -Y laurel07@acrux.nmsu.edu          
-alias astro  ssh -Y laurel07@astronomy.nmsu.edu          
+alias acrux  ssh -Y laurel07@acrux.nmsu.edu
+alias astro  ssh -Y laurel07@astronomy.nmsu.edu
 alias mine cd /acrux/laurel07
 alias ls ls --color=auto
 alias open gnome-open
