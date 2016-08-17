@@ -10,3 +10,6 @@ alias activate='source env/bin/activate'
 export DJANGO_ENV=local
 
 export PATH="./node_modules/.bin:$PATH"
+
+. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
