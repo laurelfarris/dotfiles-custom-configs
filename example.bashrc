@@ -138,13 +138,13 @@ source ~/git-completion.bash
 green="\[\033[1;32m\]"
 blue="\[\033[1;34m\]"
 purple="\[\033[1;35m\]"
-reset="\[\033[0m\]"
 cyan="\[\033[36m\]"
 cyan="\e[1;36m"  # Bold
 green="\e[1;32m"
 purple="\e[1;35m"
 blue="\e[0;34m"
 Yellow='\e[0;33m'
+reset="\[\033[0m\]"
 
 # Change command prompt
 source ~/git-prompt.sh

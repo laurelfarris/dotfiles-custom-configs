@@ -12,7 +12,7 @@ alias rm='safe_rm'
 function mypath() { echo "${PATH//:/$'\n'}"; }
 
 export CLICOLOR=1
-LS_COLORS="di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;200:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 # Colors
@@ -39,8 +39,9 @@ pic=${Normal}${yellow}✱${dgray}${Bold}
 Arrow=➤
 
 #function vi() {
-#    echo -ne "\e]0; ${1} \007";
-#    vim ${1}
+#    myfile=${_}
+#    echo -ne "\e]0; ${_} \007";
+#    vim ${_}
 #}
 #function ipython() {
 #    echo -ne "\e]0; iPython \007";
@@ -50,7 +51,7 @@ Arrow=➤
 # Enable tab completion
 source ~/dotfiles/custom-configs/git-completion.bash
 # Change command prompt
-source ~/dotfiles/custom-configs/git-prompt.sh
+source ~/dotfiles/custom-configs/git-prompt
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
 
@@ -70,7 +71,8 @@ set_prompt () {
         printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${dgray}${MY_LINE}${PIECE}"
     done
-    LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}@\h:\w${dgray})\n"
+    # Temporarily removing hostname #LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}@\h:\w${dgray})\n"
+    LINE1="${Bold}${MY_LINE}(${pic})${Char}q\rlqq${Text}(${pmt}\w${dgray})\n"
     #LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
     # if git then Line2 as below, else Line2 = \r
