@@ -35,4 +35,4 @@ export PYTHONPATH="~/Modules/"
 # Use the following to set it to match your LS_COLORS:
 
 #export LSCOLORS="di=38;5;200:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
-zstyle ':completion:*' list-colors 'di=00;38;5;200:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215'
+zstyle ':completion:*' list-colors 'di=00;38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215'
