@@ -1,5 +1,4 @@
 source /home/local/etc/cshrc
-echo "reading .cshrc"
 
 # SSW IDL
 setenv QUIET 1
