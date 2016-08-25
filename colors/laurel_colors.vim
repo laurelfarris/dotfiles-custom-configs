@@ -93,7 +93,7 @@ hi shParen ctermfg=231
 hi shQuote ctermfg=255
 hi shSingleQuote ctermfg=255
 hi shSetList ctermfg=180
-hi shVariable ctermfg=81
+hi shVariable ctermfg=65
 
 hi cshDblQuote ctermfg=67
 hi tcshDQuote ctermfg=67
@@ -203,17 +203,23 @@ hi IDLangRoutine ctermfg=107
 hi IDLangStatement ctermfg=107
 hi IDLangString ctermfg=67
 
-hi pythonBuiltIn ctermfg=107
-hi pythonConditional ctermfg=180
+hi pythonBuiltIn ctermfg=65
+"hi pythonBuiltIn ctermfg=107
+hi pythonConditional ctermfg=222
+"hi pythonConditional ctermfg=180
 hi pythonDocstring ctermfg=243
 hi pythonExceptions ctermfg=124
-hi pythonFunction ctermfg=180
+"hi pythonFunction ctermfg=180
+hi pythonFunction ctermfg=222
 hi pythonInclude ctermfg=13
 hi pythonNumber ctermfg=67
-hi pythonOperator ctermfg=180
-hi pythonQuotes ctermfg=67
-hi pythonRepeat ctermfg=180
-hi pythonStatement ctermfg=107
+hi pythonOperator ctermfg=222
+"hi pythonOperator ctermfg=180
+hi pythonQuotes ctermfg=255
+"hi pythonRepeat ctermfg=180
+hi pythonRepeat ctermfg=222
+hi pythonStatement ctermfg=65
+"hi pythonStatement ctermfg=107
 hi pythonString ctermfg=67
 hi pythonTripleQuotes ctermfg=248
 
@@ -249,13 +255,14 @@ let g:colors_name = "testing_colors"
 "   others:         89 90 91 127 128 133 161 162 163 164 165 170 171 199 200 201 207
 "
 " Purple
-"   dark winners:   5 13 60 96 103 139
-"   light winners:  182 183 189
-"   kinda bright:   97 104 141 147
-"   others:         53 54 55 56 57 62 63 92 93 98 99 105 129 134 135 140 176 177 219
+"   winners:   5 13 96 139 182 183 grayish: 103 60 almost white: 189
+"   others:    53 54 55 56 57 62 63 92 93 97 98 99 104 105 129 134 135 140 141 147 176 177 219
 "
 " Pink/peach
-"   winners:    95 131 132 137 138 139 167 168 173 174 175 180 181 216 217 218 223 224 225
+"   orange:     137 173 180 223 216
+"   peach:      95 131 167 138 174 181 217
+"   pink:       132 139 175 218 168
+"   pale:       224 225
 "   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
 "
 " Yellow
