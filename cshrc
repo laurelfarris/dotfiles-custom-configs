@@ -15,14 +15,11 @@ setenv MESASDK_ROOT /home/hyades/jasonj/mesa/utils/mesasdk
 setenv OMP_NUM_THREADS 2
 source $MESASDK_ROOT/bin/mesasdk_init.csh
 
-# Dropbox
+# Set paths
 setenv PATH ${PATH}:/home/user/laurel07/bin
-
-# Python
 setenv PYTHONPATH /home/users/laurel07/python:/home/holtz/a575/isochrone:/home/users/laurel07/a575/myrepo/q22/isochrones
 
 # Alias list
-#alias term1 gnome-terminal -e bash --window --geometry 102x54+0+0
 alias bash exec bash
 alias vi vim
 alias virgo  ssh -Y laurel07@virgo.nmsu.edu
@@ -37,7 +34,7 @@ alias open gnome-open
 
 # Create my own dir_colors
 setenv CLICOLOR "true"
-setenv LS_COLORS "di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+setenv LS_COLORS "di=38;5;067:ln=38;5;167:ex=38;5;071:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
 
 # Colors (make function for tcsh!!)
 #function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
@@ -54,7 +51,7 @@ set white="%{\033[3;37m%}"
 set end="%{\033[0m%}" # This is needed at the end... :(
 
 # # Clean up after ourselves...
- unset orange green yellow blue purple yellow white dgray lgray end
+unset orange green yellow blue purple yellow white dgray lgray end
 #
 #setenv SHELL /bin/bash
 #exec /bin/bash --login

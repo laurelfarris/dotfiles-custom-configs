@@ -32,7 +32,7 @@ source ~/dotfiles/custom-configs/git-prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 export CLICOLOR=1
-LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;071:*.png=38;5;147:*.jpg=38;5;147:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;071:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 # Colors
