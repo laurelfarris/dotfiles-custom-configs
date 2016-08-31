@@ -64,13 +64,13 @@ Arrow=❱
     #my_command=$(history 1 | head -1 | awk '{print $2;}')
 
 ### Make a sweet prompt
-
 set_prompt () {
-    my_shell=$(ps -p $$ | awk 'FNR == 2 {print $4}')
+    #my_shell=$(ps -p $$ | awk 'FNR == 2 {print $4}')
+    my_shell=$0
+    my_title=$(echo -ne "\e]1; \W/\007\e]2; $my_shell: \w\007")
+
     my_host="@${HOSTNAME%%.*}"
     num=${#my_host}
-    #my_title=$(echo -ne "\e]1; \W/ \007\e]2; \001\e[1m\002$my_shell: \001\e[0m\002 \w \007")
-    my_title=$(echo -ne "\e]1; \W/\007\e]2; $my_shell: \w\007")
 
     length=$(($(tput cols)-($num + 4)))
     MY_LINE=""
@@ -79,18 +79,13 @@ set_prompt () {
         printf -v PIECE '%b' ${MY_RULE}
         MY_LINE="${Bold}${dgray}${MY_LINE}${PIECE}"
     done
-    #LINE1="${Bold}${MY_LINE}(${blue}$my_host${dgray})${Char}q\rlqq${Text}(${pmt}\w${dgray})\n"
     LINE1="${MY_LINE}${Text}(${blue}$my_host${dgray})${Char}qq\rlqq${Text}(${pmt}\w${dgray})\n"
-    #LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
     LINE3="${Char}mqq${Text}${Arrow} ${Normal}${wh}"
-    # if git then Line2 as below, else Line2 = \r
-    if [ -d .git ]; then
-        LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
-            #PS1=${LINE1}${LINE2}${LINE3};
-    else
-        LINE2="\r"
-        #PS1=${LINE1}${LINE3};
-    fi;
-    PS1=${my_title}${LINE1}${LINE2}${LINE3};
+    PS1=${my_title}${LINE1}${LINE3};
 }
+#    if [ -d .git ]; then
+#        LINE2="${Char}tqq${Text}(${blue}$(__git_ps1) ${dgray})\n"
+#    else
+#        LINE2="\r"
+#    fi;
 PROMPT_COMMAND=set_prompt
