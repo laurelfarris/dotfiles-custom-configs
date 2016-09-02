@@ -1,10 +1,12 @@
 #. /home/local/etc/bashrc
 
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
-alias acrux='ssh -Y laurel07@acrux.nmsu.edu'
-alias solar='ssh -Y laurel07@solarstorm.nmsu.edu'
-alias src='source ~/.bashrc'
-alias delete_pyc='find . -iname \*.pyc -exec rm \{\} \+'
+alias src='. ~/.bashrc'
+alias delete_pyc='find . -iname \*.pyc -exec mv \{\} ~/.trash \+'
+
+export CLICOLOR=1
+LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;071:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
+export LS_COLORS
 
 function safe_rm() { mv $@ ~/.trash; }
 alias rm='safe_rm'
@@ -12,12 +14,13 @@ alias rm='safe_rm'
 function mypath() { echo "${PATH//:/$'\n'}"; }
 
 function my_vi() {
-    myfile=$1
-    echo -ne "\e]0; VIM: ${myfile} \007";
-    vim ${myfile}
+    #myfile=$1
+    #echo -ne "\e]0; VIM: ${myfile} \007";
+    #vim ${myfile}
+    echo -ne "\e]0; VIM: $1 \007";
+    vim $1
 }
 alias vi='my_vi'
-#alias vi='vim'
 
 #function ipython() {
 #    echo -ne "\e]0; iPython \007";
@@ -31,21 +34,26 @@ source ~/dotfiles/custom-configs/git-prompt
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-export CLICOLOR=1
-LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;071:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
-export LS_COLORS
-
 # Colors
 function EXT_COLOR () { echo -ne "\[\e[38;5;$1m\]"; }
-wh=`EXT_COLOR 254`
-lgray=`EXT_COLOR 248`
-dgray=`EXT_COLOR 238`
-orange=`EXT_COLOR 215`
-pur=`EXT_COLOR 097`
-blue=`EXT_COLOR 060`
-green=`EXT_COLOR 071`
-yellow=`EXT_COLOR 229`
-pmt=`EXT_COLOR 60`
+#wh=`EXT_COLOR 254`
+#lgray=`EXT_COLOR 248`
+#dgray=`EXT_COLOR 238`
+#orange=`EXT_COLOR 215`
+#pur=`EXT_COLOR 097`
+#blue=`EXT_COLOR 060`
+#green=`EXT_COLOR 071`
+#yellow=`EXT_COLOR 229`
+#pmt=`EXT_COLOR 60`
+wh=$(EXT_COLOR 254)
+lgray=$(EXT_COLOR 248)
+dgray=$(EXT_COLOR 238)
+orange=$(EXT_COLOR 215)
+pur=$(EXT_COLOR 097)
+blue=$(EXT_COLOR 060)
+green=$(EXT_COLOR 071)
+yellow=$(EXT_COLOR 229)
+pmt=$(EXT_COLOR 60)
 end="\[\e[0m\]"
 
 Bold="\[\e[1m\]"
