@@ -15,6 +15,7 @@ alias l1='ls -dFHGP ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias ll='ls -dFHGP1 ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
 
+
 function safe_rm() {
     for fname in $@; do
         mv $fname ~/.Trash
