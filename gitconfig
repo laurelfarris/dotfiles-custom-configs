@@ -15,6 +15,6 @@
 [push]
     default = matching
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
+    co = checkout
+    br = branch
+    ci = commit

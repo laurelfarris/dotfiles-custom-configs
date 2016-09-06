@@ -6,7 +6,7 @@ hi NonText ctermbg=black
 hi ColorColumn ctermbg=234
 hi CursorLine ctermbg=234
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
-autocmd BufEnter,BufRead *.ex,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
+autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 
 let g:startify_custom_header = ['']
 

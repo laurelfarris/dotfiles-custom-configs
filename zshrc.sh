@@ -6,6 +6,7 @@ alias sm='./manage.py schemamigration'
 alias mm='./manage.py makemigrations'
 alias ipy='ipython3'
 alias activate='source env/bin/activate'
+alias gs='git status'
 
 export DJANGO_ENV=local
 
