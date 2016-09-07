@@ -1,4 +1,8 @@
 "set spellfile=./en.utf-8.add
+"
+
+"syntax match texGreek contains=ALL tau
+"hi texGreek ctermfg=200
 
 set number
 set cursorline

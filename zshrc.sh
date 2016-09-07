@@ -13,12 +13,13 @@ alias jup2='open -a safari http://localhost:8888/'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias l1='ls -dFHGP ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias ll='ls -dFHGP1 ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
+alias mv='mv -i'
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
 
 
 function safe_rm() {
     for fname in $@; do
-        mv $fname ~/.Trash
+        command mv $fname ~/.Trash
     done
 }
 alias rm='safe_rm'

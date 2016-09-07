@@ -126,16 +126,17 @@ hi texRefZone ctermfg=107
 hi texZone ctermfg=245
 hi texString ctermfg=250
 
-hi texGreek ctermfg=255
-hi texSuperscript ctermfg=250
-hi texSubscript ctermfg=250
+hi texGreek ctermfg=067
+hi texSuperscript ctermfg=245
+hi texSubscript ctermfg=245
 hi texMathSymbol ctermfg=67
-hi texMathOper ctermfg=67
+hi texMathOper ctermfg=255
 hi texMathMatcher ctermfg=255
-hi texMathZoneY ctermfg=255
-hi texMathZoneX ctermfg=255
 hi texMathZoneAS ctermfg=255
 hi texMathZoneE ctermfg=255
+hi texMathZoneW ctermfg=255
+hi texMathZoneX ctermfg=255
+hi texMathZoneY ctermfg=255
 
 " Latex things I probably won't use
 "hi texDocZone ctermfg=255  \url{texDocZone}
