@@ -18,3 +18,6 @@ nnoremap <Leader>ff :Unite file file_rec/git -start-insert -buffer-name=files -w
 
 " Not-so-hardtime
 let g:hardtime_maxcount = 100
+
+" Use eslint for JS linting instead of jshint
+let g:syntastic_javascript_checkers = ['eslint']
