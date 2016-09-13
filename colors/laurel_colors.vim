@@ -98,12 +98,12 @@ hi tcshSQuote ctermfg=67
 
 hi texSpecialChar ctermfg=60
 hi texDoctype ctermfg=186
-hi texDoctypeArgs ctermfg=74
+hi texDoctypeArgs ctermfg=67
 
 hi texNewCmd ctermfg=186
 hi texCmdName ctermfg=186
 hi texCmdBody ctermfg=180
-hi texCmdArgs ctermfg=74
+hi texCmdArgs ctermfg=67
 hi texNewEnv ctermfg=186
 hi texEnvName ctermfg=186
 hi texDefParm ctermfg=186
@@ -113,11 +113,11 @@ hi texBeginEnd ctermfg=107
 hi texBeginEndName ctermfg=180
 hi texStatement ctermfg=107
 hi texInputfile ctermfg=180
-hi texInputfileopt ctermfg=74
+hi texInputfileopt ctermfg=67
 
 hi texTypeStyle ctermfg=139
 hi texTypeSize ctermfg=67
-hi texLength ctermfg=74
+hi texLength ctermfg=67
 
 hi texCite ctermfg=180
 hi texRefZone ctermfg=107
@@ -192,14 +192,14 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi IDLangConditional ctermfg=180
-hi IDLangContinueLine cterm=none ctermbg=none ctermfg=60
-hi IDLangKeyword ctermfg=139
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=235
+hi IDLangKeyword ctermfg=138
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangOperator ctermfg=180
-hi IDLangRoutine ctermfg=107
-hi IDLangStatement ctermfg=107
-hi IDLangStrucvar ctermfg=65
+hi IDLangRoutine ctermfg=65
+hi IDLangStatement ctermfg=65
+hi IDLangStrucvar ctermfg=138
 "   purple winners:   5 13 96 139 182 183 grayish: 103 60 almost white: 189
 
 hi pythonBuiltIn ctermfg=65
