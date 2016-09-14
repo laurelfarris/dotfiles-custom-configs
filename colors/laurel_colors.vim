@@ -192,15 +192,16 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi IDLangConditional ctermfg=180
-hi IDLangContinueLine cterm=none ctermbg=none ctermfg=235
-hi IDLangKeyword ctermfg=138
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangOperator ctermfg=180
 hi IDLangRoutine ctermfg=65
 hi IDLangStatement ctermfg=65
-hi IDLangStrucvar ctermfg=138
-"   purple winners:   5 13 96 139 182 183 grayish: 103 60 almost white: 189
+
+hi IDLangKeyword ctermfg=103
+hi IDLangStrucvar ctermfg=103
+"   purple winners:   5 13 96 139 182 183 grayish: 145 103 60 almost white: 189
 
 hi pythonBuiltIn ctermfg=65
 "hi pythonBuiltIn ctermfg=107
