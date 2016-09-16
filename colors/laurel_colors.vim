@@ -18,9 +18,13 @@ hi Cursor ctermfg=16 ctermbg=145 cterm=NONE guifg=#182227 guibg=#9ea7a6 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
 hi CursorLineNr ctermfg=186 ctermbg=233
+hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Define ctermfg=200
-hi Delimiter ctermfg=60
+
+"hi Delimiter ctermfg=60
+hi Delimiter ctermfg=238
+
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f0f0f0 guibg=#43820d gui=bold
 hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE guifg=#f0f0f0 guibg=#1c3657 gui=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#880708 guibg=NONE gui=NONE
@@ -35,15 +39,20 @@ hi Identifier ctermfg=255 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=N
 hi IncSearch ctermfg=black ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
-hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+
+"hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+hi MatchParen ctermfg=186 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+
 hi NonText ctermfg=59 ctermbg=black cterm=NONE guifg=#414e58 guibg=#232c31 gui=NONE
 "hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
 hi Number ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+
+hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+"hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Special ctermfg=255 ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
@@ -66,6 +75,7 @@ hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NON
 "hi vimCommentTitle ctermfg=243
 hi vimFgBgAttrib ctermfg=180
 hi vimFuncName ctermfg=180
+hi vimHiAttrib ctermfg=180
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimOption ctermfg=180
@@ -90,13 +100,14 @@ hi shParen ctermfg=231
 hi shQuote ctermfg=255
 hi shSingleQuote ctermfg=255
 hi shSetList ctermfg=180
-hi shVariable ctermfg=65
+hi shVariable ctermfg=107
 
 hi cshDblQuote ctermfg=67
 hi tcshDQuote ctermfg=67
 hi tcshSQuote ctermfg=67
 
-hi texSpecialChar ctermfg=60
+hi texSpecialChar ctermfg=238
+"hi texSpecialChar ctermfg=60
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=67
 
@@ -191,17 +202,22 @@ hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gu
 hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
-hi IDLangConditional ctermfg=180
+
+
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
-hi IDLangOperator ctermfg=180
+
+hi IDLangConditional ctermfg=65
+hi IDLangOperator ctermfg=65
+
 hi IDLangRoutine ctermfg=65
 hi IDLangStatement ctermfg=65
 
-hi IDLangKeyword ctermfg=103
-hi IDLangStrucvar ctermfg=103
-"   purple winners:   5 13 96 139 182 183 grayish: 145 103 60 almost white: 189
+hi IDLangKeyword ctermfg=180
+hi IDLangStrucvar ctermfg=180
+
+
 
 hi pythonBuiltIn ctermfg=65
 "hi pythonBuiltIn ctermfg=107
@@ -235,11 +251,13 @@ let g:colors_name = "testing_colors"
 "   others:         17 18 4 19 20 21 25 32 33 39 45 68 69 74 81 87 111 116 117 123
 
 " Cyan
-"   winners:        36 66 73 151 157 158
+"   winners:        66
+"   kinda bright:   36 73
 "   others:         6 14 23 24 30 31 37 38 43 44 50 61 79 80 86 115 122
 "
 " 'Seaweed'
-"   winners:       29 65 71 72 107 108 150 193 194
+"   winners:       65 72 107 108 150 151 157 158   Really pale: 193 194
+"   kinda bright:  29 71
 "
 " Green
 "   winners:       64 107 144 149 192
@@ -260,7 +278,7 @@ let g:colors_name = "testing_colors"
 "
 " Pink/peach
 "   orange:     137 173 180 223 216
-"   peach:      95 131 167 138 174 181 217
+"   peach:      95 131 167 138   174(complements 180)  181 217
 "   pink:       132 139 175 218 168
 "   pale:       224 225
 "   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
