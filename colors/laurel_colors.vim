@@ -40,8 +40,7 @@ hi IncSearch ctermfg=black ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gu
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
 
-"hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
-hi MatchParen ctermfg=186 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
 
 hi NonText ctermfg=59 ctermbg=black cterm=NONE guifg=#414e58 guibg=#232c31 gui=NONE
 "hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
@@ -107,7 +106,6 @@ hi tcshDQuote ctermfg=67
 hi tcshSQuote ctermfg=67
 
 hi texSpecialChar ctermfg=238
-"hi texSpecialChar ctermfg=60
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=67
 
@@ -126,7 +124,7 @@ hi texStatement ctermfg=107
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
 
-hi texTypeStyle ctermfg=139
+hi texTypeStyle ctermfg=96
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
@@ -137,9 +135,9 @@ hi texRefZone ctermfg=107
 hi texZone ctermfg=245
 hi texString ctermfg=250
 
-hi texGreek ctermfg=067
-hi texSuperscript ctermfg=245
-hi texSubscript ctermfg=245
+hi texGreek ctermfg=107
+hi texSuperscript ctermfg=255
+hi texSubscript ctermfg=255
 hi texMathSymbol ctermfg=67
 hi texMathOper ctermfg=255
 hi texMathMatcher ctermfg=255
