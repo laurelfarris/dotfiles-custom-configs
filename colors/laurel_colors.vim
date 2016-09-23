@@ -87,6 +87,8 @@ hi zshKeyword ctermfg=180
 hi zshOptions ctermfg=180
 hi zshTypes ctermfg=147
 
+hi bashSpecialVariables ctermfg=107
+
 hi shAlias ctermfg=255
 hi shConditional ctermfg=180
 hi shDerefSimple ctermfg=186
@@ -94,6 +96,7 @@ hi shDerefSpecial ctermfg=186
 hi shDerefVar ctermfg=186
 hi shDoubleQuote ctermfg=255
 hi shFunctionKey ctermfg=107
+hi shFunctionOne ctermfg=180
 hi shFunction ctermfg=180
 hi shParen ctermfg=231
 hi shQuote ctermfg=255
@@ -205,12 +208,15 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
+hi IDLangOperator ctermfg=132
 
 hi IDLangConditional ctermfg=65
-hi IDLangOperator ctermfg=65
+hi IDLangStatement ctermfg=137
 
 hi IDLangRoutine ctermfg=65
-hi IDLangStatement ctermfg=65
+"   orange:     137 173 180 223 216
+"   peach:      95 131 167 138   174(complements 180)  181 217
+"   pink:       132 139 175 218 168
 
 hi IDLangKeyword ctermfg=180
 hi IDLangStrucvar ctermfg=180

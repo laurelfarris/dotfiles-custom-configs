@@ -5,7 +5,7 @@ alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -exec mv {} ~/.trash \+'
 
 export CLICOLOR=1
-LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;071:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;065:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 function mypath() { echo "${PATH//:/$'\n'}"; }
@@ -14,7 +14,7 @@ function safe_rm() { mv $@ ~/.trash; }
 alias rm='safe_rm'
 
 function my_vi() {
-    echo -ne "\e]0; VIM: $1 \007";
+    echo -ne "\e]0; VIM: \"$1\"\007";
     vim $1
 }
 alias vi='my_vi'
@@ -35,9 +35,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # Is 'echo -ne' actually needed here?
 function COLOR () { echo -ne "\[\e[38;5;$1m\]"; }
 dgray=$(COLOR 238)
-blue=$(COLOR 060)
-cyan=$(COLOR 067)
-purple=$(COLOR 129)
+lgray=$(COLOR 245)
+purple=$(COLOR 060)
+blue=$(COLOR 067)
+dgreen=$(COLOR 065)
+gray1=$(COLOR 145)
+gray2=$(COLOR 059)
 end="\[\e[0m\]"
 # normal="\[\e[0m\]" --> same as end!
 
@@ -55,25 +58,24 @@ low=${bold}${blue}${char}mqq
 
 ### Make a sweet prompt
 set_prompt () {
-    my_title=$(echo -ne "\e]1; \W/\007\e]2; ${0}: \w\007")
-    my_host="@${HOSTNAME%%.*}"
-    num=${#my_host}
 
-    length=$(( $(tput cols)-(${num} + 4) ))
+    ## Temporarily not using this...
+    #my_host="@${HOSTNAME%%.*}"
+    #num=${#my_host}
+    #length=$(( $(tput cols)-(${num} + 4) ))
 
-    #my_line=""
-#        printf -v piece '%b' ${segment}
-#        my_line="${bold}${dgray}${my_line}${piece}"
-
-    #my_line="${bold}${gray}"
+    length=$(( $(tput cols)-12 ))
     my_line=""
     for ((i=1; i<=${length}; i++)); do
         my_line+=${segment}
     done
 
-    line1="${my_line}${text}(${blue}${my_host}${dgray})${char}qq\rlqq${text}(${blue}\w${dgray})\n"
+    #my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
+    my_title=$(echo -ne "\e]1; \W/\007\e]2; \s: \w\007")
+    line1="${my_line}${text}(${lgray}\t${dgray})${char}qq\rlqq${text}(${lgray}@\h: ${lgray}\w${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
-    PS1=${my_title}${line1}${line3};
+    #PS1=${my_title}${line1}${line3};
+    PS1=${line1}${line3};
 }
 PROMPT_COMMAND=set_prompt
