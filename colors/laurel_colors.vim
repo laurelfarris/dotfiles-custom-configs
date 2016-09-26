@@ -127,7 +127,7 @@ hi texStatement ctermfg=107
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
 
-hi texTypeStyle ctermfg=96
+hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
