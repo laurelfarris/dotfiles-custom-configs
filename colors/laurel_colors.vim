@@ -208,10 +208,10 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
-hi IDLangOperator ctermfg=132
+hi IDLangOperator ctermfg=180
 
-hi IDLangConditional ctermfg=65
-hi IDLangStatement ctermfg=137
+hi IDLangConditional ctermfg=103
+hi IDLangStatement ctermfg=103
 
 hi IDLangRoutine ctermfg=65
 "   orange:     137 173 180 223 216

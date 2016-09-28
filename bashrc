@@ -58,13 +58,9 @@ low=${bold}${blue}${char}mqq
 
 ### Make a sweet prompt
 set_prompt () {
-
-    ## Temporarily not using this...
-    #my_host="@${HOSTNAME%%.*}"
-    #num=${#my_host}
-    #length=$(( $(tput cols)-(${num} + 4) ))
-
-    length=$(( $(tput cols)-12 ))
+    my_host="@${HOSTNAME%%.*}"
+    num=${#my_host}
+    length=$(( $(tput cols)-(${num} + 4) ))
     my_line=""
     for ((i=1; i<=${length}; i++)); do
         my_line+=${segment}
@@ -72,7 +68,7 @@ set_prompt () {
 
     #my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
     my_title=$(echo -ne "\e]1; \W/\007\e]2; \s: \w\007")
-    line1="${my_line}${text}(${lgray}\t${dgray})${char}qq\rlqq${text}(${lgray}@\h: ${lgray}\w${dgray})\n"
+    line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
     #PS1=${my_title}${line1}${line3};
