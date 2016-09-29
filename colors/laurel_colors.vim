@@ -52,7 +52,7 @@ hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
 hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 "hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 
-hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Search ctermfg=167 ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Special ctermfg=255 ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
