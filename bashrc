@@ -56,7 +56,9 @@ top=${bold}${cyan}${char}lqq
 mid=${bold}${purple}${char}tqq
 low=${bold}${blue}${char}mqq
 
+echo -ne "\e]0; \d \007"
 ### Make a sweet prompt
+my_title=$(echo -ne "\e]0; \d \007")
 set_prompt () {
     my_host="@${HOSTNAME%%.*}"
     num=${#my_host}
@@ -67,11 +69,10 @@ set_prompt () {
     done
 
     #my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
-    my_title=$(echo -ne "\e]1; \W/\007\e]2; \s: \w\007")
     line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
-    #PS1=${my_title}${line1}${line3};
-    PS1=${line1}${line3};
+    PS1=${my_title}${line1}${line3};
+    #PS1=${line1}${line3};
 }
 PROMPT_COMMAND=set_prompt
