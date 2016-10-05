@@ -2,7 +2,7 @@
 
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias src='. ~/.bashrc'
-alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -exec mv {} ~/.trash \+'
+#alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
 
 export CLICOLOR=1
 LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;065:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
@@ -56,8 +56,9 @@ top=${bold}${cyan}${char}lqq
 mid=${bold}${purple}${char}tqq
 low=${bold}${blue}${char}mqq
 
-echo -ne "\e]0; \d \007"
+
 ### Make a sweet prompt
+
 my_title=$(echo -ne "\e]0; \d \007")
 set_prompt () {
     my_host="@${HOSTNAME%%.*}"

@@ -35,7 +35,7 @@ hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Float ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE guifg=#9a9a9a guibg=#182227 gui=NONE
 hi Function ctermfg=107
-hi Identifier ctermfg=255 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
+hi Identifier ctermfg=white ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
 hi IncSearch ctermfg=black ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
@@ -53,7 +53,7 @@ hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 "hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 
 hi Search ctermfg=167 ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi Special ctermfg=255 ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
+hi Special ctermfg=white ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#f0f0f0 guibg=#575e61 gui=bold
@@ -64,7 +64,7 @@ hi Tag ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f0f0f0 guibg=NONE gui=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold guifg=#9a9a9a guibg=NONE gui=inverse,bold,italic
 hi Type ctermfg=153 ctermbg=NONE cterm=NONE guifg=#b5d8f6 guibg=NONE gui=NONE
-hi Type ctermfg=255
+hi Type ctermfg=white
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#252c31 guibg=#252c31 gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
@@ -89,18 +89,18 @@ hi zshTypes ctermfg=147
 
 hi bashSpecialVariables ctermfg=107
 
-hi shAlias ctermfg=255
+hi shAlias ctermfg=white
 hi shConditional ctermfg=180
 hi shDerefSimple ctermfg=186
 hi shDerefSpecial ctermfg=186
 hi shDerefVar ctermfg=186
-hi shDoubleQuote ctermfg=255
+hi shDoubleQuote ctermfg=white
 hi shFunctionKey ctermfg=107
 hi shFunctionOne ctermfg=180
 hi shFunction ctermfg=180
 hi shParen ctermfg=231
-hi shQuote ctermfg=255
-hi shSingleQuote ctermfg=255
+hi shQuote ctermfg=white
+hi shSingleQuote ctermfg=white
 hi shSetList ctermfg=180
 hi shVariable ctermfg=107
 
@@ -127,6 +127,7 @@ hi texStatement ctermfg=107
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
 
+hi texAccent ctermfg=103
 hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
@@ -139,26 +140,26 @@ hi texZone ctermfg=245
 hi texString ctermfg=250
 
 hi texGreek ctermfg=107
-hi texSuperscript ctermfg=255
-hi texSubscript ctermfg=255
+hi texSuperscript ctermfg=white
+hi texSubscript ctermfg=white
 hi texMathSymbol ctermfg=67
-hi texMathOper ctermfg=255
-hi texMathMatcher ctermfg=255
-hi texMathZoneAS ctermfg=255
-hi texMathZoneE ctermfg=255
-hi texMathZoneW ctermfg=255
-hi texMathZoneX ctermfg=255
-hi texMathZoneY ctermfg=255
+hi texMathOper ctermfg=white
+hi texMathMatcher ctermfg=white
+hi texMathZoneAS ctermfg=white
+hi texMathZoneE ctermfg=white
+hi texMathZoneW ctermfg=white
+hi texMathZoneX ctermfg=white
+hi texMathZoneY ctermfg=white
 
 " Latex things I probably won't use
-"hi texDocZone ctermfg=255  \url{texDocZone}
+"hi texDocZone ctermfg=white  \url{texDocZone}
 
 
 " HTML
 hi htmlArg ctermfg=79
 hi htmlEndTag ctermfg=117
 hi htmlItalic ctermfg=217 ctermbg=none cterm=none
-hi htmlString ctermfg=255
+hi htmlString ctermfg=white
 hi htmlSpecialChar ctermfg=79
 hi htmlTag ctermfg=182
 hi htmlTagName ctermfg=117
@@ -216,7 +217,7 @@ hi IDLangRoutine ctermfg=103
 
 hi IDLangOperator ctermfg=180
 hi IDLangKeyword ctermfg=180
-hi IDLangStrucvar ctermfg=180
+hi IDLangStrucvar ctermfg=white
 
 
 
@@ -232,7 +233,7 @@ hi pythonInclude ctermfg=13
 hi pythonNumber ctermfg=67
 hi pythonOperator ctermfg=222
 "hi pythonOperator ctermfg=180
-hi pythonQuotes ctermfg=255
+hi pythonQuotes ctermfg=white
 "hi pythonRepeat ctermfg=180
 hi pythonRepeat ctermfg=222
 hi pythonStatement ctermfg=65
