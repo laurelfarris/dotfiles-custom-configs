@@ -2,7 +2,8 @@
 
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias src='. ~/.bashrc'
-#alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
+alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
+alias delete_ssw='find /home/users/laurel07 -iname ssw_idl\* -execdir mv {} ~/.trash \+'
 
 export CLICOLOR=1
 LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;065:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"

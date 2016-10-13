@@ -210,10 +210,10 @@ hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 
-hi IDLangConditional ctermfg=065
-hi IDLangStatement ctermfg=065
+hi IDLangConditional ctermfg=103
+hi IDLangStatement ctermfg=103
 
-hi IDLangRoutine ctermfg=103
+hi IDLangRoutine ctermfg=065
 
 hi IDLangOperator ctermfg=180
 hi IDLangKeyword ctermfg=180
