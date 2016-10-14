@@ -1,10 +1,11 @@
 set cursorline
 set nu
-hi LineNr ctermbg=black
-hi CursorLineNr ctermfg=yellow ctermbg=233
-hi NonText ctermbg=black
-hi ColorColumn ctermbg=234
-hi CursorLine ctermbg=234
+hi Normal guibg=#000000
+hi LineNr ctermbg=black guibg=#000000
+hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#dfdf04 guibg=#070707
+hi NonText ctermbg=black guibg=#000000
+hi ColorColumn ctermbg=234 guibg=#101010
+hi CursorLine ctermbg=234 guibg=#101010
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 
