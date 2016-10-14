@@ -23,7 +23,7 @@ hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Define ctermfg=200
 
 "hi Delimiter ctermfg=60
-hi Delimiter ctermfg=238
+hi Delimiter ctermfg=239
 
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f0f0f0 guibg=#43820d gui=bold
 hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE guifg=#f0f0f0 guibg=#1c3657 gui=NONE
