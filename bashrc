@@ -42,6 +42,7 @@ blue=$(COLOR 067)
 dgreen=$(COLOR 065)
 gray1=$(COLOR 145)
 gray2=$(COLOR 059)
+pink=$(COLOR 133)
 end="\[\e[0m\]"
 # normal="\[\e[0m\]" --> same as end!
 
@@ -56,6 +57,9 @@ arrow=❱
 top=${bold}${cyan}${char}lqq
 mid=${bold}${purple}${char}tqq
 low=${bold}${blue}${char}mqq
+
+#heart=$(echo -e "\xE2\x9D\xA4")
+#PS1="\[\e[38;5;145m\]\u@\h \[\e[38;5;133m\]${heart}\[\e[38;5;145m\] \w\n-->${end} "
 
 
 ### Make a sweet prompt
@@ -74,7 +78,7 @@ set_prompt () {
     line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
-    PS1=${my_title}${line1}${line3};
-    #PS1=${line1}${line3};
+    #PS1=${my_title}${line1}${line3};
+    PS1=${line1}${line3};
 }
 PROMPT_COMMAND=set_prompt

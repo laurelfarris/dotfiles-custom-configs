@@ -7,24 +7,29 @@ endif
 
 let g:colors_name = "laurel_colors"
 
-hi bibKey ctermfg=180
 hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Character ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
 hi Comment ctermfg=243 ctermbg=NONE cterm=NONE guifg=#9a9a9a guibg=NONE gui=italic
 hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi Cursor ctermfg=16 ctermbg=145 cterm=NONE guifg=#182227 guibg=#9ea7a6 gui=NONE
+
+" Cursor seems to have no effect
+hi Cursor ctermfg=200 ctermbg=100 cterm=underline guifg=#182227 guibg=#9ea7a6 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
-hi CursorLineNr ctermfg=186 ctermbg=233
+hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
+hi CursorLineNr ctermfg=227 ctermbg=233
 hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
+
+hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+
+hi IncSearch ctermfg=white ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
+hi Search ctermfg=white ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+
+
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Define ctermfg=200
-
-"hi Delimiter ctermfg=60
 hi Delimiter ctermfg=239
-
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f0f0f0 guibg=#43820d gui=bold
 hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE guifg=#f0f0f0 guibg=#1c3657 gui=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#880708 guibg=NONE gui=NONE
@@ -36,23 +41,16 @@ hi Float ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE guifg=#9a9a9a guibg=#182227 gui=NONE
 hi Function ctermfg=107
 hi Identifier ctermfg=white ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi IncSearch ctermfg=black ctermbg=107 cterm=NONE guifg=#182227 guibg=#8bb664 gui=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
-
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
-
 hi NonText ctermfg=59 ctermbg=black cterm=NONE guifg=#414e58 guibg=#232c31 gui=NONE
 "hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
 hi Number ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-
 hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-"hi PreProc ctermfg=060 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 
-hi Search ctermfg=167 ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Special ctermfg=white ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
@@ -107,6 +105,8 @@ hi shVariable ctermfg=107
 hi cshDblQuote ctermfg=67
 hi tcshDQuote ctermfg=67
 hi tcshSQuote ctermfg=67
+
+hi bibKey ctermfg=180
 
 hi texSpecialChar ctermfg=238
 hi texDoctype ctermfg=186
