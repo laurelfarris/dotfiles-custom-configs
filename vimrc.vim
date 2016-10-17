@@ -21,6 +21,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle
 autocmd BufEnter,BufRead *.tex hi clear texBoldItalStyle
+autocmd BufEnter,BufRead *.tex hi clear SpellBad
 
 autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+"""+ end=+"""+ keepend "excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
 autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+'''+ end=+'''+ keepend excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError

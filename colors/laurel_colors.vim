@@ -24,7 +24,7 @@ hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
 
 hi IncSearch ctermfg=white ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
-hi Search ctermfg=white ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Search ctermfg=065 ctermbg=none cterm=underline guifg=NONE guibg=NONE gui=underline
 
 
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
@@ -53,6 +53,7 @@ hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 
 hi Special ctermfg=white ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
+hi SpellBad ctermfg=none ctermbg=235 cterm=none
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#f0f0f0 guibg=#575e61 gui=bold
 hi StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE guifg=#f0f0f0 guibg=#575e61 gui=NONE
