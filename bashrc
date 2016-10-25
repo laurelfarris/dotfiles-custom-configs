@@ -9,7 +9,9 @@ export CLICOLOR=1
 LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;065:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
+# Do the same thing! Which is better?
 function mypath() { echo "${PATH//:/$'\n'}"; }
+function mypath2() { echo $PATH | tr ":" "\n"; }
 
 function safe_rm() { mv $@ ~/.trash; }
 alias rm='safe_rm'
