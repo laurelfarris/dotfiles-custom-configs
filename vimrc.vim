@@ -8,6 +8,9 @@ hi ColorColumn ctermbg=234 guibg=#101010
 hi CursorLine ctermbg=234 guibg=#101010
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
+autocmd BufEnter,BufRead *.md,*.markdown set wrap
+
+" colorscheme "Code School 3"
 
 let g:startify_custom_header = ['']
 
@@ -22,3 +25,6 @@ let g:hardtime_maxcount = 100
 
 " Use eslint for JS linting instead of jshint
 let g:syntastic_javascript_checkers = ['eslint']
+
+" Define alternative filetype names for markdown syntax highlighting
+let g:vim_markdown_fenced_languages = ['js=javascript']
