@@ -211,6 +211,8 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
+hi IDLangString ctermfg=12
+"   winners:        12 67 75 109 110 152 153 188 195
 
 hi IDLangConditional ctermfg=103
 hi IDLangStatement ctermfg=103

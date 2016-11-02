@@ -80,7 +80,7 @@ set_prompt () {
     line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
-    #PS1=${my_title}${line1}${line3};
-    PS1=${line1}${line3};
+    PS1=${my_title}${line1}${line3};
+    #PS1=${line1}${line3};
 }
 PROMPT_COMMAND=set_prompt
