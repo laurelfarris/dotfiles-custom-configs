@@ -211,8 +211,7 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
-hi IDLangString ctermfg=12
-"   winners:        12 67 75 109 110 152 153 188 195
+hi IDLangString ctermfg=145
 
 hi IDLangConditional ctermfg=103
 hi IDLangStatement ctermfg=103
@@ -279,7 +278,7 @@ let g:colors_name = "testing_colors"
 "   others:         89 90 91 127 128 133 161 162 163 164 165 170 171 199 200 201 207
 "
 " Purple
-"   winners:   5 13 96 139 182 183 grayish: 103 60 almost white: 189
+"   winners:   5 13 96 139 146 182 183 grayish: 103 60 almost white: 189
 "   others:    53 54 55 56 57 62 63 92 93 97 98 99 104 105 129 134 135 140 141 147 176 177 219
 "
 " Pink/peach
@@ -299,5 +298,5 @@ let g:colors_name = "testing_colors"
 "   others:     130 136 166 172 202 208 214 215
 "
 " Gray
-"   winners:    145 146
+"   winners:    145
 "   others:     7 8 15 59 102 232-->256
