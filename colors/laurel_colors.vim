@@ -234,14 +234,15 @@ hi pythonExceptions ctermfg=124
 hi pythonFunction ctermfg=222
 hi pythonInclude ctermfg=13
 hi pythonNumber ctermfg=67
-hi pythonOperator ctermfg=222
-"hi pythonOperator ctermfg=180
+hi pythonOperator ctermfg=180
 hi pythonQuotes ctermfg=white
 "hi pythonRepeat ctermfg=180
 hi pythonRepeat ctermfg=222
 hi pythonStatement ctermfg=65
 "hi pythonStatement ctermfg=107
-hi pythonString ctermfg=67
+hi pythonString ctermfg=250
+"   winners:        109 110 152 153 188 195
+"   others:         4 25 32 68 69 74 111 116 117
 hi pythonTripleQuotes ctermfg=248
 
 """ Colors! """
