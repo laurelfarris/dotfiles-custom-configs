@@ -209,17 +209,18 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
+
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=145
 
-hi IDLangConditional ctermfg=103
-hi IDLangStatement ctermfg=103
-
 hi IDLangRoutine ctermfg=065
+hi IDLangOperator ctermfg=065
 
-hi IDLangOperator ctermfg=180
-hi IDLangKeyword ctermfg=180
+hi IDLangConditional ctermfg=180
+hi IDLangStatement ctermfg=180
+
+hi IDLangKeyword ctermfg=103
 hi IDLangStrucvar ctermfg=white
 
 
