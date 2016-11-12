@@ -3,6 +3,7 @@
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
+# Set up to do this automatically when exiting sswidl
 alias delete_ssw='find /home/users/laurel07 -iname ssw_idl\* -execdir mv {} ~/.trash \+'
 
 export CLICOLOR=1
