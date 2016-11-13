@@ -88,6 +88,7 @@ hi zshOptions ctermfg=180
 hi zshTypes ctermfg=147
 
 hi bashSpecialVariables ctermfg=107
+hi bashStatement ctermfg=white
 
 hi shAlias ctermfg=white
 hi shConditional ctermfg=180
@@ -98,10 +99,14 @@ hi shDoubleQuote ctermfg=white
 hi shFunctionKey ctermfg=107
 hi shFunctionOne ctermfg=180
 hi shFunction ctermfg=180
+hi shLoop ctermfg=180
 hi shParen ctermfg=231
 hi shQuote ctermfg=white
+hi shRepeat ctermfg=white
 hi shSingleQuote ctermfg=white
 hi shSetList ctermfg=180
+hi shStatement ctermfg=white
+hi shTestOpr ctermfg=white
 hi shVariable ctermfg=107
 
 hi cshDblQuote ctermfg=67
