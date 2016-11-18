@@ -217,7 +217,7 @@ hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
 
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
-hi IDLangString ctermfg=145
+hi IDLangString ctermfg=67
 
 hi IDLangRoutine ctermfg=065
 hi IDLangOperator ctermfg=065
