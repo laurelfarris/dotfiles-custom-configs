@@ -23,18 +23,15 @@ function my_vi() {
 }
 alias vi='my_vi'
 
+
+## Git stuff
+
 # Enable tab completion
 source ~/dotfiles/custom-configs/git-completion.bash
 # Change command prompt
-source ~/dotfiles/custom-configs/git-prompt
+source ~/dotfiles/custom-configs/git-prompt.bash
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
-
-#    if [ -d .git ]; then
-#        line2="${char}tqq${text}(${blue}$(__git_ps1) ${dgray})\n"
-#    else
-#        line2="\r"
-#    fi;
 
 # Is 'echo -ne' actually needed here?
 function COLOR () { echo -ne "\[\e[38;5;$1m\]"; }
@@ -79,9 +76,16 @@ set_prompt () {
 
     #my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
     line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
+
+#    if [ -d .git ]; then
+#        line2="${char}tqq${text}(${blue}$(__git_ps1) ${dgray})\n"
+#    else
+#        line2="\r"
+#    fi;
+
+    line2="${char}tqq${text}(${lgray}$(__git_ps1) ${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
-    PS1=${my_title}${line1}${line3};
-    #PS1=${line1}${line3};
+    PS1=${my_title}${line1}${line2}${line3};
 }
 PROMPT_COMMAND=set_prompt

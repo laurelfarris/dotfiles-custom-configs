@@ -45,8 +45,8 @@
 # GIT_PS1_SHOWSTASHSTATE to a nonempty value. If something is stashed,
 # then a '$' will be shown next to the branch name.
 #
-# If you would like to see if there're untracked files, then you can set
-# GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there're untracked
+# If you would like to see if there are untracked files, then you can set
+# GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there are untracked
 # files, then a '%' will be shown next to the branch name.  You can
 # configure this per-repository with the bash.showUntrackedFiles
 # variable, which defaults to true once GIT_PS1_SHOWUNTRACKEDFILES is
