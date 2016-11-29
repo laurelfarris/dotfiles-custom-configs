@@ -5,6 +5,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
+"syntax keyword IDLangConditional foreach endforeach
+
 let g:colors_name = "laurel_colors"
 
 hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
@@ -212,19 +214,16 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
+hi IDLnew ctermfg=140
 
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
-
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
-
 hi IDLangRoutine ctermfg=065
 hi IDLangOperator ctermfg=065
-
 hi IDLangConditional ctermfg=180
 hi IDLangStatement ctermfg=180
-
 hi IDLangKeyword ctermfg=103
 hi IDLangStrucvar ctermfg=white
 
@@ -251,8 +250,7 @@ hi pythonString ctermfg=250
 "   others:         4 25 32 68 69 74 111 116 117
 hi pythonTripleQuotes ctermfg=248
 
-""" Colors! """
-let g:colors_name = "testing_colors"
+" Colors!
 
 " Black
 "   others: 0 16

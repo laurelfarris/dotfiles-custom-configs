@@ -16,6 +16,8 @@ function mypath2() { echo $PATH | tr ":" "\n"; }
 
 function safe_rm() { mv $@ ~/.trash; }
 alias rm='safe_rm'
+function restore() { mv ~/.trash/$@ $PWD; }
+alias res='restore'
 
 function my_vi() {
     echo -ne "\e]0; VIM: \"$1\"\007";
