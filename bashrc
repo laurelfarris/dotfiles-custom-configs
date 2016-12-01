@@ -66,8 +66,9 @@ low=${bold}${blue}${char}mqq
 
 ### Make a sweet prompt
 
-my_title=$(echo -ne "\e]0; \d \007")
+#my_title=$(echo -ne "\e]0; \d \007")
 set_prompt () {
+    my_title=$(echo -ne "\e]0; \w \007")
     my_host="@${HOSTNAME%%.*}"
     num=${#my_host}
     length=$(( $(tput cols)-(${num} + 4) ))
@@ -76,15 +77,9 @@ set_prompt () {
         my_line+=${segment}
     done
 
-    #my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
+#    my_time=echo "$(date +%a), $(date +%b) $(date +%d)  $(date +%R)"
     line1="${my_line}${text}(${lgray}@\h${dgray})${char}qq\rlqq${text}(${lgray}\w${dgray})\n"
-
-#    if [ -d .git ]; then
-#        line2="${char}tqq${text}(${blue}$(__git_ps1) ${dgray})\n"
-#    else
-#        line2="\r"
-#    fi;
-
+#    line2="\r"
     line2="${char}tqq${text}(${lgray}$(__git_ps1) ${dgray})\n"
     line3="${char}mqq${text}${arrow}${end} "
 
