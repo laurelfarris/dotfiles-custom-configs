@@ -25,8 +25,8 @@ hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
 
-hi IncSearch ctermfg=white ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
-hi Search ctermfg=none ctermbg=235 cterm=underline guifg=NONE guibg=NONE gui=underline
+hi IncSearch ctermfg=none ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
+hi Search ctermfg=none ctermbg=none cterm=underline guifg=NONE guibg=NONE gui=underline
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi CapBad ctermfg=none ctermbg=235 cterm=underline
@@ -225,7 +225,7 @@ hi IDLangOperator ctermfg=065
 hi IDLangConditional ctermfg=180
 hi IDLangStatement ctermfg=180
 hi IDLangKeyword ctermfg=103
-hi IDLangStrucvar ctermfg=white
+hi IDLangStrucvar ctermfg=103
 
 
 

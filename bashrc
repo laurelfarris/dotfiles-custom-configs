@@ -29,9 +29,9 @@ alias vi='my_vi'
 ## Git stuff
 
 # Enable tab completion
-source ~/dotfiles/custom-configs/git-completion.bash
+. $HOME/dotfiles/custom-configs/git-completion.bash
 # Change command prompt
-source ~/dotfiles/custom-configs/git-prompt.bash
+. $HOME/dotfiles/custom-configs/git-prompt.bash
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
 
