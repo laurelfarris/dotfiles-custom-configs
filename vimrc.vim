@@ -10,6 +10,7 @@ autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile,BufEnter *.hbs set ft=mustache
+autocmd BufEnter,BufRead *.md,*.markdown set wrap
 
 " source ~/Archive/vim-htmlbars-inline-syntax/plugin/htmlbars_inline_syntax.vim
 " autocmd BufRead,BufNewFile *.js HighlightInlineHbs
@@ -31,3 +32,6 @@ let g:hardtime_maxcount = 100
 
 " Use eslint for JS linting instead of jshint
 let g:syntastic_javascript_checkers = ['eslint']
+
+" Define alternative filetype names for markdown syntax highlighting
+let g:vim_markdown_fenced_languages = ['js=javascript']
