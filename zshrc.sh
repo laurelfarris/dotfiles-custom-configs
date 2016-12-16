@@ -14,3 +14,5 @@ export PATH="./node_modules/.bin:$PATH"
 
 . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
+
+export GPG_TTY=$(tty)
