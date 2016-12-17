@@ -12,7 +12,7 @@ let g:colors_name = "laurel_colors"
 hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi Character ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
-hi Comment ctermfg=243 ctermbg=NONE cterm=NONE guifg=#9a9a9a guibg=NONE gui=italic
+hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#9a9a9a guibg=NONE gui=italic
 hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 
@@ -94,9 +94,9 @@ hi bashStatement ctermfg=white
 
 hi shAlias ctermfg=white
 hi shConditional ctermfg=180
-hi shDerefSimple ctermfg=186
-hi shDerefSpecial ctermfg=186
-hi shDerefVar ctermfg=186
+hi shDerefSimple ctermfg=white
+hi shDerefSpecial ctermfg=white
+hi shDerefVar ctermfg=white
 hi shDoubleQuote ctermfg=white
 hi shFunctionKey ctermfg=107
 hi shFunctionOne ctermfg=180
@@ -107,7 +107,7 @@ hi shQuote ctermfg=white
 hi shRepeat ctermfg=white
 hi shSingleQuote ctermfg=white
 hi shSetList ctermfg=180
-hi shStatement ctermfg=white
+hi shStatement ctermfg=107
 hi shTestOpr ctermfg=white
 hi shVariable ctermfg=107
 
@@ -214,18 +214,18 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
-hi IDLnew ctermfg=140
 
-hi IDLangContinueLine cterm=none ctermbg=none ctermfg=238
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=59
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
 hi IDLangRoutine ctermfg=065
-hi IDLangOperator ctermfg=065
+hi IDLangOperator ctermfg=12
 hi IDLangConditional ctermfg=180
 hi IDLangStatement ctermfg=180
 hi IDLangKeyword ctermfg=103
 hi IDLangStrucvar ctermfg=103
+hi IDLangSSW ctermfg=229
 
 
 
@@ -233,7 +233,7 @@ hi pythonBuiltIn ctermfg=65
 "hi pythonBuiltIn ctermfg=107
 hi pythonConditional ctermfg=222
 "hi pythonConditional ctermfg=180
-hi pythonDocstring ctermfg=243
+hi pythonDocstring ctermfg=245
 hi pythonExceptions ctermfg=124
 "hi pythonFunction ctermfg=180
 hi pythonFunction ctermfg=222
@@ -245,7 +245,7 @@ hi pythonQuotes ctermfg=white
 hi pythonRepeat ctermfg=222
 hi pythonStatement ctermfg=65
 "hi pythonStatement ctermfg=107
-hi pythonString ctermfg=250
+hi pythonString ctermfg=67
 "   winners:        109 110 152 153 188 195
 "   others:         4 25 32 68 69 74 111 116 117
 hi pythonTripleQuotes ctermfg=248
@@ -256,7 +256,7 @@ hi pythonTripleQuotes ctermfg=248
 "   others: 0 16
 "
 " Blue
-"   winners:        12 67 75 109 110 152 153 188 195
+"   winners:        12 67 75 109 110 152 153  almost white: 188 195
 "   kinda bright:   159
 "   others:         17 18 4 19 20 21 25 32 33 39 45 68 69 74 81 87 111 116 117 123
 
