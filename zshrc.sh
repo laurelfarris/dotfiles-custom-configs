@@ -10,7 +10,7 @@ alias gs='git status'
 
 export DJANGO_ENV=local
 
-export PATH="./node_modules/.bin:$PATH"
+export PATH="./node_modules/.bin:$PATH:`yarn global bin`"
 
 . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
