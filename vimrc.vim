@@ -20,6 +20,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 let g:startify_custom_header = ['']
+let g:exclude = ["jedi-vim.vim"]
 
 " Position cursor between to braces/parens on return
 let g:delimitMate_expand_cr = 1
@@ -35,3 +36,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Define alternative filetype names for markdown syntax highlighting
 let g:vim_markdown_fenced_languages = ['js=javascript']
+
+" Missing html tags (html5 + flexi)
+autocmd BufEnter *.js,*.hbs syn keyword htmlTagName contained section article screen page box vbox hbox centered fill grid container
