@@ -16,7 +16,7 @@ hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#9a9a9a guibg=NONE gui=itali
 hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
 
-" Cursor seems to have no effect
+" Cursor seems to have no effect...
 hi Cursor ctermfg=200 ctermbg=100 cterm=underline guifg=#182227 guibg=#9ea7a6 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
@@ -25,11 +25,11 @@ hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
 
-hi IncSearch ctermfg=none ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
+hi IncSearch ctermfg=200 ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
 hi Search ctermfg=none ctermbg=none cterm=underline guifg=NONE guibg=NONE gui=underline
 
-hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi CapBad ctermfg=none ctermbg=235 cterm=underline
+hi SpellBad ctermfg=124 ctermbg=none cterm=none
+hi CapBad ctermfg=124 ctermbg=none cterm=none
 
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
 hi Define ctermfg=200
