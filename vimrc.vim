@@ -7,7 +7,7 @@ hi NonText ctermbg=black guibg=#000000
 hi ColorColumn ctermbg=234 guibg=#101010
 hi CursorLine ctermbg=234 guibg=#101010
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
-autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
+autocmd BufEnter,BufRead *.elm,*.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile,BufEnter *.hbs set ft=mustache
 autocmd BufEnter,BufRead *.md,*.markdown set wrap
@@ -20,7 +20,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 let g:startify_custom_header = ['']
-let g:exclude = ["jedi-vim.vim"]
+let g:exclude = ["jedi-vim.vim", "syntastic.vim"]
 
 " Position cursor between to braces/parens on return
 let g:delimitMate_expand_cr = 1
@@ -36,6 +36,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Define alternative filetype names for markdown syntax highlighting
 let g:vim_markdown_fenced_languages = ['js=javascript']
+
+" Use neomake instead of syntastic
 
 " Missing html tags (html5 + flexi)
 autocmd BufEnter *.js,*.hbs syn keyword htmlTagName contained section article screen page box vbox hbox centered fill grid container
