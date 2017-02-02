@@ -9,68 +9,69 @@ endif
 
 let g:colors_name = "laurel_colors"
 
-hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi Character ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
-hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#9a9a9a guibg=NONE gui=italic
+hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE
+hi Character ctermfg=67 ctermbg=NONE cterm=NONE
+hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE
+hi Comment ctermfg=59 ctermbg=NONE cterm=NONE
 hi Conditional ctermfg=180
-hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
+hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 
 " Cursor seems to have no effect...
-hi Cursor ctermfg=200 ctermbg=100 cterm=underline guifg=#182227 guibg=#9ea7a6 gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#2e373b gui=NONE
+hi Cursor ctermfg=200 ctermbg=none cterm=underline
+hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
 hi CursorLineNr ctermfg=227 ctermbg=233
-hi LineNr ctermfg=102 ctermbg=0 cterm=NONE guifg=#84898c guibg=#2a343a gui=NONE
+hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
 
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline guifg=#dda790 guibg=NONE gui=underline
+hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
-hi IncSearch ctermfg=200 ctermbg=none cterm=underline guifg=#182227 guibg=#8bb664 gui=NONE
-hi Search ctermfg=none ctermbg=none cterm=underline guifg=NONE guibg=NONE gui=underline
+hi IncSearch ctermfg=280 ctermbg=none cterm=underline
+hi Search ctermfg=280 ctermbg=none cterm=none
 
-hi SpellBad ctermfg=124 ctermbg=none cterm=none
-hi CapBad ctermfg=124 ctermbg=none cterm=none
+hi SpellBad ctermfg=none ctermbg=none cterm=underline
+hi SpellCap ctermfg=none ctermbg=none cterm=underline
+hi SpellRare ctermfg=none ctermbg=none cterm=none
 
-hi Define ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+hi Define ctermfg=180 ctermbg=NONE cterm=NONE
 hi Define ctermfg=200
 hi Delimiter ctermfg=239
-hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f0f0f0 guibg=#43820d gui=bold
-hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE guifg=#f0f0f0 guibg=#1c3657 gui=NONE
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#880708 guibg=NONE gui=NONE
-hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f0f0f0 guibg=#204a87 gui=bold
-hi Directory ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
+hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold
+hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE
+hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE
+hi DiffText ctermfg=231 ctermbg=24 cterm=bold
+hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
 hi Error ctermbg=none ctermfg=none cterm=none
-hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Float ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi Folded ctermfg=247 ctermbg=16 cterm=NONE guifg=#9a9a9a guibg=#182227 gui=NONE
+hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Float ctermfg=68 ctermbg=NONE cterm=NONE
+hi Folded ctermfg=247 ctermbg=16 cterm=NONE
 hi Function ctermfg=107
-hi Identifier ctermfg=white ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-hi Label ctermfg=107 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
-hi NonText ctermfg=59 ctermbg=black cterm=NONE guifg=#414e58 guibg=#232c31 gui=NONE
-"hi Normal ctermfg=231 ctermbg=16 cterm=NONE guifg=#f0f0f0 guibg=#252c31 gui=NONE
-hi Number ctermfg=67 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi Operator ctermfg=67 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
-hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
+hi Identifier ctermfg=white ctermbg=NONE cterm=NONE
+hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE
+hi Label ctermfg=107 ctermbg=NONE cterm=NONE
+hi NonText ctermfg=59 ctermbg=black cterm=NONE
+"hi Normal ctermfg=231 ctermbg=16 cterm=NONE
+hi Number ctermfg=67 ctermbg=NONE cterm=NONE
+hi Operator ctermfg=67 ctermbg=NONE cterm=NONE
+hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE
+hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE
+hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE
 
-hi Special ctermfg=white ctermbg=NONE cterm=NONE guifg=#f0f0f0 guibg=NONE gui=NONE
-hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE guifg=#414e58 guibg=#252c31 gui=NONE
-hi Statement ctermfg=107 ctermbg=NONE cterm=NONE guifg=#dda790 guibg=NONE gui=NONE
-hi StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#f0f0f0 guibg=#575e61 gui=bold
-hi StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE guifg=#f0f0f0 guibg=#575e61 gui=NONE
-hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi String ctermfg=231 ctermbg=NONE cterm=NONE guifg=#8bb664 guibg=NONE gui=NONE
-hi Tag ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
-hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f0f0f0 guibg=NONE gui=bold
-hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold guifg=#9a9a9a guibg=NONE gui=inverse,bold,italic
-hi Type ctermfg=153 ctermbg=NONE cterm=NONE guifg=#b5d8f6 guibg=NONE gui=NONE
+hi Special ctermfg=white ctermbg=NONE cterm=NONE
+hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE
+hi Statement ctermfg=107 ctermbg=NONE cterm=NONE
+hi StatusLine ctermfg=231 ctermbg=59 cterm=bold
+hi StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE
+hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE
+hi String ctermfg=231 ctermbg=NONE cterm=NONE
+hi Tag ctermfg=153 ctermbg=NONE cterm=NONE
+hi Title ctermfg=231 ctermbg=NONE cterm=bold
+hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
+hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi Type ctermfg=white
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#252c31 guibg=#252c31 gui=NONE
-hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3f4b52 gui=NONE
-hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+"hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE
+hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
+hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
 
 "hi vimCommentString ctermfg=243
 "hi vimCommentTitle ctermfg=243
@@ -289,7 +290,7 @@ hi pythonTripleQuotes ctermfg=248
 " Pink/peach
 "   orange:     137 173 180 223 216
 "   peach:      95 131 167 138   174(complements 180)  181 217
-"   pink:       132 139 175 218 168
+"   pink:       132 139 168 175 218
 "   pale:       224 225
 "   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
 "
