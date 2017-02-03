@@ -12,7 +12,7 @@ let g:colors_name = "laurel_colors"
 hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE
 hi Character ctermfg=67 ctermbg=NONE cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE
-hi Comment ctermfg=59 ctermbg=NONE cterm=NONE
+hi Comment ctermfg=245 ctermbg=NONE cterm=NONE
 hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 
@@ -25,8 +25,8 @@ hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
-hi IncSearch ctermfg=280 ctermbg=none cterm=underline
-hi Search ctermfg=280 ctermbg=none cterm=none
+hi IncSearch ctermfg=221 ctermbg=none cterm=underline
+hi Search ctermfg=221 ctermbg=none cterm=none
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi SpellCap ctermfg=none ctermbg=none cterm=underline
