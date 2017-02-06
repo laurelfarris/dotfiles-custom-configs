@@ -17,11 +17,11 @@ hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 
 " Cursor seems to have no effect...
-hi Cursor ctermfg=200 ctermbg=none cterm=underline
+"hi Cursor ctermfg=none ctermbg=none cterm=underline
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
-hi CursorLineNr ctermfg=227 ctermbg=233
-hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
+hi CursorLineNr ctermfg=227 ctermbg=233 cterm=none
+hi LineNr ctermfg=102 ctermbg=0 cterm=none
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
