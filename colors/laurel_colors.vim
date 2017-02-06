@@ -25,8 +25,8 @@ hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
-hi IncSearch ctermfg=221 ctermbg=none cterm=underline
-hi Search ctermfg=221 ctermbg=none cterm=none
+hi IncSearch ctermfg=227 ctermbg=none cterm=none
+hi Search ctermfg=227 ctermbg=none cterm=none
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi SpellCap ctermfg=none ctermbg=none cterm=underline

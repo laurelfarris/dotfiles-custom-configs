@@ -1,6 +1,7 @@
 "set spellfile=./en.utf-8.add
 "
 
+set sidescroll=1
 set number
 set cursorline
 set conceallevel=0
