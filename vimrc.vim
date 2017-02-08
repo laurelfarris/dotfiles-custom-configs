@@ -1,5 +1,6 @@
-"set spellfile=./en.utf-8.add
 "
+" list where words are ADDED for zg (add to word list) and zw commands
+set spellfile=${HOME}/dotfiles/custom-configs/en.utf-8.add
 
 set sidescroll=1
 set number
@@ -17,6 +18,8 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 "autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
+
+autocmd BufEnter,BufRead *.tex set spell
 
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle

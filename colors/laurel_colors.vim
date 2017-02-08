@@ -18,19 +18,18 @@ hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 
 " Cursor seems to have no effect...
 "hi Cursor ctermfg=none ctermbg=none cterm=underline
-hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
-hi CursorLineNr ctermfg=227 ctermbg=233 cterm=none
 hi LineNr ctermfg=102 ctermbg=0 cterm=none
-
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
-
-hi IncSearch ctermfg=227 ctermbg=none cterm=none
-hi Search ctermfg=227 ctermbg=none cterm=none
+hi CursorLineNr ctermfg=227 ctermbg=233 cterm=none
+hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
+hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
+hi Search ctermfg=none ctermbg=234 cterm=inverse
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi SpellCap ctermfg=none ctermbg=none cterm=underline
 hi SpellRare ctermfg=none ctermbg=none cterm=none
+
+hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE
 hi Define ctermfg=200
@@ -75,6 +74,7 @@ hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
 
 "hi vimCommentString ctermfg=243
 "hi vimCommentTitle ctermfg=243
+hi vimEnvvar ctermfg=white
 hi vimFgBgAttrib ctermfg=180
 hi vimFuncName ctermfg=180
 hi vimHiAttrib ctermfg=180

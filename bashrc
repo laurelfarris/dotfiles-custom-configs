@@ -1,5 +1,9 @@
 #. /home/local/etc/bashrc
 
+# Press spacebar after typing, e.g. !! to retrieve previous command.
+# This will expand the command before executing it.
+bind Space:magic-space
+
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
