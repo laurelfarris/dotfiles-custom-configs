@@ -69,8 +69,11 @@ low=${bold}${blue}${char}mqq
 
 ### Make a sweet prompt
 
+
+
 #my_title=$(echo -ne "\e]0; \d \007")
 set_prompt () {
+    #my_title=$(echo -n "\e]0; $(date +%H:%M:%S) \007")
     my_title=$(echo -ne "\e]0; \w \007")
     my_host="@${HOSTNAME%%.*}"
     num=${#my_host}

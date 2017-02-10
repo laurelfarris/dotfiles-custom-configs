@@ -4,7 +4,7 @@ set spellfile=${HOME}/dotfiles/custom-configs/en.utf-8.add
 
 set sidescroll=1
 set number
-set cursorline
+"set cursorline
 set conceallevel=0
 set splitbelow
 set nojoinspaces
