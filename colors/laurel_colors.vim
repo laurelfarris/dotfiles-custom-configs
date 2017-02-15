@@ -26,7 +26,7 @@ hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
 hi Search ctermfg=none ctermbg=234 cterm=inverse
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi SpellCap ctermfg=none ctermbg=none cterm=underline
+hi SpellCap ctermfg=none ctermbg=none cterm=none
 hi SpellRare ctermfg=none ctermbg=none cterm=none
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
@@ -54,7 +54,7 @@ hi Operator ctermfg=67 ctermbg=NONE cterm=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE
 hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE
-
+hi Readlineinclude ctermfg=white ctermbg=NONE cterm=NONE
 hi Special ctermfg=white ctermbg=NONE cterm=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE
@@ -216,12 +216,12 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
 
-hi IDLangContinueLine cterm=none ctermbg=none ctermfg=59
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=236
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
 hi IDLangRoutine ctermfg=065
-hi IDLangOperator ctermfg=12
+hi IDLangOperator ctermfg=67
 hi IDLangConditional ctermfg=180
 hi IDLangStatement ctermfg=180
 hi IDLangKeyword ctermfg=103

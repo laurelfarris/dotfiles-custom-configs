@@ -9,7 +9,7 @@ alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
 
 export CLICOLOR=1
-LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;065:*.png=38;5;103:*.jpg=38;5;103:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;255:*.png=38;5;107:*.jpg=38;5;107:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 # Do the same thing! Which is better?
@@ -22,15 +22,13 @@ function restore() { mv ~/.trash/$@ $PWD; }
 alias res='restore'
 
 function my_vi() {
-    
     echo -ne "\e]0; VIM: \"$1\"\007";
     vim $1
-}
+    }
 alias vi='my_vi'
 
 
 ## Git stuff
-
 # Enable tab completion
 . $HOME/dotfiles/custom-configs/git-completion.bash
 # Change command prompt
@@ -38,7 +36,7 @@ alias vi='my_vi'
 # Unstaged (*) and staged (+) changes will be shown next to the branch name.
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-# Is 'echo -ne' actually needed here?
+## Colors
 function COLOR () { echo -ne "\[\e[38;5;$1m\]"; }
 dgray=$(COLOR 238)
 lgray=$(COLOR 245)
@@ -68,8 +66,6 @@ low=${bold}${blue}${char}mqq
 
 
 ### Make a sweet prompt
-
-
 
 #my_title=$(echo -ne "\e]0; \d \007")
 set_prompt () {
