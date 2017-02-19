@@ -220,12 +220,12 @@ hi IDLangContinueLine cterm=none ctermbg=none ctermfg=236
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
-hi IDLangRoutine ctermfg=065
+hi IDLangRoutine ctermfg=180
 hi IDLangOperator ctermfg=67
-hi IDLangConditional ctermfg=180
-hi IDLangStatement ctermfg=180
-hi IDLangKeyword ctermfg=103
-hi IDLangStrucvar ctermfg=103
+hi IDLangConditional ctermfg=107
+hi IDLangStatement ctermfg=107
+hi IDLangKeyword ctermfg=white
+hi IDLangStrucvar ctermfg=white
 hi IDLangSSW ctermfg=229
 
 
