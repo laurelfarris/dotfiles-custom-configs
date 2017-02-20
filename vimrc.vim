@@ -1,26 +1,36 @@
+set mouse=a
 set cursorline
 set nu
-hi Normal guibg=#000000
-hi LineNr ctermbg=black guibg=#000000
-hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#dfdf04 guibg=#070707
-hi NonText ctermbg=black guibg=#000000
-hi ColorColumn ctermbg=234 guibg=#101010
-hi CursorLine ctermbg=234 guibg=#101010
+set nuw=6
+hi Normal guibg=#1d1f21
+hi LineNr guifg=#626267 guibg=#1d1f21
+hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#aaaaac guibg=#303137
+hi clear SignColumn
+hi NonText ctermbg=black guibg=#1d1f21
+hi ColorColumn ctermbg=234 guibg=#222426
+hi CursorLine ctermbg=234 guibg=#202224
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile,BufEnter *.hbs set ft=mustache
 autocmd BufEnter,BufRead *.md,*.markdown set wrap
 
+" colorscheme base16-tomorrow-night
+
 " source ~/Archive/vim-htmlbars-inline-syntax/plugin/htmlbars_inline_syntax.vim
 " autocmd BufRead,BufNewFile *.js HighlightInlineHbs
+
+augroup my_neomake_signs
+    au!
+    autocmd ColorScheme *
+                \ hi clear NeomakeErrorSignDefault
+augroup END
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 let g:startify_custom_header = ['']
-let g:exclude = ["jedi-vim.vim", "syntastic.vim"]
 
 " Position cursor between to braces/parens on return
 let g:delimitMate_expand_cr = 1
