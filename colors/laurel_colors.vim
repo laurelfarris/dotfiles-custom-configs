@@ -26,8 +26,8 @@ hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
 hi Search ctermfg=none ctermbg=234 cterm=inverse
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi SpellCap ctermfg=none ctermbg=none cterm=none
-hi SpellRare ctermfg=none ctermbg=none cterm=none
+hi SpellCap ctermfg=01 ctermbg=none cterm=none
+hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
 
@@ -222,8 +222,8 @@ hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
 hi IDLangRoutine ctermfg=180
 hi IDLangOperator ctermfg=67
-hi IDLangConditional ctermfg=107
-hi IDLangStatement ctermfg=107
+hi IDLangConditional ctermfg=65
+hi IDLangStatement ctermfg=65
 hi IDLangKeyword ctermfg=white
 hi IDLangStrucvar ctermfg=white
 hi IDLangSSW ctermfg=229
