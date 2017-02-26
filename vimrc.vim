@@ -47,7 +47,7 @@ call dein#add('davidhalter/jedi-vim', {'if': 0})
 
 " Make passive mode the default... so I don't punch my computer.
 let g:syntastic_mode_map = {
-    \ "mode": "passive",
+    \ "mode": "active",
     \ "active_filetypes": ["ruby", "php"],
     \ "passive_filetypes": ["puppet"] }
 
