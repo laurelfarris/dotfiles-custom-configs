@@ -142,8 +142,8 @@ hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
-hi texCite ctermfg=180
-hi texRefZone ctermfg=107
+hi texCite ctermfg=103
+hi texRefZone ctermfg=103
 "hi texParen ctermfg=200
 " All verbatim text?
 hi texZone ctermfg=245
@@ -216,7 +216,7 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
 
-hi IDLangContinueLine cterm=none ctermbg=none ctermfg=236
+hi IDLangContinueLine cterm=none ctermbg=none ctermfg=240
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
 hi IDLangString ctermfg=67
@@ -227,6 +227,9 @@ hi IDLangStatement ctermfg=65
 hi IDLangKeyword ctermfg=white
 hi IDLangStrucvar ctermfg=white
 hi IDLangSSW ctermfg=229
+hi IDLangImportant ctermfg=01
+" Red
+"   others:       01 09 52 88 160 196 124
 
 
 
@@ -256,35 +259,18 @@ hi pythonTripleQuotes ctermfg=248
 " Black
 "   others: 0 16
 "
-" Blue
-"   winners:        12 67 75 109 110 152 153  almost white: 188 195
-"   kinda bright:   159
-"   others:         17 18 4 19 20 21 25 32 33 39 45 68 69 74 81 87 111 116 117 123
-
-" Cyan
-"   winners:        66
-"   kinda bright:   36 73
-"   others:         6 14 23 24 30 31 37 38 43 44 50 61 79 80 86 115 122
-"
-" 'Seaweed'
-"   winners:       65 72 107 108 150 151 157 158   Really pale: 193 194
-"   kinda bright:  29 71
-"
-" Green
-"   winners:       64 107 144 149 192
-"   too bright:    76 82 112 118 190
-"   kinda bright:  70 77 78 83 84 85 106 113 120 191
-"   others:        2 10 22 28 34 35 46 47 48 49 58 101 114 119 121 142 143 148 154 155 156
-"
-"
-" Red
-"   others:       01 09 52 88 160 196 124
-"
-" Magenta
-"   others:         89 90 91 127 128 133 161 162 163 164 165 170 171 199 200 201 207
+" Blue/cyan/green
+"   25 32 39 45 69 81 87 123 159 6 14 23 24 30 31 37 38 43 44 50 79 80 86 115 122
+"   12 66 73 67 68 74 75 109 110 111 116 117 152 153
+"   65 72 107 108 150 151 157 158
+"   64 107 144 149 192 188 193 194 195 
+"     108 is nice. Use this for something :)
+"   106 113 120 191
+"   22 28 35 58 101 114 119 121 142 143 148 154 155 156
 "
 " Purple
-"   winners:   5 13 96 139 146 182 183 grayish: 103 60 almost white: 189
+"   winners:
+"   189 146 183 103 60 182 139 96 183
 "   others:    53 54 55 56 57 62 63 92 93 97 98 99 104 105 129 134 135 140 141 147 176 177 219
 "
 " Pink/peach
@@ -293,6 +279,9 @@ hi pythonTripleQuotes ctermfg=248
 "   pink:       132 139 168 175 218
 "   pale:       224 225
 "   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
+"
+" Red      01 09 52 88 160 196 124
+" Magenta  89 90 91 127 128 133 161 162 163 164 165 170 171 199 200 201 207
 "
 " Yellow
 "   winners:    227 228 229 230
