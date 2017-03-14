@@ -16,3 +16,9 @@ export PATH="./node_modules/.bin:$PATH:`yarn global bin`"
 # . $HOME/.asdf/completions/asdf.bash
 
 export GPG_TTY=$(tty)
+
+# export TERM="screen-256color"
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+export GIT_EDITOR="$VISUAL"

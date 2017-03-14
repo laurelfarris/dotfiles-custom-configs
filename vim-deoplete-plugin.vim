@@ -17,6 +17,9 @@ let g:deoplete#omni#input_patterns = {}
 let g:deoplete#omni#functions.elm = ['elm#Complete']
 let g:deoplete#omni#input_patterns.elm = '[^ \t]+'
 let g:deoplete#sources.elm = ['omni'] + g:deoplete#sources._
+
+" Fixing autocomplete bug, see: https://github.com/offa/nvim-config/issues/36
+let g:deoplete#auto_complete_delay=50
 "===============================================================================
 " Plugin Keymappings
 "===============================================================================

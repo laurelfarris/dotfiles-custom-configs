@@ -2,6 +2,11 @@ set mouse=a
 set cursorline
 set nu
 set nuw=6
+
+
+colorscheme base16-tomorrow-night
+
+
 hi Normal guibg=#1d1f21
 hi LineNr guifg=#626267 guibg=#1d1f21
 hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#aaaaac guibg=#303137
@@ -15,7 +20,6 @@ autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile,BufEnter *.hbs set ft=mustache
 autocmd BufEnter,BufRead *.md,*.markdown set wrap
 
-" colorscheme base16-tomorrow-night
 
 " source ~/Archive/vim-htmlbars-inline-syntax/plugin/htmlbars_inline_syntax.vim
 " autocmd BufRead,BufNewFile *.js HighlightInlineHbs
@@ -51,3 +55,23 @@ let g:vim_markdown_fenced_languages = ['js=javascript']
 
 " Missing html tags (html5 + flexi)
 autocmd BufEnter *.js,*.hbs syn keyword htmlTagName contained section article screen page box vbox hbox centered fill grid container
+
+" Tagbar
+noremap <Leader>tt :TagbarOpenAutoClose<CR>
+
+
+" ctags
+set tags=./.tags,.tags
+
+
+" Elm ctags
+function! ElmAutoTag()
+    exe 'silent !rm -rf ctags'
+    exe 'silent !ctags -Rf .tags --languages=-all,+Elm'
+    exe 'redraw!'
+endfunction
+
+augroup autotag
+    au!
+    autocmd BufWritePost,FileWritePost *.elm call ElmAutoTag ()
+augroup END
