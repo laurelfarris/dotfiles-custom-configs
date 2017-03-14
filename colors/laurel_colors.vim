@@ -17,7 +17,7 @@ hi Conditional ctermfg=180
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 
 " Cursor seems to have no effect...
-"hi Cursor ctermfg=none ctermbg=none cterm=underline
+hi Cursor ctermfg=none ctermbg=none cterm=underline
 hi LineNr ctermfg=102 ctermbg=0 cterm=none
 hi CursorLineNr ctermfg=227 ctermbg=233 cterm=none
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
@@ -48,7 +48,7 @@ hi Identifier ctermfg=white ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE
 hi NonText ctermfg=59 ctermbg=black cterm=NONE
-"hi Normal ctermfg=231 ctermbg=16 cterm=NONE
+hi Normal ctermfg=231 ctermbg=16 cterm=NONE
 hi Number ctermfg=67 ctermbg=NONE cterm=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE
@@ -67,7 +67,7 @@ hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
 hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi Type ctermfg=white
-"hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE
 hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
 hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -263,7 +263,7 @@ hi pythonTripleQuotes ctermfg=248
 "   25 32 39 45 69 81 87 123 159 6 14 23 24 30 31 37 38 43 44 50 79 80 86 115 122
 "   12 66 73 67 68 74 75 109 110 111 116 117 152 153
 "   65 72 107 108 150 151 157 158
-"   64 107 144 149 192 188 193 194 195 
+"   64 107 144 149 192 188 193 194 195
 "     108 is nice. Use this for something :)
 "   106 113 120 191
 "   22 28 35 58 101 114 119 121 142 143 148 154 155 156

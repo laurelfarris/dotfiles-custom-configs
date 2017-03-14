@@ -7,6 +7,7 @@ alias mm='./manage.py makemigrations'
 #alias ipy='ipython --matplotlib --pylab'
 alias activate='source env/bin/activate'
 
+alias chrome='open -a Google\ Chrome'
 alias ipy='ipython'
 alias jup='jupyter notebook'
 alias jup2='open -a safari http://localhost:8888/'
