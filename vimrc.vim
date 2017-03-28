@@ -1,14 +1,21 @@
 "
+
 " list where words are ADDED for zg (add to word list) and zw commands
 set spellfile=${HOME}/dotfiles/custom-configs/en.utf-8.add
 
 set sidescroll=1
 set number
-"set cursorline
 set conceallevel=0
 set splitbelow
 set nojoinspaces
 
+" Reload color scheme
+"source $HOME/dotfiles/custom_configs/colors/laurel_colors.vim
+
+" Allows syntax highlighting of current line number and background
+set cursorline
+
+" Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
 nnoremap Y y$
 
@@ -17,14 +24,34 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-"autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
+" Make a function from '0read' onward. Call date in preferred format :)
+
+let g:screen_size_restore_pos = 1
+
+" Put modified date at top of new idl files.
+autocmd BufNewFile *.pro 0read !echo "; Last modified:   " $(date)
+
+" Update modify time of existing files when writing to them,
+"   and then return cursor to previous position
+"   Bit of a problem when returning to position for files longer than
+"   screen length... returns row at bottom of screen, not original screen pos.
+"   PROBLEM if 'last modified' line is at top already. Mark is deleted once
+"   line is... need to learn vim functions, if statements, etc.
+" autocmd BufWrite *.pro :normal H mh ``
+"autocmd BufWrite *.pro ks | 2d | 1read !echo "; Last modified:   " $(date)
+"autocmd BufWritePost *.pro :normal ``
+"autocmd BufWritePost *.pro :normal `h zt ``
+
+" Wait until actually exiting to insert time stamp (not working...)
+"autocmd vimLeavePre *.pro 0read !echo "; Last modified:   " $(date)
+
+autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
 
 autocmd BufEnter,BufRead *.tex set spell
-
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle
 autocmd BufEnter,BufRead *.tex hi clear texBoldItalStyle
-autocmd BufEnter,BufRead *.tex hi clear SpellBad
+"autocmd BufEnter,BufRead *.tex hi clear SpellBad
 
 autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+"""+ end=+"""+ keepend "excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
 autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+'''+ end=+'''+ keepend excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
@@ -47,7 +74,7 @@ call dein#add('davidhalter/jedi-vim', {'if': 0})
 
 " Make passive mode the default... so I don't punch my computer.
 let g:syntastic_mode_map = {
-    \ "mode": "active",
+    \ "mode": "passive",
     \ "active_filetypes": ["ruby", "php"],
     \ "passive_filetypes": ["puppet"] }
 

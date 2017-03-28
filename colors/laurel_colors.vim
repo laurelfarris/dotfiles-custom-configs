@@ -19,7 +19,7 @@ hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 " Cursor seems to have no effect...
 hi Cursor ctermfg=none ctermbg=none cterm=underline
 hi LineNr ctermfg=102 ctermbg=0 cterm=none
-hi CursorLineNr ctermfg=227 ctermbg=233 cterm=none
+hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
 hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
@@ -78,11 +78,13 @@ hi vimEnvvar ctermfg=white
 hi vimFgBgAttrib ctermfg=180
 hi vimFuncName ctermfg=180
 hi vimHiAttrib ctermfg=180
+hi vimLineComment ctermfg=245
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimOption ctermfg=180
 hi vimSynContains ctermfg=180
 hi vimSynRegOpt ctermfg=180
+hi vimVar ctermfg=180
 
 hi zshCommands ctermfg=107
 hi zshDelimiter ctermfg=147
@@ -118,6 +120,7 @@ hi tcshSQuote ctermfg=67
 
 hi bibKey ctermfg=180
 
+hi texComment ctermfg=245
 hi texSpecialChar ctermfg=238
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=67
@@ -148,6 +151,7 @@ hi texRefZone ctermfg=103
 " All verbatim text?
 hi texZone ctermfg=245
 hi texString ctermfg=250
+hi texSpecialKey ctermfg=131
 
 hi texGreek ctermfg=107
 hi texSuperscript ctermfg=white
@@ -160,6 +164,7 @@ hi texMathZoneE ctermfg=white
 hi texMathZoneW ctermfg=white
 hi texMathZoneX ctermfg=white
 hi texMathZoneY ctermfg=white
+hi texOnlyMath ctermfg=none ctermbg=none cterm=bold
 
 " Latex things I probably won't use
 "hi texDocZone ctermfg=white  \url{texDocZone}
@@ -215,7 +220,7 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
-
+hi IDLangComment ctermfg=245
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=240
 hi IDLangNumber ctermfg=67
 hi IDLangRealNumber ctermfg=67
@@ -227,6 +232,7 @@ hi IDLangStatement ctermfg=65
 hi IDLangKeyword ctermfg=white
 hi IDLangStrucvar ctermfg=white
 hi IDLangSSW ctermfg=229
+hi IDLangSystem ctermfg=65
 hi IDLangImportant ctermfg=01
 " Red
 "   others:       01 09 52 88 160 196 124
