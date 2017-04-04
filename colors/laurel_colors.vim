@@ -29,7 +29,7 @@ hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi SpellCap ctermfg=01 ctermbg=none cterm=none
 hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline
+hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline
 
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE
 hi Define ctermfg=200
@@ -220,23 +220,24 @@ hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 
+" IDL
 hi IDLangComment ctermfg=245
 hi IDLangContinueLine cterm=none ctermbg=none ctermfg=240
-hi IDLangNumber ctermfg=67
-hi IDLangRealNumber ctermfg=67
-hi IDLangString ctermfg=67
+hi IDLangImportant ctermfg=131
+hi IDLangSSW ctermfg=229
+
 hi IDLangRoutine ctermfg=180
-hi IDLangOperator ctermfg=67
-hi IDLangConditional ctermfg=65
+hi IDLangConditional ctermfg=96
 hi IDLangStatement ctermfg=65
+hi IDLangSystem ctermfg=144
+
 hi IDLangKeyword ctermfg=white
 hi IDLangStrucvar ctermfg=white
-hi IDLangSSW ctermfg=229
-hi IDLangSystem ctermfg=65
-hi IDLangImportant ctermfg=01
-" Red
-"   others:       01 09 52 88 160 196 124
 
+hi IDLangNumber ctermfg=67
+hi IDLangRealNumber ctermfg=67
+hi IDLangOperator ctermfg=67
+hi IDLangString ctermfg=67
 
 
 hi pythonBuiltIn ctermfg=65
@@ -266,7 +267,7 @@ hi pythonTripleQuotes ctermfg=248
 "   others: 0 16
 "
 " Blue/cyan/green
-"   25 32 39 45 69 81 87 123 159 6 14 23 24 30 31 37 38 43 44 50 79 80 86 115 122
+"    69 81 87 123 159 6 14 23 24 30 31 37 38 43 44 50 79 80 86 115 122
 "   12 66 73 67 68 74 75 109 110 111 116 117 152 153
 "   65 72 107 108 150 151 157 158
 "   64 107 144 149 192 188 193 194 195
@@ -287,16 +288,14 @@ hi pythonTripleQuotes ctermfg=248
 "   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
 "
 " Red      01 09 52 88 160 196 124
-" Magenta  89 90 91 127 128 133 161 162 163 164 165 170 171 199 200 201 207
+" Magenta  133 170 207
+"    bright: 161 162 163 171 199
 "
 " Yellow
 "   winners:    227 228 229 230
-"   icky:       3 94 100 226
 "   others:     11 178 179 184 185 186 187 220
 "
-" Orange
-"   winners:    221 222
-"   others:     130 136 166 172 202 208 214 215
+" Orange        130 166 172 202 208 214 215 221 222 
 "
 " Gray
 "   winners:    145
