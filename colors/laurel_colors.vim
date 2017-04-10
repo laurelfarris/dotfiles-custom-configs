@@ -96,6 +96,7 @@ hi bashSpecialVariables ctermfg=107
 hi bashStatement ctermfg=white
 
 hi shAlias ctermfg=white
+hi shComment ctermfg=245
 hi shConditional ctermfg=180
 hi shDerefSimple ctermfg=white
 hi shDerefSpecial ctermfg=white
@@ -295,7 +296,7 @@ hi pythonTripleQuotes ctermfg=248
 "   winners:    227 228 229 230
 "   others:     11 178 179 184 185 186 187 220
 "
-" Orange        130 166 172 202 208 214 215 221 222 
+" Orange        130 166 172 202 208 214 215 221 222
 "
 " Gray
 "   winners:    145
