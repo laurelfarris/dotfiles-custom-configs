@@ -39,7 +39,7 @@ hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold
 hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
-hi Error ctermbg=none ctermfg=none cterm=none
+hi Error ctermbg=white ctermfg=65 cterm=none
 hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Float ctermfg=68 ctermbg=NONE cterm=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE
@@ -242,21 +242,16 @@ hi IDLangString ctermfg=67
 
 
 hi pythonBuiltIn ctermfg=65
-"hi pythonBuiltIn ctermfg=107
-hi pythonConditional ctermfg=222
-"hi pythonConditional ctermfg=180
+hi pythonConditional ctermfg=180
 hi pythonDocstring ctermfg=245
-hi pythonExceptions ctermfg=124
-"hi pythonFunction ctermfg=180
+hi pythonExceptions ctermfg=131
 hi pythonFunction ctermfg=222
-hi pythonInclude ctermfg=13
+hi pythonInclude ctermfg=109
 hi pythonNumber ctermfg=67
 hi pythonOperator ctermfg=180
 hi pythonQuotes ctermfg=white
-"hi pythonRepeat ctermfg=180
-hi pythonRepeat ctermfg=222
+hi pythonRepeat ctermfg=180
 hi pythonStatement ctermfg=65
-"hi pythonStatement ctermfg=107
 hi pythonString ctermfg=67
 "   winners:        109 110 152 153 188 195
 "   others:         4 25 32 68 69 74 111 116 117
