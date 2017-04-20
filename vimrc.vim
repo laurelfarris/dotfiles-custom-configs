@@ -1,7 +1,7 @@
 "
 
 " list where words are ADDED for zg (add to word list) and zw commands
-set spellfile=${HOME}/dotfiles/custom-configs/en.utf-8.add
+set spellfile=${HOME}/Dropbox/en.utf-8.add
 
 set sidescroll=1
 set number
@@ -9,11 +9,9 @@ set conceallevel=0
 set splitbelow
 set nojoinspaces
 
-" Reload color scheme
-"source $HOME/dotfiles/custom_configs/colors/laurel_colors.vim
-
 " Allows syntax highlighting of current line number and background
 set cursorline
+hi cursorline ctermbg=235
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
@@ -29,6 +27,8 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 let g:screen_size_restore_pos = 1
 
 " Put modified date at top of new idl files.
+" " maybe add if statement to only do this if more than a certain amount of
+" time has gone by
 autocmd BufNewFile *.pro 0read !echo "; Last modified:   " $(date)
 
 " Update modify time of existing files when writing to them,

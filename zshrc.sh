@@ -11,10 +11,15 @@ alias chrome='open -a Google\ Chrome'
 alias ipy='ipython'
 alias jup='jupyter notebook'
 alias jup2='open -a safari http://localhost:8888/'
-alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
+alias astro='ssh laurel07@astronomy.nmsu.edu'
 alias ll='ls -dFHGP ^*.(aux|bbl|blg|log|maf|mtc|mtc0|nav|out|snm|toc)'
 alias mv='mv -i'
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
+
+function cleanup() {
+    for f in $( find . -type f -mtime +$1 )
+    do echo $(basename $f); done
+}
 
 
 function safe_rm() {
@@ -30,7 +35,6 @@ alias mmv='noglob zmv -W'
 export DJANGO_ENV=local
 
 export PATH="./node_modules/.bin:$PATH"
-export PYTHONPATH="~/Modules/"
 
 LS_COLORS="di=00;38;5;67:ln=00;38;5;167:ex=00;38;5;071:*.png=00;38;5;147:*.jpg=00;38;5;147:*.gz=00;38;5;215:*.tar=00;38;5;215"
 export LS_COLORS

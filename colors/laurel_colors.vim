@@ -19,9 +19,12 @@ hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 " Cursor seems to have no effect...
 hi Cursor ctermfg=none ctermbg=none cterm=underline
 hi LineNr ctermfg=102 ctermbg=0 cterm=none
+
 hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
 hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=233 cterm=NONE
+hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
+
 hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
 hi Search ctermfg=none ctermbg=234 cterm=inverse
 
@@ -33,7 +36,6 @@ hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline
 
 hi Define ctermfg=180 ctermbg=NONE cterm=NONE
 hi Define ctermfg=200
-hi Delimiter ctermfg=239
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold
 hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE
@@ -69,7 +71,6 @@ hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi Type ctermfg=white
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE
-hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
 hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
 
 "hi vimCommentString ctermfg=243
@@ -122,7 +123,6 @@ hi tcshSQuote ctermfg=67
 hi bibKey ctermfg=180
 
 hi texComment ctermfg=245
-hi texSpecialChar ctermfg=238
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=67
 
@@ -153,6 +153,9 @@ hi texRefZone ctermfg=103
 hi texZone ctermfg=245
 hi texString ctermfg=250
 hi texSpecialKey ctermfg=131
+
+hi Delimiter ctermfg=240
+hi texSpecialChar ctermfg=240
 
 hi texGreek ctermfg=107
 hi texSuperscript ctermfg=white
