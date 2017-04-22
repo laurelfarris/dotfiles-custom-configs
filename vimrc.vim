@@ -4,16 +4,20 @@ set nu
 set nuw=6
 
 
-colorscheme base16-tomorrow-night
+" colorscheme base16-tomorrow-night
+colorscheme codeschool
 
 
-hi Normal guibg=#1d1f21
-hi LineNr guifg=#626267 guibg=#1d1f21
+"hi Normal guibg=#1d1f21
+"hi LineNr guifg=#626267 guibg=#1d1f21
+hi LineNr guifg=#626267
 hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#aaaaac guibg=#303137
 hi clear SignColumn
-hi NonText ctermbg=black guibg=#1d1f21
+"hi NonText ctermbg=black guibg=#1d1f21
+hi NonText ctermbg=black guibg=#303234
 hi ColorColumn ctermbg=234 guibg=#222426
-hi CursorLine ctermbg=234 guibg=#202224
+" hi CursorLine ctermbg=234 guibg=#202224
+hi CursorLine ctermbg=234 guibg=#343638
 autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 autocmd BufRead,BufNewFile *.json set filetype=json
