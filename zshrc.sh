@@ -17,7 +17,7 @@ export PATH="./node_modules/.bin:$PATH:`yarn global bin`"
 
 export GPG_TTY=$(tty)
 
-# export TERM="screen-256color"
+# export TERM="tmux-256color"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
