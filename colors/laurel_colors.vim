@@ -29,7 +29,7 @@ hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
 hi Search ctermfg=none ctermbg=234 cterm=inverse
 
 hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi SpellCap ctermfg=01 ctermbg=none cterm=none
+hi SpellCap ctermfg=none ctermbg=none cterm=none
 hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
 hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline

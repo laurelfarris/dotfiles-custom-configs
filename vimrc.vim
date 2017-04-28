@@ -1,5 +1,3 @@
-"
-
 " list where words are ADDED for zg (add to word list) and zw commands
 set spellfile=${HOME}/Dropbox/en.utf-8.add
 
@@ -11,7 +9,7 @@ set nojoinspaces
 
 " Allows syntax highlighting of current line number and background
 set cursorline
-hi cursorline ctermbg=235
+hi cursorline ctermbg=237
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
@@ -47,6 +45,7 @@ autocmd BufNewFile *.pro 0read !echo "; Last modified:   " $(date)
 
 autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
 
+autocmd BufEnter *.tex :normal zt
 autocmd BufEnter,BufRead *.tex set spell
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle
