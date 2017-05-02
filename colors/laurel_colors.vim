@@ -67,23 +67,29 @@ hi String ctermfg=231 ctermbg=NONE cterm=NONE
 hi Tag ctermfg=153 ctermbg=NONE cterm=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
-hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi Type ctermfg=white
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE
 hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
+
+" ???
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=none
 
 "hi vimCommentString ctermfg=243
 "hi vimCommentTitle ctermfg=243
 hi vimEnvvar ctermfg=white
 hi vimFgBgAttrib ctermfg=180
 hi vimFuncName ctermfg=180
+hi vimGroup ctermfg=white
 hi vimHiAttrib ctermfg=180
+hi vimHiCtermFgBg ctermfg=white
+hi vimHiCterm ctermfg=white
 hi vimLineComment ctermfg=245
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimOption ctermfg=180
 hi vimSynContains ctermfg=180
+hi vimSynType ctermfg=white
 hi vimSynRegOpt ctermfg=180
 hi vimVar ctermfg=180
 
@@ -175,54 +181,51 @@ hi texOnlyMath ctermfg=none ctermbg=none cterm=bold
 
 
 " HTML
-hi htmlArg ctermfg=79
-hi htmlEndTag ctermfg=117
+hi htmlTag ctermfg=59
+hi htmlEndTag ctermfg=59
+hi htmlTagName ctermfg=107
+hi htmlArg ctermfg=180
+hi htmlValue ctermfg=67
+
+hi htmlLink ctermfg=none ctermbg=none cterm=none
+
 hi htmlItalic ctermfg=217 ctermbg=none cterm=none
 hi htmlString ctermfg=white
-hi htmlSpecialChar ctermfg=79
-hi htmlTag ctermfg=182
-hi htmlTagName ctermfg=117
-hi htmlValue ctermfg=216
-hi htmlTag ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlEndTag ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlTagName ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlArg ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlSpecialChar ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
+hi htmlSpecialChar ctermfg=white
 
-hi cssBraces ctermfg=60
-hi cssUnitDecorators ctermfg=60
-
-hi cssCommonAttr ctermfg=255
-hi cssBackgroundAttr ctermfg=255
-hi cssBorderAttr ctermfg=255
-hi cssPositioningAttr ctermfg=255
-hi cssFontAttr ctermfg=255
-hi cssUIAttr ctermfg=255
-hi cssColor ctermfg=255
-hi cssValueLength ctermfg=255
-hi cssValueNumber ctermfg=255
-
-hi cssTagName ctermfg=229
-hi cssIdentifier ctermfg=255
-hi cssPseudoClassID ctermfg=255
-
-hi cssBackgroundProp ctermfg=210
+hi cssBackgroundAttr ctermfg=white
+hi cssBackgroundProp ctermfg=white
+hi cssBorderAttr ctermfg=white
+hi cssBorderOutlineAttr ctermfg=white
+hi cssBorderOutlineProp ctermfg=white
 hi cssBorderProp ctermfg=35
+hi cssBoxAttr ctermfg=white
 hi cssBoxProp ctermfg=81
-hi cssDimensionProp ctermfg=32
-hi cssFontProp ctermfg=79
-hi cssListProp ctermfg=215
-hi cssPositioningProp ctermfg=45
-hi cssTextProp ctermfg=147
-hi cssURL ctermfg=74 ctermbg=NONE cterm=NONE guifg=#68a9eb guibg=NONE gui=NONE
+hi cssBraces ctermfg=59
+hi cssClassName ctermfg=white
+hi cssColor ctermfg=white
+hi cssCommonAttr ctermfg=white
+hi cssDefinition ctermfg=59
+hi cssDimensionProp ctermfg=white
+hi cssFontAttr ctermfg=white
+hi cssFontProp ctermfg=white
 hi cssFunctionName ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi cssColor ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi cssPseudoClassId ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
-hi cssClassName ctermfg=153 ctermbg=NONE cterm=NONE guifg=#bcdbff guibg=NONE gui=NONE
-hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3c98d9 guibg=NONE gui=NONE
-hi cssCommonAttr ctermfg=151 ctermbg=NONE cterm=NONE guifg=#a7cfa3 guibg=NONE gui=NONE
-hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-
+hi cssIdentifier ctermfg=white
+hi cssInclude ctermfg=white
+hi cssListProp ctermfg=white
+hi cssMarginProp ctermfg=white
+hi cssPaddingProp ctermfg=white
+hi cssPositioningAttr ctermfg=white
+hi cssPositioningProp ctermfg=white
+hi cssPseudoClassID ctermfg=white
+hi cssTagName ctermfg=white
+hi cssTextAttr ctermfg=white
+hi cssTextProp ctermfg=white
+hi cssUIAttr ctermfg=white
+hi cssUnitDecorators ctermfg=60
+hi cssURL ctermfg=74
+hi cssValueLength ctermfg=white
+hi cssValueNumber ctermfg=white
 
 " IDL
 hi IDLangComment ctermfg=245
@@ -243,22 +246,25 @@ hi IDLangRealNumber ctermfg=67
 hi IDLangOperator ctermfg=67
 hi IDLangString ctermfg=67
 
-
+" Python
 hi pythonBuiltIn ctermfg=65
 hi pythonConditional ctermfg=180
 hi pythonDocstring ctermfg=245
 hi pythonExceptions ctermfg=131
-hi pythonFunction ctermfg=222
 hi pythonInclude ctermfg=109
-hi pythonNumber ctermfg=67
 hi pythonOperator ctermfg=180
 hi pythonQuotes ctermfg=white
 hi pythonRepeat ctermfg=180
-hi pythonStatement ctermfg=65
-hi pythonString ctermfg=67
-"   winners:        109 110 152 153 188 195
-"   others:         4 25 32 68 69 74 111 116 117
+
+hi pythonStatement ctermfg=138
+hi pythonFunction ctermfg=66
+
 hi pythonTripleQuotes ctermfg=248
+
+hi pythonNumber ctermfg=67
+hi pythonString ctermfg=67
+
+
 
 " Colors!
 
