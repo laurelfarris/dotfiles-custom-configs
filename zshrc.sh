@@ -21,6 +21,11 @@ function cleanup() {
     do command rm $f; done
 }
 
+function rename() {
+    for f in treteupp.*; do
+        echo $(basename $f); done
+}
+
 function spaces_suck() {
     ls -1 *\ * | while read line; do
     new=$(echo $line | tr ' ' '_')
