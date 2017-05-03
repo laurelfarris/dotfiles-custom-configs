@@ -20,13 +20,10 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" Make a function from '0read' onward. Call date in preferred format :)
 
 let g:screen_size_restore_pos = 1
 
 " Put modified date at top of new idl files.
-" " maybe add if statement to only do this if more than a certain amount of
-" time has gone by
 autocmd BufNewFile *.pro 0read !echo "; Last modified:   " $(date)
 
 " Update modify time of existing files when writing to them,

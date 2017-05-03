@@ -55,7 +55,7 @@ hi Number ctermfg=67 ctermbg=NONE cterm=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE
-hi PreProc ctermfg=238 ctermbg=NONE cterm=NONE
+hi PreProc ctermfg=240 ctermbg=NONE cterm=NONE
 hi Readlineinclude ctermfg=white ctermbg=NONE cterm=NONE
 hi Special ctermfg=white ctermbg=NONE cterm=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE

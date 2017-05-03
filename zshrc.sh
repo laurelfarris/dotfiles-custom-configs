@@ -23,7 +23,10 @@ function cleanup() {
 
 function rename() {
     for f in treteupp.*; do
-        echo $(basename $f); done
+        filename="${f%.*}"
+        ext="${f#*.}"
+        mv $f wrong_writeup.$ext
+    done
 }
 
 function spaces_suck() {
