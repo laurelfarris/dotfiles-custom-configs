@@ -20,7 +20,13 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+" jump sections in latex files
+map <silent> ]] :/^\\section\s*{<CR> :noh<CR>
+map <silent> [[ :?^\\section\s*{<CR> :noh<CR>
+"map <silent> ]s :/\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
+"map <silent> [s :?\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
 
+" ???
 let g:screen_size_restore_pos = 1
 
 " Put modified date at top of new idl files.
