@@ -60,5 +60,3 @@ LS_COLORS="di=00;38;5;67:ln=00;38;5;167:ex=00;38;5;071:*.png=00;38;5;147:*.jpg=0
 export LS_COLORS
 export LSCOLORS=exfxcxdxgxegedabagacad
 export GPG_TTY=$(tty)
-export TERM=xterm-256color
-[ -n $TMUX ] && export TERM=screen-256color

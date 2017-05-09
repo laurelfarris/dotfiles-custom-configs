@@ -1,6 +1,4 @@
 " list where words are ADDED for zg (add to word list) and zw commands
-set nocompatible
-filetype plugin indent on
 set spellfile=${HOME}/Dropbox/en.utf-8.add
 
 set termguicolors
@@ -13,6 +11,7 @@ set nojoinspaces
 " Allows syntax highlighting of current line number and background
 set cursorline
 hi cursorline ctermbg=237
+
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
@@ -76,20 +75,24 @@ set nu
 set nuw=6
 
 
-colorscheme base16-tomorrow-night
-" colorscheme codeschool
+" colorscheme base16-tomorrow-night
+set background=dark
+colorscheme codeschool
+syntax on
 
 
 "hi Normal guibg=#1d1f21
 "hi LineNr guifg=#626267 guibg=#1d1f21
-hi LineNr guifg=#626267
-hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#aaaaac guibg=#303137
+hi LineNr guifg=#626267 guibg=#303030
+hi CursorLineNr ctermfg=yellow ctermbg=233 guifg=#aaaaac guibg=#303030
 hi clear SignColumn
 "hi NonText ctermbg=black guibg=#1d1f21
-hi NonText ctermbg=black guibg=#303234
+hi NonText ctermbg=black guibg=#303030
 hi ColorColumn ctermbg=234 guibg=#222426
 " hi CursorLine ctermbg=234 guibg=#202224
 hi CursorLine ctermbg=234 guibg=#343638
+hi Normal guibg=#303030
+
 autocmd BufEnter,BufRead *.py,*.elm set colorcolumn=73,80,100
 autocmd BufEnter,BufRead *.ex,*.exs,*.yml,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
 autocmd BufRead,BufNewFile *.json set filetype=json
