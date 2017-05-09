@@ -6,6 +6,7 @@ alias sm='./manage.py schemamigration'
 alias mm='./manage.py makemigrations'
 #alias ipy='ipython --matplotlib --pylab'
 alias activate='source env/bin/activate'
+alias gs='git status'
 
 alias chrome='open -a Google\ Chrome'
 alias ipy='ipython'
@@ -58,3 +59,6 @@ export PATH="./node_modules/.bin:$PATH"
 LS_COLORS="di=00;38;5;67:ln=00;38;5;167:ex=00;38;5;071:*.png=00;38;5;147:*.jpg=00;38;5;147:*.gz=00;38;5;215:*.tar=00;38;5;215"
 export LS_COLORS
 export LSCOLORS=exfxcxdxgxegedabagacad
+export GPG_TTY=$(tty)
+export TERM=xterm-256color
+[ -n $TMUX ] && export TERM=screen-256color

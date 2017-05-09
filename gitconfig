@@ -11,10 +11,17 @@
     untracked = yellow
 [user]
     name = Dustin Farris
-    email = dustin.farris@gmail.com
+    email = dustin@farris.io
+    signingkey = B8F8A436
 [push]
     default = matching
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
+    co = checkout
+    br = branch
+    ci = commit
+[gpg]
+    program = gpg
+[pull]
+	rebase = true
+[core]
+	editor = nvim
