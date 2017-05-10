@@ -32,9 +32,8 @@ hi SpellBad ctermfg=none ctermbg=none cterm=underline
 hi SpellCap ctermfg=none ctermbg=none cterm=none
 hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
-hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline
+hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline guifg=#e9e860 guibg=NONE gui=NONE
 
-hi Define ctermfg=180 ctermbg=NONE cterm=NONE
 hi Define ctermfg=200
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold
 hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE
@@ -140,9 +139,9 @@ hi texNewEnv ctermfg=186
 hi texEnvName ctermfg=186
 hi texDefParm ctermfg=186
 
-hi texSection ctermfg=67
-hi texBeginEnd ctermfg=107
-hi texBeginEndName ctermfg=180
+hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
+hi texBeginEnd ctermfg=107 guifg=#45ab5c guibg=NONE gui=NONE
+hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
 hi texStatement ctermfg=107
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
@@ -160,7 +159,7 @@ hi texZone ctermfg=245
 hi texString ctermfg=250
 hi texSpecialKey ctermfg=131
 
-hi Delimiter ctermfg=240
+hi Delimiter ctermfg=240 guifg=#505050 guibg=NONE gui=NONE
 hi texSpecialChar ctermfg=240
 
 hi texGreek ctermfg=107

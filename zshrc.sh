@@ -18,7 +18,7 @@ alias mv='mv -i'
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
 
 function cleanup() {
-    for f in $( find $HOME/.trash -type f -maxdepth 1 -mtime +30 )
+    for f in `find $HOME/.trash -type f -maxdepth 1 -mtime +30`
     do command rm $f; done
 }
 cleanup
@@ -33,7 +33,7 @@ function rename() {
 
 function spaces_suck() {
     ls -1 *\ * | while read line; do
-    new=$(echo $line | tr ' ' '_')
+    new=` echo $line | tr ' ' '_' `
     mv $line $new
 done
 
@@ -42,7 +42,7 @@ done
 
 function safe_rm() {
     for fname in $@; do
-        if [[ $(basename $PWD) != .Trash ]]; then
+        if [[ `basename $PWD` != .Trash ]]; then
             command mv $fname ~/.Trash; else rm $fname
         fi
     done
