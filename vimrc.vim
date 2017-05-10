@@ -31,7 +31,7 @@ set number
 set conceallevel=0
 set splitbelow
 set nojoinspaces
-set mouse=a "??
+"set mouse=a
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
