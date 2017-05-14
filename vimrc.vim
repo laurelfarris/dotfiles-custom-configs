@@ -1,80 +1,20 @@
+source ${HOME}/dotfiles/custom-configs/all-vimrc.vim
 
-" 5/10/2017
-colorscheme laurel_colors
-"set t_Co=256
-filetype plugin on
-syntax on "Activates syntax highlighting
 
-"set background=dark
-"colorscheme codeschool
 set notermguicolors
-"
-set cursorline  "Allows syntax highlighting of current line number and background
-"hi CursorLine ctermbg=234 guibg=#343638
-"hi CursorLineNr ctermfg=yellow ctermbg=255 guifg=#aaaaac guibg=#303030
-"hi LineNr guifg=#626267 guibg=#1d1f21
-"hi Normal guibg=#1d1f21
-"hi NonText ctermbg=black guibg=#1d1f21
-"hi NonText ctermbg=black guibg=#303030
-"hi ColorColumn ctermbg=234 guibg=#222426
-"hi clear SignColumn
 
+hi CursorLine ctermbg=234 guibg=#343638
+hi clear SignColumn
 
+"set mouse=a  "Enable use of mouse
 
-" list where words are ADDED for zg (add to word list) and zw commands
-set spellfile=${HOME}/Dropbox/en.utf-8.add
+" Bright color scheme (for mac)
+hi normal ctermfg=250
 
-set expandtab
-set sidescroll=1
-set number
-"set nuw=6  " number of columns allotted to line numbers
-set conceallevel=0
-set splitbelow
-set nojoinspaces
-"set mouse=a
-
-" Set K and Y to be natural counterparts of J and D, respectively
-nnoremap K i<CR><ESC>
-nnoremap Y y$
-
-":echo synIDattr(synID(line("."), col("."), 1), "name"))))
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-" jump sections in latex files
-map <silent> ]] :/^\\section\s*{<CR> :noh<CR>
-map <silent> [[ :?^\\section\s*{<CR> :noh<CR>
-"map <silent> ]s :/\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
-"map <silent> [s :?\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
 
 " ???
 let g:screen_size_restore_pos = 1
 
-
-autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
-autocmd BufRead *.pro syntax keyword IDLangConditional foreach endforeach
-autocmd BufRead *.pro syntax keyword IDLangRoutine file_search array_indices
-autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &
-autocmd BufRead *.pro syntax keyword IDLangImportant STOP &
-
-autocmd BufEnter,BufRead *.tex set spell
-autocmd BufEnter,BufRead *.tex hi clear texItalStyle
-autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle
-autocmd BufEnter,BufRead *.tex hi clear texBoldItalStyle
-
-autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+"""+ end=+"""+ keepend "excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
-autocmd BufEnter,BufRead *.py syn region pythonDocstring  start=+'''+ end=+'''+ keepend excludenl "contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
-"autocmd BufEnter,BufRead hi link pythonDocString Comment
-
-autocmd BufEnter,BufRead *.py set colorcolumn=73,80,100
-autocmd BufEnter,BufRead *.ex,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass,*.scss set shiftwidth=2 softtabstop=2 colorcolumn=80,100
-
-
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Override and use file_rec/git instead of file_rec/async (it is much faster)
 nnoremap <Leader>ff :Unite file file_rec/git -start-insert -buffer-name=files -winheight=18<CR>
@@ -84,10 +24,6 @@ let g:startify_custom_header = ['']
 " Position cursor between to braces/parens on return...?
 let g:delimitMate_expand_cr = 0
 
-" attempt to disable plugins?
-" call dein#disable(g:exclude)
-" call dein#add('davidhalter/jedi-vim', {'if': 0})
-
 " Make passive mode the default... so I don't punch my computer.
 let g:syntastic_mode_map = {
     \ "mode": "passive",
@@ -96,8 +32,6 @@ let g:syntastic_mode_map = {
 
 " Not-so-hardtime
 let g:hardtime_maxcount = 1000
-
-
 
 
 " --------  Added 5/8/2017 --------

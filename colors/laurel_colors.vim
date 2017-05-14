@@ -1,38 +1,45 @@
-set background=dark
+
 highlight clear
 
 if exists("syntax_on")
   syntax reset
 endif
 
-"syntax keyword IDLangConditional foreach endforeach
-
 let g:colors_name = "laurel_colors"
+
+hi Normal ctermfg=231 ctermbg=16 cterm=NONE
+
+set background=dark
+
+
+hi Comment ctermfg=245 ctermbg=NONE cterm=NONE
 
 hi Boolean ctermfg=67 ctermbg=NONE cterm=NONE
 hi Character ctermfg=67 ctermbg=NONE cterm=NONE
-hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE
-hi Comment ctermfg=245 ctermbg=NONE cterm=NONE
 hi Conditional ctermfg=180
+hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline guifg=#e9e860 guibg=NONE gui=NONE
+
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
+hi Number ctermfg=68 ctermbg=NONE cterm=NONE
+hi String ctermfg=68 ctermbg=NONE cterm=NONE
 
-" Cursor seems to have no effect...
-hi Cursor ctermfg=none ctermbg=none cterm=underline
-hi LineNr ctermfg=102 ctermbg=0 cterm=none
 
+hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
+hi CursorColumn ctermfg=NONE ctermbg=NONE cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
 hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
-hi CursorColumn ctermfg=NONE ctermbg=23 cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=233 cterm=NONE
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
+hi ColorColumn ctermfg=NONE ctermbg=232 cterm=NONE guibg=#222426
 
 hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
 hi Search ctermfg=none ctermbg=234 cterm=inverse
 
-hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi SpellCap ctermfg=none ctermbg=none cterm=none
-hi SpellRare ctermfg=15 ctermbg=none cterm=none
+hi VertSplit ctermfg=132 ctermbg=black cterm=NONE
+" Active window
+hi StatusLine ctermfg=132 ctermbg=234 cterm=NONE
+" Inactive window (when using split windows)
+hi StatusLineNC ctermfg=245 ctermbg=black cterm=NONE
 
-hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline guifg=#e9e860 guibg=NONE gui=NONE
 
 hi Define ctermfg=200
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold
@@ -49,8 +56,6 @@ hi Identifier ctermfg=white ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=180 ctermbg=NONE cterm=NONE
 hi Label ctermfg=107 ctermbg=NONE cterm=NONE
 hi NonText ctermfg=59 ctermbg=black cterm=NONE
-hi Normal ctermfg=231 ctermbg=16 cterm=NONE
-hi Number ctermfg=67 ctermbg=NONE cterm=NONE
 hi Operator ctermfg=67 ctermbg=NONE cterm=NONE
 hi Pmenu ctermfg=153 ctermbg=NONE cterm=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE
@@ -59,17 +64,16 @@ hi Readlineinclude ctermfg=white ctermbg=NONE cterm=NONE
 hi Special ctermfg=white ctermbg=NONE cterm=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE
-hi StatusLine ctermfg=231 ctermbg=59 cterm=bold
-hi StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE
 hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE
-hi String ctermfg=231 ctermbg=NONE cterm=NONE
 hi Tag ctermfg=153 ctermbg=NONE cterm=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
-hi Type ctermfg=white
 hi Type ctermfg=153 ctermbg=NONE cterm=NONE
-hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE
 hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
+
+hi SpellBad ctermfg=none ctermbg=none cterm=underline
+hi SpellCap ctermfg=none ctermbg=none cterm=none
+hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
 " ???
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=none
@@ -87,6 +91,7 @@ hi vimLineComment ctermfg=245
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimOption ctermfg=180
+hi vimString ctermfg=68
 hi vimSynContains ctermfg=180
 hi vimSynType ctermfg=white
 hi vimSynRegOpt ctermfg=180
@@ -139,10 +144,19 @@ hi texNewEnv ctermfg=186
 hi texEnvName ctermfg=186
 hi texDefParm ctermfg=186
 
+"hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
+"hi texBeginEnd ctermfg=65 guifg=#45ab5c guibg=NONE gui=NONE
+"hi texStatement ctermfg=65
+"hi texBeginEndName ctermfg=137 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
+"hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
+"hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline guifg=#e9e860 guibg=NONE gui=NONE
+"hi LineNr ctermfg=240 ctermbg=NONE cterm=NONE
+
 hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
 hi texBeginEnd ctermfg=107 guifg=#45ab5c guibg=NONE gui=NONE
-hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
 hi texStatement ctermfg=107
+hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
+
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
 
@@ -174,8 +188,6 @@ hi texMathZoneW ctermfg=white
 hi texMathZoneX ctermfg=white
 hi texMathZoneY ctermfg=white
 hi texOnlyMath ctermfg=none ctermbg=none cterm=bold
-
-" Latex things I probably won't use
 "hi texDocZone ctermfg=white  \url{texDocZone}
 
 
@@ -262,45 +274,3 @@ hi pythonTripleQuotes ctermfg=248
 
 hi pythonNumber ctermfg=67
 hi pythonString ctermfg=67
-
-
-
-" Colors!
-
-" Black
-"   others: 0 16
-"
-" Blue/cyan/green
-"    69 81 87 123 159 6 14 23 24 30 31 37 38 43 44 50 79 80 86 115 122
-"   12 66 73 67 68 74 75 109 110 111 116 117 152 153
-"   65 72 107 108 150 151 157 158
-"   64 107 144 149 192 188 193 194 195
-"     108 is nice. Use this for something :)
-"   106 113 120 191
-"   22 28 35 58 101 114 119 121 142 143 148 154 155 156
-"
-" Purple
-"   winners:
-"   189 146 183 103 60 182 139 96 183
-"   others:    53 54 55 56 57 62 63 92 93 97 98 99 104 105 129 134 135 140 141 147 176 177 219
-"
-" Pink/peach
-"   orange:     137 173 180 223 216
-"   peach:      95 131 167 138   174(complements 180)  181 217
-"   pink:       132 139 168 175 218
-"   pale:       224 225
-"   others:     203 204 205 206 209 210 211 125 126 169 197 198 212 213 231
-"
-" Red      01 09 52 88 160 196 124
-" Magenta  133 170 207
-"    bright: 161 162 163 171 199
-"
-" Yellow
-"   winners:    227 228 229 230
-"   others:     11 178 179 184 185 186 187 220
-"
-" Orange        130 166 172 202 208 214 215 221 222
-"
-" Gray
-"   winners:    145
-"   others:     7 8 15 59 102 232-->256
