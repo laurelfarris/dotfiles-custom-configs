@@ -7,7 +7,8 @@ endif
 
 let g:colors_name = "laurel_colors"
 
-hi Normal ctermfg=231 ctermbg=16 cterm=NONE
+"hi Normal ctermfg=231 ctermbg=16 cterm=NONE
+hi Normal ctermfg=white ctermbg=16 cterm=NONE
 
 set background=dark
 

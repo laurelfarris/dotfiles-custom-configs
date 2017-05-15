@@ -7,6 +7,7 @@ syntax on "Activates syntax highlighting
 set cursorline  "Allows syntax highlighting of current line number and background
 set cursorcolumn "Cursor in crosshairs
 
+set conceallevel=0
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
 set autoindent "if previous line is indented, indent next line
 set autoread "Read open files again when changed outside vim
