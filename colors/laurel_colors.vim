@@ -20,9 +20,9 @@ hi Character ctermfg=67 ctermbg=NONE cterm=NONE
 hi Conditional ctermfg=180
 hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline guifg=#e9e860 guibg=NONE gui=NONE
 
-hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
-hi Number ctermfg=68 ctermbg=NONE cterm=NONE
-hi String ctermfg=68 ctermbg=NONE cterm=NONE
+hi Constant ctermfg=67 ctermbg=NONE cterm=NONE
+hi Number ctermfg=67 ctermbg=NONE cterm=NONE
+hi String ctermfg=67 ctermbg=NONE cterm=NONE
 
 
 hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
@@ -37,9 +37,9 @@ hi Search ctermfg=none ctermbg=234 cterm=inverse
 
 hi VertSplit ctermfg=132 ctermbg=black cterm=NONE
 " Active window
-hi StatusLine ctermfg=132 ctermbg=234 cterm=NONE
+hi StatusLine ctermfg=245 ctermbg=234 cterm=NONE
 " Inactive window (when using split windows)
-hi StatusLineNC ctermfg=245 ctermbg=black cterm=NONE
+hi StatusLineNC ctermfg=240 ctermbg=234 cterm=NONE
 
 
 hi Define ctermfg=200
@@ -92,7 +92,7 @@ hi vimLineComment ctermfg=245
 hi vimNotation ctermfg=180
 hi vimMapModKey ctermfg=180
 hi vimOption ctermfg=180
-hi vimString ctermfg=68
+hi vimString ctermfg=67
 hi vimSynContains ctermfg=180
 hi vimSynType ctermfg=white
 hi vimSynRegOpt ctermfg=180

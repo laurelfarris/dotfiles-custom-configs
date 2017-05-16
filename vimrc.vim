@@ -1,7 +1,6 @@
 source ${HOME}/dotfiles/custom-configs/all-vimrc.vim
 
 
-set notermguicolors
 
 hi CursorLine ctermbg=234 guibg=#343638
 hi clear SignColumn
