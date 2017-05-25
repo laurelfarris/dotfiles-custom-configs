@@ -5,10 +5,10 @@ source ${HOME}/dotfiles/custom-configs/all-vimrc.vim
 hi CursorLine ctermbg=234 guibg=#343638
 hi clear SignColumn
 
-"set mouse=a  "Enable use of mouse
+set notermguicolors
+"set nofoldenable " disable code folding
 
-" Bright color scheme (for mac)
-hi normal ctermfg=250
+"set mouse=a  "Enable use of mouse
 
 
 " ???

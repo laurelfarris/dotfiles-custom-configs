@@ -34,28 +34,20 @@ nnoremap Y y$
 nnoremap <TAB> i<TAB><ESC>
 
 
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
-
-
-
 " Put 'last modified' date at top of codes.
 func! MyDate()
-    :put! =';Last modified:  ' . strftime('%d %B %Y %T')
+    :put! =';; Last modified:  ' . strftime('%d %B %Y %T')
 endf
 func! LastModified()
     let l:winview = winsaveview()
+    :normal mk
     :1d
     :call MyDate()
-    :normal ``
+    :normal `k
     call winrestview(l:winview)
 endf
 autocmd BufNewFile *.pro :call MyDate()
-autocmd BufNewFile *.py :call MyDate()
 autocmd BufWritePost *.pro :call LastModified()
-autocmd BufWritePost *.py :call LastModified()
 
 
 " Jump sections in latex files

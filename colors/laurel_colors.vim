@@ -7,7 +7,6 @@ endif
 
 let g:colors_name = "laurel_colors"
 
-"hi Normal ctermfg=231 ctermbg=16 cterm=NONE
 hi Normal ctermfg=white ctermbg=16 cterm=NONE
 
 set background=dark
@@ -259,17 +258,17 @@ hi IDLangOperator ctermfg=67
 hi IDLangString ctermfg=67
 
 " Python
-hi pythonBuiltIn ctermfg=65
-hi pythonConditional ctermfg=180
+hi pythonBuiltIn ctermfg=180
+hi pythonConditional ctermfg=65
 hi pythonDocstring ctermfg=245
 hi pythonExceptions ctermfg=131
 hi pythonInclude ctermfg=109
-hi pythonOperator ctermfg=180
+hi pythonOperator ctermfg=65
 hi pythonQuotes ctermfg=white
-hi pythonRepeat ctermfg=180
+hi pythonRepeat ctermfg=65
 
 hi pythonStatement ctermfg=138
-hi pythonFunction ctermfg=66
+hi pythonFunction ctermfg=180
 
 hi pythonTripleQuotes ctermfg=248
 
