@@ -244,9 +244,9 @@ hi IDLangContinueLine cterm=none ctermbg=none ctermfg=240
 hi IDLangImportant ctermfg=131
 hi IDLangSSW ctermfg=229
 
-hi IDLangRoutine ctermfg=180
-hi IDLangConditional ctermfg=96
-hi IDLangStatement ctermfg=65
+hi IDLangRoutine ctermfg=65
+hi IDLangConditional ctermfg=180
+hi IDLangStatement ctermfg=180
 hi IDLangSystem ctermfg=144
 
 hi IDLangKeyword ctermfg=white

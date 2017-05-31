@@ -68,6 +68,7 @@ function get() {
     #open ${file}
     #rm ${file}
     curl -o temp.pdf $1
+    chmod 444 temp.pdf
     open temp.pdf
     rm temp.pdf
 }

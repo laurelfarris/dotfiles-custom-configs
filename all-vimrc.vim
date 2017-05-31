@@ -36,7 +36,7 @@ nnoremap <TAB> i<TAB><ESC>
 
 " Put 'last modified' date at top of codes.
 func! MyDate()
-    :put! =';; Last modified:  ' . strftime('%d %B %Y %T')
+    :put! =';; Last modified:   ' . strftime('%d %B %Y %T')
 endf
 func! LastModified()
     let l:winview = winsaveview()
