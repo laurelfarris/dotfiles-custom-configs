@@ -62,15 +62,16 @@ done
 
 # Open a pdf in preview without having to worry about deleting it later
 function get() {
-    #url=$1
-    #file=${HOME}/Temp/temp.pdf
-    #curl --create-dirs -o ${file} ${url}
-    #open ${file}
-    #rm ${file}
-    curl -o temp.pdf $1
-    chmod 444 temp.pdf
-    open temp.pdf
-    rm temp.pdf
+    dir=${HOME}/Temp/
+    filenumber=`date +'%s'`
+    file=${HOME}/Temp/temp${filenumber}.pdf
+    curl --create-dirs -o ${file} $1
+    chmod 444 ${file}
+    open ${file}
+    # Add an option to save if desired, and to not remove until Preview
+    #    window containing this file is closed> open --args (maybe...)
+    # Or just delete from Temp/ after 24 hours...
+    rm ${file}
 }
 
 

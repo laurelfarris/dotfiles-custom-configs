@@ -5,34 +5,32 @@ syntax on "Activates syntax highlighting
 
 "set background=dark
 
-set cursorline  "Allows syntax highlighting of current line number and background
-set cursorcolumn "Cursor in crosshairs
-
-set conceallevel=0
-set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
 set autoindent "if previous line is indented, indent next line
 set autoread "Read open files again when changed outside vim
+set conceallevel=0
+set cursorline  "Allows syntax highlighting of current line number and background
+set cursorcolumn "Cursor in crosshairs
 set expandtab "do this when writing out file
 set ignorecase "better for searching
 set incsearch "Move to string as you type it
+set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
 set noswapfile "Ain't nobody got time for swap files
 set nowrap "long lines continue off screen instead of wrapping
 set number "enable line numbering
 "set nuw=6  " number of columns allotted to line numbers
+set pastetoggle=<F3>
 set report=0  "display message when change is applied to at least 0 lines
 set scrolloff=0 "Keep n lines visible on screen above/below cursor
-set tabstop=4 "tab 4 spaces, not 8
 set shiftwidth=4 "move 4 spaces using '>>' or 'V'+'>'
 set sidescroll=1 "move one column at a time for long lines that go off screen
 set splitbelow "new command opens file at bottom half of screen, not top
 set splitright "new command opens file to the right, not to the left
+set tabstop=4 "tab 4 spaces, not 8
 
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
 nnoremap Y y$
-nnoremap <TAB> i<TAB><ESC>
-
 
 " Put 'last modified' date at top of codes.
 func! MyDate()
@@ -47,7 +45,7 @@ func! LastModified()
     call winrestview(l:winview)
 endf
 autocmd BufNewFile *.pro :call MyDate()
-autocmd BufWritePost *.pro :call LastModified()
+autocmd BufWrite *.pro :undojoin | call LastModified()
 
 
 " Jump sections in latex files
@@ -67,7 +65,7 @@ autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &
 
 
 set spellfile=${HOME}/Dropbox/en.utf-8.add "list where words are ADDED for zg (add to word list) and zw commands
-autocmd BufEnter,BufRead *.tex set spell
+"autocmd BufEnter,BufRead *.tex set spell
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texBoldStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle

@@ -165,8 +165,8 @@ hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
-hi texCite ctermfg=103
-hi texRefZone ctermfg=103
+hi texCite ctermfg=229
+hi texRefZone ctermfg=180
 "hi texParen ctermfg=200
 " All verbatim text?
 hi texZone ctermfg=245
