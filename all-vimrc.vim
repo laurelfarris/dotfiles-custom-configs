@@ -13,6 +13,8 @@ set conceallevel=0 "Don't collapse my shit
 set cursorline  "Allows syntax highlighting of current line number and background
 set cursorcolumn "Cursor in crosshairs
 set expandtab "do this when writing out file
+set foldmethod=marker
+set foldmarker={---,---}
 set ignorecase "better for searching
 set incsearch "Move to string as you type it
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
@@ -29,10 +31,20 @@ set splitbelow " 'new' opens file at bottom half of screen, not top
 set splitright " 'vsplit' opens file to the right, not to the left
 set tabstop=4 "tab 4 spaces, not 8
 
+" Vertically center search results 07/05/17 12:26
+:nnoremap n nzz
+:nnoremap N Nzz
+":nnoremap * *zz
+":nnoremap # #zz
+":nnoremap g* g*zz
+":nnoremap g# g#zz
 
 " Set K and Y to be natural counterparts of J and D, respectively
 nnoremap K i<CR><ESC>
 nnoremap Y y$
+
+" Make command to insert current date and/or time into document
+:command! Date :r !date +"\%D \%k:\%M"
 
 " Put 'last modified' date at top of codes.
 func! MyDate()
