@@ -153,9 +153,9 @@ hi texDefParm ctermfg=186
 "hi LineNr ctermfg=240 ctermbg=NONE cterm=NONE
 
 hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
-hi texBeginEnd ctermfg=107 guifg=#45ab5c guibg=NONE gui=NONE
-hi texStatement ctermfg=107
+hi texBeginEnd ctermfg=187 guifg=#45ab5c guibg=NONE gui=NONE
 hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
+hi texStatement ctermfg=107
 
 hi texInputfile ctermfg=180
 hi texInputfileopt ctermfg=67
