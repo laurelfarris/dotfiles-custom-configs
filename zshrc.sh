@@ -32,12 +32,16 @@ function safe_rm() {
 alias rm='safe_rm'
 
 function cleanup() {
+    # Permanently delete files moved to Trash more than 1 month ago.
+    # Gives write permissions back, since can't rm without
+    #   (actually gives an option to do so, but that's annoying).
 
-    # Permanently delete files moved to Trash more than 1 month ago
     for f in `find ${HOME}/.Trash -type f -atime +30`; do
+        chmod 644 ${f}
         command rm ${f}
-        echo "Permanently deleted file ${f}"
     done
+
+    # Move items in subdirectories to depth 1
     for d in `find ${HOME}/.Trash -maxdepth 2 -mindepth 2`; do
         mv $d ${HOME}/.Trash
     done
@@ -45,19 +49,21 @@ function cleanup() {
 }
 #cleanup
 
+function spaces_suck() {
+    ls -1 *\ * | while read line; do
+    new=` echo $line | tr ' ' '_' `
+    mv $line $new
+done
+}
+
+
+
 function rename() {
     for f in treteupp.*; do
         filename="${f%.*}"
         ext="${f#*.}"
         mv $f wrong_writeup.$ext
     done
-}
-
-function spaces_suck() {
-    ls -1 *\ * | while read line; do
-    new=` echo $line | tr ' ' '_' `
-    mv $line $new
-done
 }
 
 # Open a pdf in preview without having to worry about deleting it later
