@@ -1,5 +1,6 @@
 colorscheme laurel_colors
 "colorscheme codeschool
+
 filetype plugin on
 syntax on "Activates syntax highlighting
 

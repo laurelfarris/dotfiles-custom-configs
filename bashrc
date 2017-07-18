@@ -22,8 +22,12 @@ function restore() { mv ~/.trash/$@ $PWD; }
 alias res='restore'
 
 function my_vi() {
-    echo -ne "\e]0; VIM: \"$1\"\007";
-    vim $1
+    if swap | grep -q $1; then
+        echo "File already being edited you moron!"
+    else
+        echo -ne "\e]0; VIM: \"$1\"\007";
+        vim $1
+    fi
     }
 alias vi='my_vi'
 
