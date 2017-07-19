@@ -14,8 +14,6 @@ set conceallevel=0 "Don't collapse my shit
 set cursorline  "Allows syntax highlighting of current line number and background
 set cursorcolumn "Cursor in crosshairs
 set expandtab "do this when writing out file
-set foldmethod=marker
-set foldmarker={---,---}
 set ignorecase "better for searching
 set incsearch "Move to string as you type it
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
@@ -76,6 +74,7 @@ autocmd BufEnter,BufRead *.ex,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass
 
 " BufEnter OR BufRead? Need both?
 autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
+autocmd BufRead *.pro syntax keyword IDLangImportant START &
 autocmd BufRead *.pro syntax keyword IDLangImportant STOP &
 autocmd BufRead *.pro syntax keyword IDLangRoutine file_search array_indices
 autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &

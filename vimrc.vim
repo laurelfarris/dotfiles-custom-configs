@@ -1,6 +1,9 @@
 source ${HOME}/dotfiles/custom-configs/all-vimrc.vim
 
 
+" Folding (CentOS does not like this...)
+set foldmethod=marker
+set foldmarker={---,---}
 
 hi CursorLine ctermbg=234 guibg=#343638
 hi clear SignColumn
