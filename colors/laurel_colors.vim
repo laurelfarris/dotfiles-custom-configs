@@ -157,7 +157,7 @@ hi texBeginEnd ctermfg=187 guifg=#45ab5c guibg=NONE gui=NONE
 hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
 hi texStatement ctermfg=107
 
-hi texInputfile ctermfg=180
+hi texInputfile ctermfg=139
 hi texInputfileopt ctermfg=67
 
 hi texAccent ctermfg=103
@@ -165,7 +165,7 @@ hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
-hi texCite ctermfg=229
+hi texCite ctermfg=187
 hi texRefZone ctermfg=180
 "hi texParen ctermfg=200
 " All verbatim text?
