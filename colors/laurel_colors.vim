@@ -31,8 +31,12 @@ hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=232 cterm=NONE guibg=#222426
 
-hi IncSearch ctermfg=none ctermbg=234 cterm=inverse
-hi Search ctermfg=none ctermbg=234 cterm=inverse
+hi IncSearch ctermfg=none ctermbg=none cterm=underline
+hi Search ctermfg=none ctermbg=none cterm=underline
+hi SpellBad ctermfg=none ctermbg=240 cterm=none
+
+hi SpellCap ctermfg=white ctermbg=58 cterm=none
+hi SpellRare ctermfg=200 ctermbg=none cterm=underline
 
 hi VertSplit ctermfg=132 ctermbg=black cterm=NONE
 " Active window
@@ -47,8 +51,8 @@ hi DiffChange ctermfg=231 ctermbg=23 cterm=NONE
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold
 hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
-hi Error ctermbg=white ctermfg=65 cterm=none
-hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Error ctermbg=none ctermfg=15 cterm=none
+hi ErrorMsg ctermfg=white ctermbg=black cterm=NONE
 hi Float ctermfg=68 ctermbg=NONE cterm=NONE
 hi Folded ctermfg=247 ctermbg=16 cterm=NONE
 hi Function ctermfg=107
@@ -70,10 +74,6 @@ hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
 hi Type ctermfg=153 ctermbg=NONE cterm=NONE
 hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
-
-hi SpellBad ctermfg=none ctermbg=none cterm=underline
-hi SpellCap ctermfg=none ctermbg=none cterm=none
-hi SpellRare ctermfg=15 ctermbg=none cterm=none
 
 " ???
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=none
