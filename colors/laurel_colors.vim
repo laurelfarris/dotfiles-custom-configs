@@ -138,7 +138,7 @@ hi texDoctypeArgs ctermfg=67
 
 hi texNewCmd ctermfg=186
 hi texCmdName ctermfg=186
-hi texCmdBody ctermfg=180
+hi texCmdBody ctermfg=white
 hi texCmdArgs ctermfg=67
 hi texNewEnv ctermfg=186
 hi texEnvName ctermfg=186

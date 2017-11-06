@@ -18,7 +18,11 @@ alias ll='ls -dFHGP ^*.(aux|bbl|blg|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
 
-alias todo='open -g ${HOME}/Google\ Drive/Research/General/action_items.pdf'
+function ropen() {
+    for fname in $@; do
+        open ${HOME}/Google\ Drive/References/Mendeley/$fname*.pdf
+    done
+}
 
 function safe_rm() {
     for fname in $@; do
