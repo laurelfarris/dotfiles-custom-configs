@@ -14,8 +14,8 @@ alias ipy='ipython'
 alias jup='jupyter notebook'
 alias jup2='open -a safari http://localhost:8888/'
 alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
-alias ll='ls -dFHGP ^*.(aux|bbl|blg|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
-alias l1='ls -1dFHGP ^*.(aux|bbl|blg|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
+alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
+alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
 
 function ropen() {
@@ -40,7 +40,7 @@ function cleanup() {
     # Gives write permissions back, since can't rm without
     #   (actually gives an option to do so, but that's annoying).
 
-    for f in `find ${HOME}/.Trash -type f -atime +30`; do
+    for f in `find ${HOME}/.Trash -type f -depth 1 -atime +10`; do
         chmod 644 ${f}
         command rm ${f}
     done
