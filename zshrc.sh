@@ -35,10 +35,21 @@ function safe_rm() {
 }
 alias rm='safe_rm'
 
+function nospaces() {
+    ls -1 *\ * | while read line; do
+    old=${line:s/\*//}
+    new=` echo $old | tr ' ' '_' `
+    mv $old $new
+done
+}
+
+
 function cleanup() {
     # Permanently delete files moved to Trash more than 1 month ago.
     # Gives write permissions back, since can't rm without
     #   (actually gives an option to do so, but that's annoying).
+
+    nospaces
 
     for f in `find ${HOME}/.Trash -type f -depth 1 -atime +10`; do
         chmod 644 ${f}
@@ -53,12 +64,6 @@ function cleanup() {
 }
 #cleanup
 
-function spaces_suck() {
-    ls -1 *\ * | while read line; do
-    new=` echo $line | tr ' ' '_' `
-    mv $line $new
-done
-}
 
 
 

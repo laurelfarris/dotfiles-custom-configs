@@ -31,12 +31,11 @@ hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=232 cterm=NONE guibg=#222426
 
-hi IncSearch ctermfg=none ctermbg=none cterm=underline
-hi Search ctermfg=none ctermbg=none cterm=underline
-hi SpellBad ctermfg=none ctermbg=240 cterm=none
-
-hi SpellCap ctermfg=white ctermbg=58 cterm=none
-hi SpellRare ctermfg=200 ctermbg=none cterm=underline
+hi IncSearch ctermfg=black ctermbg=white cterm=none
+hi Search ctermfg=black ctermbg=white cterm=none
+hi SpellBad ctermfg=none ctermbg=none cterm=underline
+hi SpellCap ctermfg=none ctermbg=none cterm=underline
+hi SpellRare ctermfg=white ctermbg=65 cterm=underline
 
 hi VertSplit ctermfg=132 ctermbg=black cterm=NONE
 " Active window

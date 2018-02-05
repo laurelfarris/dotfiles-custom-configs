@@ -10,8 +10,8 @@
     deleted = red
     untracked = yellow
 [user]
-    name = Dustin Farris
-    email = dustin@farris.io
+	name = laurelfarris
+	email = laurel@laurelfarris.com
     signingkey = B8F8A436
 [push]
     default = matching
