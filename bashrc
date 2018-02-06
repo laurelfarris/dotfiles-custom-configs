@@ -23,7 +23,7 @@ alias res='restore'
 
 function my_vi() {
     if swap | grep -q $1; then
-        echo "File already being edited you moron!"
+        echo "You're already editing this file, dumbass."
     else
         echo -ne "\e]0; VIM: \"$1\"\007";
         vim $1
