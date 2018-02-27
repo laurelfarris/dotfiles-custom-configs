@@ -46,26 +46,9 @@ done
 
 function cleanup() {
     # Permanently delete files moved to Trash more than 1 month ago.
-    # Gives write permissions back, since can't rm without
-    #   (actually gives an option to do so, but that's annoying).
-
-    # nospaces
-
-    for f in `find ${HOME}/.Trash -type f -depth 1 -atime +30`; do
-        chmod 644 ${f}
-        command rm ${f}
-    done
-
-    # Move items in subdirectories to depth 1
-    for d in `find ${HOME}/.Trash -maxdepth 2 -mindepth 2`; do
-        mv $d ${HOME}/.Trash
-    done
-    find ${HOME}/.Trash -type d -empty -delete
+    find ${HOME}/.Trash -type f -atime +30 -delete
+    find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 }
-#cleanup
-
-
-
 
 function rename() {
     for f in treteupp.*; do
