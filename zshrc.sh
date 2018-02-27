@@ -49,9 +49,9 @@ function cleanup() {
     # Gives write permissions back, since can't rm without
     #   (actually gives an option to do so, but that's annoying).
 
-    nospaces
+    # nospaces
 
-    for f in `find ${HOME}/.Trash -type f -depth 1 -atime +10`; do
+    for f in `find ${HOME}/.Trash -type f -depth 1 -atime +30`; do
         chmod 644 ${f}
         command rm ${f}
     done

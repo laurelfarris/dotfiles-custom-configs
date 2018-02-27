@@ -31,8 +31,8 @@ set splitright " 'vsplit' opens file to the right, not to the left
 set tabstop=4 "tab 4 spaces, not 8
 
 " Vertically center search results 07/05/17 12:26
-:nnoremap n nzz
-:nnoremap N Nzz
+":nnoremap n nzz
+":nnoremap N Nzz
 ":nnoremap * *zz
 ":nnoremap # #zz
 ":nnoremap g* g*zz
@@ -60,7 +60,10 @@ func! LastModified()
     call winrestview(l:winview)
 endf
 autocmd BufNewFile *.pro :call MyDate()
-autocmd BufWrite *.pro :call LastModified()
+
+"Changing BufWrite to BufLeave to only update 'Last modified'
+"  after exiting, not every time I do ':w' (22 Feb 2018)
+autocmd BufLeave *.pro :call LastModified()
 
 
 " Jump sections in latex files

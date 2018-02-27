@@ -9,7 +9,7 @@ alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
 
 export CLICOLOR=1
-LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;255:*.png=38;5;107:*.jpg=38;5;107:*.gz=38;5;215:*.tar=38;5;215"
+LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;255:*.pdf=38;5;107:*.png=38;5;107:*.jpg=38;5;107:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
 # Do the same thing! Which is better?
@@ -18,8 +18,11 @@ function mypath2() { echo $PATH | tr ":" "\n"; }
 
 function safe_rm() { mv $@ ~/.trash; }
 alias rm='safe_rm'
-function restore() { mv ~/.trash/$@ $PWD; }
-alias res='restore'
+
+function cleanup() {
+    find ${HOME}/.Trash -type f -atime +30 -delete
+    find ${HOME}/.Trash -mindepth 1 -empty -delete
+}
 
 function my_vi() {
     if swap | grep -q $1; then
