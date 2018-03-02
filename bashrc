@@ -16,7 +16,7 @@ export LS_COLORS
 function mypath() { echo "${PATH//:/$'\n'}"; }
 function mypath2() { echo $PATH | tr ":" "\n"; }
 
-function safe_rm() { mv $@ ~/.trash; }
+function safe_rm() { command mv -f $@ ~/.Trash; }
 alias rm='safe_rm'
 
 function cleanup() {
