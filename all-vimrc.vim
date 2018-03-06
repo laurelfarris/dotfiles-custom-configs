@@ -77,8 +77,6 @@ autocmd BufEnter,BufRead *.ex,*.html,*.feature,*.js,*.coffee,*.less,*.css,*.sass
 
 " BufEnter OR BufRead? Need both?
 autocmd BufEnter,BufRead *.pro syntax keyword IDLangConditional foreach FOREACH endforeach ENDFOREACH
-autocmd BufRead *.pro syntax keyword IDLangImportant START &
-autocmd BufRead *.pro syntax keyword IDLangImportant STOP &
 autocmd BufRead *.pro syntax keyword IDLangRoutine file_search array_indices
 autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &
 
