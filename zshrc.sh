@@ -1,3 +1,5 @@
+SAVEHIST=10000
+
 alias rOAun='./manage.py runserver 0.0.0.0:8000'
 alias mkenv='mkvirtualenv --python=/usr/local/bin/python3 `basename $PWD` && setvirtualenvproject'
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
