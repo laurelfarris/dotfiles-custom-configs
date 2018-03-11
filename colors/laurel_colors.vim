@@ -67,7 +67,7 @@ hi Readlineinclude ctermfg=white ctermbg=NONE cterm=NONE
 hi Special ctermfg=white ctermbg=NONE cterm=NONE
 hi SpecialKey ctermfg=59 ctermbg=23 cterm=NONE
 hi Statement ctermfg=107 ctermbg=NONE cterm=NONE
-hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE
+hi StorageClass ctermfg=107 ctermbg=NONE cterm=NONE
 hi Tag ctermfg=153 ctermbg=NONE cterm=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=247 ctermbg=NONE cterm=inverse,bold
