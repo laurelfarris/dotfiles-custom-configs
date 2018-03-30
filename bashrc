@@ -16,12 +16,18 @@ export LS_COLORS
 function mypath() { echo "${PATH//:/$'\n'}"; }
 function mypath2() { echo $PATH | tr ":" "\n"; }
 
-function safe_rm() { command mv -f $@ ~/.Trash; }
+function safe_rm() {
+    for fname in $@; do
+        touch -ac $fname
+        command mv -f $fname ${HOME}/.Trash/
+    done
+}
 alias rm='safe_rm'
 
-function cleanup() {
+# "Permanent rm"
+function prm() {
     find ${HOME}/.Trash -type f -atime +30 -delete
-    find ${HOME}/.Trash -mindepth 1 -empty -delete
+    find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 }
 
 function my_vi() {

@@ -47,7 +47,7 @@ alias rm='safe_rm'
 # "Permanent rm"
 function prm() {
     # Permanently delete files moved to Trash more than 1 month ago.
-    nospaces
+    # nospaces --> needs to be run from inside .Trash directory
     find ${HOME}/.Trash -type f -atime +30 -delete
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 }
