@@ -15,11 +15,9 @@ alias activate='source env/bin/activate'
 
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias chrome='open -n -a Google\ Chrome'
-alias ipy='ipython'
 alias jup='jupyter notebook'
 alias jup2='open -a safari http://localhost:8888/'
-alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
+alias astro='ssh laurel07@astronomy.nmsu.edu'
 alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
@@ -48,7 +46,8 @@ alias rm='safe_rm'
 function prm() {
     # Permanently delete files moved to Trash more than 1 month ago.
     # nospaces --> needs to be run from inside .Trash directory
-    find ${HOME}/.Trash -type f -atime +30 -delete
+    find ${HOME}/.Trash -atime +30 -delete
+    # Set mindepth to 1 to prevent .Trash from being deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 }
 
@@ -68,7 +67,7 @@ function get() {
     file=${HOME}/Temp/temp${filenumber}.pdf
     curl --create-dirs -o ${file} $1
     chmod 444 ${file}
-    open ${file}
+    open -g ${file}
     # Add an option to save if desired, and to not remove until Preview
     #    window containing this file is closed> open --args (maybe...)
     # Or just delete from Temp/ after 24 hours...
