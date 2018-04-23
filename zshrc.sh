@@ -73,7 +73,7 @@ function get() {
     # Add an option to save if desired, and to not remove until Preview
     #    window containing this file is closed> open --args (maybe...)
     # Or just delete from Temp/ after 24 hours...
-    rm ${file}
+    # rm ${file}
 }
 
 
