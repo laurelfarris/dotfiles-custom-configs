@@ -46,9 +46,11 @@ alias rm='safe_rm'
 function prm() {
     # Permanently delete files moved to Trash more than 1 month ago.
     # nospaces --> needs to be run from inside .Trash directory
+    ls ${HOME}/.Trash | wc -l
     find ${HOME}/.Trash -atime +30 -delete
     # Set mindepth to 1 to prevent .Trash from being deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
+    ls ${HOME}/.Trash | wc -l
 }
 
 # WTF is this? Might be something I copied off the interwebs (26 March 2018).
