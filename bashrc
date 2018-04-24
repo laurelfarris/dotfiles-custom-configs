@@ -26,8 +26,10 @@ alias rm='safe_rm'
 
 # "Permanent rm"
 function prm() {
+    ls ${HOME}/.Trash | wc -l
     find ${HOME}/.Trash -type f -atime +30 -delete
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
+    ls ${HOME}/.Trash | wc -l
 }
 
 function my_vi() {
