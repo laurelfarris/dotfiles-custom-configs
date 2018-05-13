@@ -22,11 +22,21 @@ alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
 
-function nospaces() {
+function fuckspaces() {
+
+    # find file/directory names that contain spaces,
+    # (contents of current directory only).
     find . -mindepth 1 -maxdepth 1 -iname "*\ *" | while read line; do
+
+    # current file name
     old=${line:s/\*//}
+
+    # new file name (replace spaces with underscores).
     new=` echo $old | tr ' ' '_' `
+
+    # rename old filename with new filename.
     mv $old $new
+
 done
 }
 
