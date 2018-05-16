@@ -34,7 +34,7 @@ function prm() {
 
 function my_vi() {
     if swap | grep -q $1; then
-        echo "You're already editing this file, dumbass."
+        echo "This file is currently open in another window."
     else
         echo -ne "\e]0; VIM: \"$1\"\007";
         vim $1
