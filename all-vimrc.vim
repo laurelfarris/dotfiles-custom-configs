@@ -65,7 +65,9 @@ autocmd BufNewFile *.pro :call MyDate()
 
 "Changing BufWrite to BufLeave to only update 'Last modified'
 "  after exiting, not every time I do ':w' (22 Feb 2018)
-autocmd BufLeave *.pro :call LastModified()
+"autocmd BufLeave *.pro :call LastModified()
+" NOTE: this was called every time I opened a DIFFERENT file using
+"  the :new command... which is not what I wanted.
 
 
 " Jump sections in latex files
