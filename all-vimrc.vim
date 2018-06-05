@@ -50,7 +50,10 @@ nnoremap Y y$
 " Put 'last modified' date at top of codes.
 func! MyDate()
     ":undojoin | put! =';; Last modified:   ' . strftime('%d %B %Y %T') | 2d
-    :put! =';; Last modified:   ' . strftime('%d %B %Y %T') | 2d
+    "
+    ":put! =';; Last modified:   ' . strftime('%d %B %Y %T') | 2d
+    " Removing time for now
+    :put! =';; Last modified:   ' . strftime('%d %B %Y') | 2d
 
 endf
 func! LastModified()
