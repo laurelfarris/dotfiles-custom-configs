@@ -64,7 +64,7 @@ func! LastModified()
     :normal `k
     call winrestview(l:winview)
 endf
-autocmd BufNewFile *.pro :call MyDate()
+"autocmd BufNewFile *.pro :call MyDate()
 
 "Changing BufWrite to BufLeave to only update 'Last modified'
 "  after exiting, not every time I do ':w' (22 Feb 2018)
