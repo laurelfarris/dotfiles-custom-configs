@@ -19,7 +19,7 @@ set expandtab "do this when writing out file
 set ignorecase "better for searching
 set incsearch "Move to string as you type it
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
-set noswapfile "Ain't nobody got time for swap files
+"set noswapfile "Ain't nobody got time for swap files
 set nowrap "long lines continue off screen instead of wrapping
 set number "enable line numbering
 "set nuw=6  " number of columns allotted to line numbers
