@@ -128,3 +128,17 @@ set_prompt () {
     PS1=${my_title}${line1}${line2}${line3};
 }
 PROMPT_COMMAND=set_prompt
+
+
+
+# SSWIDL (maybe)  2018-06-06
+
+# SSW IDL
+#export QUIET=1
+#export IDL_STARTUP='/home/users/laurel07/idl/idl_startup.pro'
+
+# Test for existance of a prompt
+#if ($?prompt) then
+#export SSW_INSTR="BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
+#source $SSW/gen/setup/setup.ssw
+#endif
