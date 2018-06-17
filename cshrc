@@ -23,7 +23,6 @@ alias praesepe ssh -Y laurel07@praesepe.nmsu.edu
 alias solar ssh -Y laurel07@solarstorm.nmsu.edu
 alias acrux ssh -Y laurel07@acrux.nmsu.edu
 alias astro ssh -Y laurel07@astronomy.nmsu.edu
-alias mine cd /acrux/laurel07
 alias ls ls --color=auto
 alias src source $HOME/.cshrc
 #alias open gnome-open
@@ -64,3 +63,4 @@ setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro'
 if ($?prompt) then
 setenv SSW_INSTR "BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
 source $SSW/gen/setup/setup.ssw endif
+#source $HOME/setup.ssw endif
