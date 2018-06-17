@@ -1,4 +1,4 @@
-"colorscheme laurel_colors
+colorscheme laurel_colors
 "colorscheme codeschool
 " source ./colors/laurel_colors
 
