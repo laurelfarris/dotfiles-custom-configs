@@ -4,7 +4,6 @@
 # This will expand the command before executing it.
 bind Space:magic-space
 
-alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias src='. ~/.bashrc'
 alias delete_pyc='find /home/users/laurel07 -iname \*.pyc -execdir mv {} ~/.trash \+'
 
@@ -15,6 +14,16 @@ export LS_COLORS
 # Do the same thing! Which is better?
 function mypath() { echo "${PATH//:/$'\n'}"; }
 function mypath2() { echo $PATH | tr ":" "\n"; }
+
+# ssh functions
+alias astro='ssh -X laurel07@astronomy.nmsu.edu'
+
+function solaridl() {
+    ssh -X laurel07@solarstorm.nmsu.edu
+    cd /solarstorm/laurel07/thesis_project/
+    tcsh
+    sswidl
+}
 
 function safe_rm() {
     for fname in $@; do
