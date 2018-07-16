@@ -16,7 +16,7 @@ function mypath() { echo "${PATH//:/$'\n'}"; }
 function mypath2() { echo $PATH | tr ":" "\n"; }
 
 # ssh functions
-alias astro='ssh -v -X laurel07@astronomy.nmsu.edu'
+alias astro='ssh -X laurel07@astronomy.nmsu.edu'
 
 function safe_rm() {
     for fname in $@; do
