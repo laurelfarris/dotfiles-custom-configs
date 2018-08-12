@@ -131,7 +131,7 @@ hi tcshSQuote ctermfg=67
 
 hi bibKey ctermfg=180
 
-hi texComment ctermfg=240
+hi texComment ctermfg=243
 hi texDoctype ctermfg=186
 hi texDoctypeArgs ctermfg=67
 
