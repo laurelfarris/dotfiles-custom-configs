@@ -246,7 +246,7 @@ hi IDLangSSW ctermfg=229
 hi IDLangRoutine ctermfg=65
 hi IDLangConditional ctermfg=180
 hi IDLangStatement ctermfg=180
-hi IDLangSystem ctermfg=144
+hi IDLangSystem ctermfg=139
 
 hi IDLangKeyword ctermfg=white
 hi IDLangStrucvar ctermfg=white
