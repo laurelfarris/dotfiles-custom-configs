@@ -24,7 +24,7 @@ alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc
 alias mv='mv -i'
 
 function getfigures() {
-    figurepath=${HOME}/Dropbox/Figures/Thesis_project/Temp
+    figurepath=${HOME}/Dropbox/Figures/Temp/
     scp laurel07@astronomy.nmsu.edu:~/\*.pdf $figurepath
     open ${figurepath}/*.pdf
 }
@@ -47,6 +47,17 @@ function fuckspaces() {
 done
 }
 
+# 16 August 2018 - This should go somewhere other than zshrc file:
+function move_list() {
+
+    #for file in `cat _list_of_old_figures.txt | head`; do
+    for file in `cat _list_of_old_figures.txt`; do
+        #ls $file
+        mv $file Old/
+        # remove name of file from list somehow... sed?
+    done
+}
+
 function safe_rm() {
     for fname in $@; do
         if [[ `basename $PWD` != .Trash ]]; then
@@ -59,16 +70,33 @@ function safe_rm() {
 }
 alias rm='safe_rm'
 
+# Execute command from directory without cd-ing into it?
+function mycd() {
+    echo "#!/bin/bash; cd $1; exec $2" > /usr/local/bin/execindirectory
+    chmod +x /usr/local/bin/execindirectory
+}
+
 # Permanently delete files that have been in .Trash for more than a month.
 function prm() {
     # nospaces --> needs to be run from inside .Trash directory
-    ls ${HOME}/.Trash | wc -l
+
+    # Creating variable for num. files before and after prm (09/11/18)
+    files1=`ls ${HOME}/.Trash | wc -l`
+
     find ${HOME}/.Trash -atime +30 -exec basename {} \;
     find ${HOME}/.Trash -atime +30 -delete
 
-    # Set mindepth to 1 to prevent .Trash from being deleted.
+    # Set mindepth to 1 to prevent ~/.Trash itself from being deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
-    ls ${HOME}/.Trash | wc -l
+
+    files2=`ls ${HOME}/.Trash | wc -l`
+
+    # Not sure how to do math operations... the following don't work (09/11/18)
+    #echo 'Permanently deleted ' ${files1} - ${files2}
+    #n=${files1}-${files2}
+
+    echo ${files1} ' files in Trash.'
+    echo ${files2} ' files in Trash after deleting old ones.'
 }
 
 # WTF is this? Might be something I copied off the interwebs (26 March 2018).
