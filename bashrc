@@ -28,11 +28,20 @@ alias rm='safe_rm'
 
 # "Permanent rm"
 function prm() {
-    ls ${HOME}/.Trash | wc -l
+
+    # 9/18/2018 Discovered the 'let' command!
+    let files1=`ls ${HOME}/.Trash | wc -l`
+
     find ${HOME}/.Trash -type f -atime +30 -exec basename {} \;
     find ${HOME}/.Trash -type f -atime +30 -delete
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
-    ls ${HOME}/.Trash | wc -l
+
+    let files2=`ls ${HOME}/.Trash | wc -l`
+    let diff="$files1 - $files2"
+
+    echo ${files1} ' files in Trash.'
+    echo ${files2} ' files in Trash after deleting old ones.'
+    echo "${diff} files permanently deleted."
 }
 
 

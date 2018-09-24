@@ -81,7 +81,7 @@ function prm() {
     # nospaces --> needs to be run from inside .Trash directory
 
     # Creating variable for num. files before and after prm (09/11/18)
-    files1=`ls ${HOME}/.Trash | wc -l`
+    let files1=`ls ${HOME}/.Trash | wc -l`
 
     find ${HOME}/.Trash -atime +30 -exec basename {} \;
     find ${HOME}/.Trash -atime +30 -delete
@@ -89,7 +89,7 @@ function prm() {
     # Set mindepth to 1 to prevent ~/.Trash itself from being deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 
-    files2=`ls ${HOME}/.Trash | wc -l`
+    let files2=`ls ${HOME}/.Trash | wc -l`
 
     # Not sure how to do math operations... the following don't work (09/11/18)
     #echo 'Permanently deleted ' ${files1} - ${files2}
@@ -97,6 +97,7 @@ function prm() {
 
     echo ${files1} ' files in Trash.'
     echo ${files2} ' files in Trash after deleting old ones.'
+    echo "${diff} files permanently deleted."
 }
 
 # WTF is this? Might be something I copied off the interwebs (26 March 2018).
