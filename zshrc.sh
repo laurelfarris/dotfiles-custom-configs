@@ -26,7 +26,7 @@ alias mv='mv -i'
 function getfigures() {
     figurepath=${HOME}/Dropbox/Figures/Temp/
     scp laurel07@astronomy.nmsu.edu:~/\*.pdf $figurepath
-    open ${figurepath}/*.pdf
+    #open ${figurepath}/*.pdf
 }
 
 function fuckspaces() {
@@ -81,7 +81,7 @@ function prm() {
     # nospaces --> needs to be run from inside .Trash directory
 
     # Creating variable for num. files before and after prm (09/11/18)
-    let files1=`ls ${HOME}/.Trash | wc -l`
+    let "files1=`ls ${HOME}/.Trash | wc -l`"
 
     find ${HOME}/.Trash -atime +30 -exec basename {} \;
     find ${HOME}/.Trash -atime +30 -delete
@@ -89,11 +89,8 @@ function prm() {
     # Set mindepth to 1 to prevent ~/.Trash itself from being deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 
-    let files2=`ls ${HOME}/.Trash | wc -l`
-
-    # Not sure how to do math operations... the following don't work (09/11/18)
-    #echo 'Permanently deleted ' ${files1} - ${files2}
-    #n=${files1}-${files2}
+    let "files2=`ls ${HOME}/.Trash | wc -l`"
+    let "diff=$files1 - $files2"
 
     echo ${files1} ' files in Trash.'
     echo ${files2} ' files in Trash after deleting old ones.'
