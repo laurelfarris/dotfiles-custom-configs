@@ -9,23 +9,31 @@ alias sm='./manage.py schemamigration'
 alias mm='./manage.py makemigrations'
 #alias ipy='ipython --matplotlib --pylab'
 alias activate='source env/bin/activate'
+alias ch='open -a Google\ Chrome'
 
 # Don't really need this alias (26 March 2018).
 #alias gs='git status'
 
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias jup='jupyter notebook'
-alias jup2='open -a safari http://localhost:8888/'
 alias astro='ssh -X -Y laurel07@astronomy.nmsu.edu'
 alias work='cd ${HOME}/Dropbox/Research/Codes/'
 alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
+alias cp='cp -i'
+
+# Neither of these works (01 November 2018)
+alias jup='jupyter notebook'
+alias jup2='open -a safari http://localhost:8888/'
 
 function getfigures() {
     figurepath=${HOME}/Dropbox/Figures/Temp/
-    scp laurel07@astronomy.nmsu.edu:~/\*.pdf $figurepath
+    scp laurel07@astronomy.nmsu.edu:~/Figures/\*.pdf $figurepath
+    echo ${figurepath}
+    # 10/19/2018 - Using 'find' to only open the files that were just downloaded,
+    #  rather than every figure in directory.
+    find ${figurepath} -mtime -1m -type f -exec open {} \+
     #open ${figurepath}/*.pdf
 }
 
@@ -59,6 +67,8 @@ function move_list() {
 }
 
 function safe_rm() {
+    # This can delete entire directories, and their contents I think.
+    # --> Fix it so it works more like command rm.
     for fname in $@; do
         if [[ `basename $PWD` != .Trash ]]; then
             touch -ac $fname

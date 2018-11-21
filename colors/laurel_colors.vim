@@ -27,7 +27,8 @@ hi String ctermfg=67 ctermbg=NONE cterm=NONE
 hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
 hi CursorColumn ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
-hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
+"hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
+hi CursorLineNr ctermfg=131 ctermbg=233 cterm=none
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=232 cterm=NONE guibg=#222426
 
@@ -131,17 +132,17 @@ hi tcshSQuote ctermfg=67
 
 hi bibKey ctermfg=180
 
-hi texComment ctermfg=243
-hi texDoctype ctermfg=186
+hi texComment ctermfg=245
+hi texDoctype ctermfg=187
 hi texDoctypeArgs ctermfg=67
 
-hi texNewCmd ctermfg=186
-hi texCmdName ctermfg=186
+hi texNewCmd ctermfg=187
+hi texCmdName ctermfg=187
 hi texCmdBody ctermfg=white
 hi texCmdArgs ctermfg=67
-hi texNewEnv ctermfg=186
-hi texEnvName ctermfg=186
-hi texDefParm ctermfg=186
+hi texNewEnv ctermfg=187
+hi texEnvName ctermfg=187
+hi texDefParm ctermfg=187
 
 "hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
 "hi texBeginEnd ctermfg=65 guifg=#45ab5c guibg=NONE gui=NONE
@@ -152,6 +153,7 @@ hi texDefParm ctermfg=186
 "hi LineNr ctermfg=240 ctermbg=NONE cterm=NONE
 
 hi texSection ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
+"hi texSubSectionZone ctermfg=67 ctermbg=NONE cterm=NONE guifg=#7592cf guibg=NONE gui=NONE
 hi texBeginEnd ctermfg=187 guifg=#45ab5c guibg=NONE gui=NONE
 hi texBeginEndName ctermfg=180 ctermbg=NONE cterm=NONE guifg=#e2a95a guibg=NONE gui=NONE
 hi texStatement ctermfg=107
@@ -164,8 +166,8 @@ hi texTypeStyle ctermfg=103
 hi texTypeSize ctermfg=67
 hi texLength ctermfg=67
 
-hi texCite ctermfg=187
-hi texRefZone ctermfg=180
+hi texCite ctermfg=white
+hi texRefZone ctermfg=65
 "hi texParen ctermfg=200
 " All verbatim text?
 hi texZone ctermfg=245

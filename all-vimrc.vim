@@ -9,6 +9,14 @@ syntax on "Activates syntax highlighting
 "
 let g:tex_flavor = "latex"
 
+
+" 01 November 2018
+set formatoptions=tcqr
+
+" the following takes the current options and removes c, r, and o (I think)
+":set formatoptions-=cro
+
+
 set autoindent "if previous line is indented, indent next line
 set autoread "Read open files again when changed outside vim
 set cmdheight=2 "space for displaying messages
@@ -90,7 +98,12 @@ autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &
 
 
 set spellfile=${HOME}/Dropbox/en.utf-8.add "list where words are ADDED for zg (add to word list) and zw commands
-"autocmd BufEnter,BufRead *.tex set spell
+
+" 18 October 2018
+" Want to set spellcheck for .tex files... why was this commented?
+autocmd BufEnter,BufRead *.tex set spell
+
+
 autocmd BufEnter,BufRead *.tex hi clear texItalStyle
 autocmd BufEnter,BufRead *.tex hi clear texBoldStyle
 autocmd BufEnter,BufRead *.tex hi clear texItalBoldStyle
