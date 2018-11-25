@@ -26,6 +26,11 @@ function safe_rm() {
 }
 alias rm='safe_rm'
 
+function rmfigs() {
+    #ls ${HOME}/Figures/*.pdf
+    rm ${HOME}/Figures/*.pdf
+}
+
 # "Permanent rm"
 function prm() {
 
