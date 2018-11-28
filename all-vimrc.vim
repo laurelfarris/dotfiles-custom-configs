@@ -9,13 +9,29 @@ syntax on "Activates syntax highlighting
 "
 let g:tex_flavor = "latex"
 
-
 " 01 November 2018
 set formatoptions=tcqr
 
-" the following takes the current options and removes c, r, and o (I think)
-":set formatoptions-=cro
+"--------------------------------------------------------------------------
+" 27 November 2018
+" http://vim.wikia.com/wiki/Comment_Lines_according_to_a_given_filetype
+" comment out highlighted lines according to file type
+" put a line like the following in your ~/.vim/filetype.vim file
+" and remember to turn on filetype detection: filetype on
+" au! BufRead,BufNewFile *.sh,*.tcl,*.php,*.pl let Comment="#"
+" if the comment character for a given filetype happens to be @
+" then use let Comment="\@" to avoid problems...
+function CommentLines()
+  "let Comment="#" " shell, tcl, php, perl
+  exe ":s@^@".g:Comment."@g"
+  exe ":s@$@".g:EndComment."@g"
+endfunction
+" map visual mode keycombo 'co' to this function
+vmap co :call CommentLines()<CR>
 
+" IDL
+au BufRead,BufNewFile *.pro set filetype=idlang | let Comment=";" | let EndComment=""
+"--------------------------------------------------------------------------
 
 set autoindent "if previous line is indented, indent next line
 set autoread "Read open files again when changed outside vim
