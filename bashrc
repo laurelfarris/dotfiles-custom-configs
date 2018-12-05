@@ -11,6 +11,26 @@ export CLICOLOR=1
 LS_COLORS="di=38;5;67:ln=38;5;167:ex=38;5;255:*.pdf=38;5;107:*.ps=38;5;107:*.png=38;5;107:*.jpg=38;5;107:*.gz=38;5;215:*.tar=38;5;215"
 export LS_COLORS
 
+
+function space2underscore() {
+
+    # find file/directory names that contain spaces,
+    # (contents of current directory only).
+    find . -mindepth 1 -maxdepth 1 -iname "*\ *" | while read line; do
+
+    # current file name
+    old=${line:s/\*//}
+
+    # new file name (replace spaces with underscores).
+    new=` echo $old | tr ' ' '_' `
+
+    # rename old filename with new filename.
+    mv $old $new
+
+done
+}
+
+
 # Do the same thing! Which is better?
 function mypath() { echo "${PATH//:/$'\n'}"; }
 function mypath2() { echo $PATH | tr ":" "\n"; }
