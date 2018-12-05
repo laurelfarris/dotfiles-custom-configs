@@ -10,7 +10,7 @@ syntax on "Activates syntax highlighting
 let g:tex_flavor = "latex"
 
 " 01 November 2018
-set formatoptions=tcqr
+set formatoptions=tcqro
 
 "--------------------------------------------------------------------------
 " 27 November 2018
