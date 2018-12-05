@@ -40,7 +40,6 @@ set cmdwinheight=10 "space for displaying messages in q:
 set conceallevel=0 "Don't collapse my shit
 set cursorline  "Allows syntax highlighting of current line number and background
 set cursorcolumn "Cursor in crosshairs
-set expandtab "do this when writing out file
 set ignorecase "better for searching
 set incsearch "Move to string as you type it
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
@@ -51,10 +50,12 @@ set number "enable line numbering
 set pastetoggle=<F3>
 set report=2  "display message when change is applied to at least 0 lines
 set scrolloff=0 "Keep n lines visible on screen above/below cursor
-set shiftwidth=4 "move 4 spaces using '>>' or 'V'+'>'
 set sidescroll=1 "move one column at a time for long lines that go off screen
 set splitbelow " 'new' opens file at bottom half of screen, not top
 set splitright " 'vsplit' opens file to the right, not to the left
+
+set expandtab "do this when writing out file
+set shiftwidth=4 "move 4 spaces using '>>' or 'V'+'>'
 set tabstop=4 "tab 4 spaces, not 8
 
 " Vertically center search results 07/05/17 12:26
