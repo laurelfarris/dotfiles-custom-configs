@@ -37,7 +37,7 @@ function getfigures() {
     #open ${figurepath}/*.pdf
 }
 
-function fuckspaces() {
+function space2underscore() {
 
     # find file/directory names that contain spaces,
     # (contents of current directory only).
