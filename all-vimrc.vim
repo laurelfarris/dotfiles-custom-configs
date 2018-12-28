@@ -21,11 +21,13 @@ set formatoptions=tcqro
 " au! BufRead,BufNewFile *.sh,*.tcl,*.php,*.pl let Comment="#"
 " if the comment character for a given filetype happens to be @
 " then use let Comment="\@" to avoid problems...
-function CommentLines()
-  "let Comment="#" " shell, tcl, php, perl
-  exe ":s@^@".g:Comment."@g"
-  exe ":s@$@".g:EndComment."@g"
-endfunction
+"
+" Commenting this out because it is defined elsewhere - Dustin 2018-12-27
+" function CommentLines()
+"   "let Comment="#" " shell, tcl, php, perl
+"   exe ":s@^@".g:Comment."@g"
+"   exe ":s@$@".g:EndComment."@g"
+" endfunction
 " map visual mode keycombo 'co' to this function
 vmap co :call CommentLines()<CR>
 
