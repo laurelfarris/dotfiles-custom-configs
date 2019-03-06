@@ -9,7 +9,7 @@ alias sm='./manage.py schemamigration'
 alias mm='./manage.py makemigrations'
 #alias ipy='ipython --matplotlib --pylab'
 alias activate='source env/bin/activate'
-alias ch='open -a Google\ Chrome'
+alias c='open -a Google\ Chrome'
 
 # Don't really need this alias (26 March 2018).
 #alias gs='git status'
@@ -36,6 +36,17 @@ function getfigures() {
     find ${figurepath} -mtime -1m -type f -exec open {} \+
     #open ${figurepath}/*.pdf
 }
+
+
+## Copied getfigures, just need one document (probably)
+function getpaper() {
+    paperpath=${HOME}/
+    scp laurel07@astronomy.nmsu.edu:~/Dissertation.pdf $paperpath
+    echo ${paperpath}
+    find ${paperpath} -mtime -1m -type f -exec open {} \+
+    #open ${paperpath}/*.pdf
+}
+
 
 function nospaces() {
 
