@@ -123,8 +123,7 @@ autocmd BufRead *.pro syntax keyword IDLangSSW read_sdo &
 
 set spellfile=${HOME}/Dropbox/en.utf-8.add "list where words are ADDED for zg (add to word list) and zw commands
 
-" 18 October 2018
-" Want to set spellcheck for .tex files... why was this commented?
+" set spellcheck for .tex files
 "autocmd BufEnter,BufRead *.tex set spell
 
 
