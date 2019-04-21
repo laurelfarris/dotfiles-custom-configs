@@ -23,16 +23,18 @@ set formatoptions=tcqro
 " then use let Comment="\@" to avoid problems...
 "
 " Commenting this out because it is defined elsewhere - Dustin 2018-12-27
-" function CommentLines()
-"   "let Comment="#" " shell, tcl, php, perl
-"   exe ":s@^@".g:Comment."@g"
-"   exe ":s@$@".g:EndComment."@g"
-" endfunction
+" Uncommenting this because it wasn't working for me anymore
+"  and I just now figured out why... Laurel 2019-04-21
+ function CommentLines()
+   "let Comment="#" " shell, tcl, php, perl
+   exe ":s@^@".g:Comment."@g"
+   exe ":s@$@".g:EndComment."@g"
+ endfunction
 " map visual mode keycombo 'co' to this function
 vmap co :call CommentLines()<CR>
 
-" IDL
 au BufRead,BufNewFile *.pro set filetype=idlang | let Comment=";" | let EndComment=""
+au BufRead,BufNewFile *.tex set filetype=tex | let Comment="%" | let EndComment=""
 "--------------------------------------------------------------------------
 
 set autoindent "if previous line is indented, indent next line
