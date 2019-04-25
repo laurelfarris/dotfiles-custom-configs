@@ -27,6 +27,15 @@ alias cp='cp -i'
 alias jup='jupyter notebook'
 alias jup2='open -a safari http://localhost:8888/'
 
+# write function that takes an argument(s)
+
+function astrocopy() {
+    for i
+    do scp $i laurel07@astronomy.nmsu.edu:~
+    done
+}
+
+
 function getfigures() {
     figurepath=${HOME}/Dropbox/Figures/Temp/
     scp laurel07@astronomy.nmsu.edu:~/Figures/\*.pdf $figurepath
