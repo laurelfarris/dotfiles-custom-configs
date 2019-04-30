@@ -31,7 +31,7 @@ alias jup2='open -a safari http://localhost:8888/'
 #  not able to read this into vim using :r! mydate -- 25 April 2018
 
 # write function that takes an argument(s)
-function astrocopy() {
+function astrocp() {
     for i
     do scp $i laurel07@astronomy.nmsu.edu:~
     done
