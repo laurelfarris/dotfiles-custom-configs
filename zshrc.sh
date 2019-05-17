@@ -139,8 +139,11 @@ function rename() {
 }
 
 # Download pdf, open in preview, and immediately delete.
+#  Changed save directory to ~/Dropbox/References/, where I'm more likely to
+#   see the pdfs I often "get" and then forget about... (16 May 2019)
 function get() {
-    dir=${HOME}/Temp/
+    #dir=${HOME}/Temp/
+    dir=${HOME}/Dropbox/References/
     filenumber=`date +'%s'`
     file=${HOME}/Temp/temp${filenumber}.pdf
     curl --create-dirs -o ${file} $1
