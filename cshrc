@@ -60,7 +60,14 @@ unset orange green yellow blue purple yellow white dgray lgray end
 setenv QUIET 1
 setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro'
 # Test for existance of a prompt... so we don't break interactive shells?
+
 if ($?prompt) then
-setenv SSW_INSTR "BCS HXT SXT WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON HESSI SOT XRT EIS SXI-GOES12 AIA EVE HMI EUVI COR1 COR2 HI"
+setenv SSW_INSTR "AIA EVE HMI IRIS HESSI BCS HXT SXT XRT EIS SXI-GOES12 EUVI WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON SOT COR1 COR2 HI"
 source $SSW/gen/setup/setup.ssw endif
 #source $HOME/setup.ssw endif
+
+# 16 May 2019
+#   >echo $SSW
+#   NOTE: same packages can exist for multiple instruments...
+#           will load in order of appearance.
+# setenv SSW database... or something
