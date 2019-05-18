@@ -141,11 +141,17 @@ function rename() {
 # Download pdf, open in preview, and immediately delete.
 #  Changed save directory to ~/Dropbox/References/, where I'm more likely to
 #   see the pdfs I often "get" and then forget about... (16 May 2019)
+# Looks like variable "dir" isn't even used anymore, probably since I
+#   condensed things by setting file name as full path-to-file, and then
+#   using the --create-dirs option with curl in order to make the dir in
+#   the path if it doesn't already exist... aw gee  (17 May 2019)
 function get() {
     #dir=${HOME}/Temp/
-    dir=${HOME}/Dropbox/References/
+    #dir=${HOME}/Dropbox/References/
+
     filenumber=`date +'%s'`
-    file=${HOME}/Temp/temp${filenumber}.pdf
+    #file=${HOME}/Temp/temp${filenumber}.pdf
+    file=${HOME}/Dropbox/References/temp${filenumber}.pdf
     curl --create-dirs -o ${file} $1
     chmod 444 ${file}
     open -g ${file}
