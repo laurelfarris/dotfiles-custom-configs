@@ -27,10 +27,13 @@ hi String ctermfg=67 ctermbg=NONE cterm=NONE
 hi LineNr ctermfg=102 ctermbg=0 cterm=NONE
 hi CursorColumn ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
-"hi CursorLineNr ctermfg=228 ctermbg=233 cterm=none
-hi CursorLineNr ctermfg=131 ctermbg=233 cterm=none
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=232 cterm=NONE guibg=#222426
+
+"hi CursorLineNr ctermfg=131 ctermbg=233 cterm=none
+"  dark pink... changing this to something I can actually see (14 July 2019):
+"226-230 --> shades of yellow (lower number = darker yellow)
+hi CursorLineNr ctermfg=187 ctermbg=233 cterm=none
 
 hi IncSearch ctermfg=black ctermbg=white cterm=none
 hi Search ctermfg=black ctermbg=white cterm=none
