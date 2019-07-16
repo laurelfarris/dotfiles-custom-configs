@@ -37,27 +37,61 @@ function astrocp() {
     done
 }
 
+
+#--------------------------------------------------------------------------------
+# function to show names of pdf files with less than maxpages
+#   (15-16 July 2019)
+
 function mytest() {
-    x=2
-    y=1
-    if (( x > y )); then
-        echo "x > y"
-    fi
+    while getopts ab:c opt; do
+        case ${opt} in
+            a ) echo ${opt}
+                ;;
+            b ) echo ${opt}
+                bvalue=$OPTARG
+                echo $bvalue
+                ;;
+            c) echo ${opt}
+                ;;
+            \? ) echo "ERROR"
+                ;;
+        esac
+    done
 }
-function numpages() {
+
+function pdfpages() {
     # -name kMDItemNumberOfPages
     # -name kMDItemFSName
 
-    for fname in $@; do
         #mdls -name kMDItemNumberOfPages $fname | awk '{ if ($3 < 7) {print $3} }'
         # --> works, but not sure how to print $fame and npages side by side
 
-        npages=`mdls -name kMDItemNumberOfPages $fname | awk '{print $3}'`
-        if (( npages < 5 )) ; then
-            echo $npages $fname
-        fi
+    while getopts "p:" opt; do
+        case ${opt} in
+            p ) maxpages=$OPTARG
+                ;;
+            \? ) echo "ERROR"
+                ;;
+        esac
     done
+
+
+    argind=${(($OPTIND))}
+    echo $argind
+
+#    for fname in $(arg); do
+#        echo $fname
+#        npages=`mdls -name kMDItemNumberOfPages $fname | awk '{print $3}'`
+#        if (( npages < maxpages )) ; then
+#            echo $npages $fname
+#        fi
+#    done
+
 }
+
+
+#--------------------------------------------------------------------------------
+
 
 
 function getfigures() {

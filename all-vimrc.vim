@@ -16,6 +16,7 @@ set formatoptions=tcqro
 " 27 November 2018
 " http://vim.wikia.com/wiki/Comment_Lines_according_to_a_given_filetype
 " comment out highlighted lines according to file type
+"  (different filetypes have different comment symbols)
 " put a line like the following in your ~/.vim/filetype.vim file
 " and remember to turn on filetype detection: filetype on
 " au! BufRead,BufNewFile *.sh,*.tcl,*.php,*.pl let Comment="#"
@@ -23,18 +24,25 @@ set formatoptions=tcqro
 " then use let Comment="\@" to avoid problems...
 "
 " Commenting this out because it is defined elsewhere - Dustin 2018-12-27
-" Uncommenting this because it wasn't working for me anymore
-"  and I just now figured out why... Laurel 2019-04-21
+" Uncommenting because this function stopped working when commented here
+"   (not sure where else it's defined, or how to use it otherwise).
+"   - Laurel 2019-04-21
  function CommentLines()
    "let Comment="#" " shell, tcl, php, perl
+   "  NOTE: the above line was commented in the source text (vim wiki).
    exe ":s@^@".g:Comment."@g"
    exe ":s@$@".g:EndComment."@g"
  endfunction
 " map visual mode keycombo 'co' to this function
 vmap co :call CommentLines()<CR>
 
+" filetype.vim -- could move these lines to separate file, tho not sure what
+" the benefit would be other than de-cluttering vimrc.vim
+"    (16 July 2019)
 au BufRead,BufNewFile *.pro set filetype=idlang | let Comment=";" | let EndComment=""
 au BufRead,BufNewFile *.tex set filetype=tex | let Comment="%" | let EndComment=""
+au BufRead,BufNewFile *.vim set filetype=vim | let Comment="\"" | let EndComment=""
+au BufRead,BufNewFile *.sh set filetype=sh | let Comment="#" | let EndComment=""
 "--------------------------------------------------------------------------
 
 set autoindent "if previous line is indented, indent next line
