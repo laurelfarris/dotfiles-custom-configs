@@ -37,6 +37,28 @@ function astrocp() {
     done
 }
 
+function mytest() {
+    x=2
+    y=1
+    if (( x > y )); then
+        echo "x > y"
+    fi
+}
+function numpages() {
+    # -name kMDItemNumberOfPages
+    # -name kMDItemFSName
+
+    for fname in $@; do
+        #mdls -name kMDItemNumberOfPages $fname | awk '{ if ($3 < 7) {print $3} }'
+        # --> works, but not sure how to print $fame and npages side by side
+
+        npages=`mdls -name kMDItemNumberOfPages $fname | awk '{print $3}'`
+        if (( npages < 5 )) ; then
+            echo $npages $fname
+        fi
+    done
+}
+
 
 function getfigures() {
     figurepath=${HOME}/Dropbox/Figures/Temp/
@@ -47,6 +69,7 @@ function getfigures() {
     find ${figurepath} -mtime -1m -type f -exec open {} \+
     #open ${figurepath}/*.pdf
 }
+
 
 
 ## Copied getfigures, just need one document (probably)
