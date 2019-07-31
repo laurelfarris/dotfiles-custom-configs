@@ -1,8 +1,11 @@
+"this vimrc only used on mac, not linux desktop in astro dept
+"all-vimrc is used by both
+
 source ${HOME}/dotfiles/custom-configs/all-vimrc.vim
 
 
 " Folding (CentOS does not like this...)
-" ... what doesn't CentOS like? marker? (22 Feb 2018)
+" ... what exactly is causing the problem? marker? (22 Feb 2018)
 set foldmethod=marker
 set foldmarker={---,---}
 
