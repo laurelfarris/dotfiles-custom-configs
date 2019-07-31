@@ -170,35 +170,15 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 
 
-
-
-
 "
 "25 July 2019 -- IDL macro to start at cursor position
-" see ~/vimrc2idl_macros.txt on astro linux machine for original form
-" (also email from Alberto on 21 May 2019)
+"  linux desktop: ~/.vimrc (only used when running idl, which can't be done from mac)
+"   see ~/vimrc2idl_macros.txt on astro linux machine for original form
+"   (also email from Alberto on 21 May 2019)
 "
 """"""""""""""""""""""""""""""""""""""""
 " Macros modo-ESC para  idl            
 """"""""""""""""""""""""""""""""""""""""
-" Copy the paragraph where the cursor is located to the clipboard of the system. 
-map # mq{ma}mb:'a,'bw !pbcopy`q 
-" In IDL, the previous macro may be a problem if the paragraph has a IF/FOR...
-" ENDIF/ENDFOR or any block that requires a BEGIN command.
-" 
-" commented first version, probably no point in using it,...
-"  actually might be faster or less messy for blocks of codes that don't have loops
-"  -Laurel (25 July 2019)
-
-" In that case it is better to use the following macro. 
-
-" locates as its main body of the procudure. It may be called as: IDL> .r mcb
-" if mcb.pro is saved in /solarstorm/laurel07/thesis_project/ location. 
-"map @ :wmq{"ay}:e /solarstorm/laurel07/thesis_project/mcb.pro :0dGa;Copied from clipboard"apGoend:w /solarstorm/laurel07/thesis_project/mcb.pro:bn`q
-"
-" Same as above, but also mark row at top of screen to display same range of rows instead of putting cursor pos in center of screen, ~"z.", which is really annoying.
-map @ :wmqHmw`q{"ay}:e /solarstorm/laurel07/thesis_project/mcb.pro :0dGa;Copied from clipboard"apGoend:w /solarstorm/laurel07/thesis_project/mcb.pro:bn`wz`q
-
 "-- comment cursor line.
 map ; maI;`a
 
