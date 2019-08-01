@@ -167,20 +167,22 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 
-
-
-
 "
-"25 July 2019 -- IDL macro to start at cursor position
-"  linux desktop: ~/.vimrc (only used when running idl, which can't be done from mac)
-"   see ~/vimrc2idl_macros.txt on astro linux machine for original form
+"25 July 2019 -- IDL macro to start at cursor position:
+"  copied to ~/.vimrc on linux desktop in astro dept.
+"    (only use this when running idl, which can't be done from mac)
+"  see ~/vimrc2idl_macros.txt on astro linux machine for original form
 "   (also email from Alberto on 21 May 2019)
 "
 """"""""""""""""""""""""""""""""""""""""
-" Macros modo-ESC para  idl            
+" Macros modo-ESC para  idl
 """"""""""""""""""""""""""""""""""""""""
 "-- comment cursor line.
 map ; maI;`a
+   " 31 July 2019
+   "  copied to all-vimrc.vim b/c useful when editing codes, even if not
+   "  running them, but unfortunately is
+   "  really slow on mac -- ~couple seconds lag before ';' is inserted...
 
 "-- UNcomment cursor line.
 "map , ma^x`a
