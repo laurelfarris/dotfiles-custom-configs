@@ -16,7 +16,7 @@ alias c='open -a Google\ Chrome'
 
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias astro='ssh laurel07@astronomy.nmsu.edu'
+alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
 alias work='cd ${HOME}/Dropbox/Research/Codes/'
 alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
@@ -104,6 +104,12 @@ function getfigures() {
     #open ${figurepath}/*.pdf
 }
 
+function getvideos() {
+    videopath=${HOME}/Dropbox/Videos/Temp/
+    scp laurel07@astronomy.nmsu.edu:~/Videos/\*.mp4 $videopath
+    echo ${videopath}
+    find ${videopath} -mtime -1m -type f -exec open {} \+
+}
 
 
 ## Copied getfigures, just need one document (probably)
