@@ -20,7 +20,7 @@ alias vi vim
 alias virgo ssh -Y laurel07@virgo.nmsu.edu
 alias hyades ssh -Y laurel07@hyades.nmsu.edu
 alias praesepe ssh -Y laurel07@praesepe.nmsu.edu
-alias solar ssh -Y laurel07@solarstorm.nmsu.edu
+alias solar ssh laurel07@solarstorm.nmsu.edu
 alias acrux ssh -Y laurel07@acrux.nmsu.edu
 alias astro ssh -Y laurel07@astronomy.nmsu.edu
 alias ls ls --color=auto
@@ -60,11 +60,13 @@ unset orange green yellow blue purple yellow white dgray lgray end
 setenv QUIET 1
 setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro'
 # Test for existance of a prompt... so we don't break interactive shells?
-
+ 
 if ($?prompt) then
-setenv SSW_INSTR "AIA EVE HMI IRIS HESSI BCS HXT SXT XRT EIS SXI-GOES12 EUVI WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON SOT COR1 COR2 HI"
-source $SSW/gen/setup/setup.ssw endif
-#source $HOME/setup.ssw endif
+#setenv SSW_INSTR "AIA EVE HMI IRIS HESSI BCS HXT SXT XRT EIS SXI-GOES12 EUVI WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON SOT COR1 COR2 HI"
+setenv SSW_INSTR "AIA HMI"
+
+#source $SSW/gen/setup/setup.ssw endif
+source $HOME/setup.ssw endif
 
 # 16 May 2019
 #   >echo $SSW
