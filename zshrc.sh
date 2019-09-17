@@ -16,7 +16,7 @@ alias c='open -a Google\ Chrome'
 
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
+alias astro='ssh -X laurel07@astronomy.nmsu.edu'
 alias work='cd ${HOME}/Dropbox/Research/Codes/'
 alias ll='ls -dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
