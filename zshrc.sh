@@ -122,23 +122,6 @@ function getpaper() {
 }
 
 
-function nospaces() {
-
-    # find file/directory names that contain spaces,
-    # (contents of current directory only).
-    find . -mindepth 1 -maxdepth 1 -iname "*\ *" | while read line; do
-
-    # current file name
-    old=${line:s/\*//}
-
-    # new file name (replace spaces with underscores).
-    new=` echo $old | tr ' ' '_' `
-
-    # rename old filename with new filename.
-    mv $old $new
-
-done
-}
 
 # 16 August 2018 - This should go somewhere other than zshrc file:
 function move_list() {
@@ -171,9 +154,29 @@ function mycd() {
     chmod +x /usr/local/bin/execindirectory
 }
 
+
+function nospaces() {
+
+    # find file/directory names that contain spaces,
+    # (contents of current directory only).
+    find . -mindepth 1 -maxdepth 1 -iname "*\ *" | while read line; do
+
+    # current file name
+    old=${line:s/\*//}
+
+    # new file name (replace spaces with underscores).
+    new=` echo $old | tr ' ' '_' `
+
+    # rename old filename with new filename.
+    mv $old $new
+
+done
+}
+
 # Permanently delete files that have been in .Trash for more than a month.
 function prm() {
-    # nospaces --> needs to be run from inside .Trash directory
+    # function "nospaces" (defined above) needs to run inside ~/.Trash/
+    #  [] --> Find a way to run nospaces first, from any directory.
 
     # Creating variable for num. files before and after prm (09/11/18)
     let "files1=`ls ${HOME}/.Trash | wc -l`"
