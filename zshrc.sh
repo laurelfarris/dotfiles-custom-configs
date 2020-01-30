@@ -181,10 +181,10 @@ function prm() {
     # Creating variable for num. files before and after prm (09/11/18)
     let "files1=`ls ${HOME}/.Trash | wc -l`"
 
-    find ${HOME}/.Trash -atime +15 -exec basename {} \;
-    find ${HOME}/.Trash -atime +15 -delete
+    find ${HOME}/.Trash -atime +30 -exec basename {} \;
+    find ${HOME}/.Trash -atime +30 -delete
 
-    # Set mindepth to 1 to prevent ~/.Trash itself from being deleted.
+    # Set mindepth to 1 so top directory ~/.Trash/ isn't deleted.
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 
     let "files2=`ls ${HOME}/.Trash | wc -l`"

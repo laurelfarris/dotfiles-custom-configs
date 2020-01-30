@@ -57,8 +57,8 @@ function prm() {
     # 9/18/2018 Discovered the 'let' command!
     let files1=`ls ${HOME}/.Trash | wc -l`
 
-    find ${HOME}/.Trash -type f -atime +15 -exec basename {} \;
-    find ${HOME}/.Trash -type f -atime +15 -delete
+    find ${HOME}/.Trash -type f -atime +30 -exec basename {} \;
+    find ${HOME}/.Trash -type f -atime +30 -delete
     find ${HOME}/.Trash -mindepth 1 -type d -empty -delete
 
     let files2=`ls ${HOME}/.Trash | wc -l`
