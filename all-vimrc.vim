@@ -62,7 +62,7 @@ set noswapfile "Ain't nobody got time for swap files
 set nowrap "long lines continue off screen instead of wrapping
 
 set number "enable line numbering
-"set nuw=6  " number of columns allotted to line numbers
+set numberwidth=5  " columns allotted to line numbers
 set pastetoggle=<F3>
 set report=2  "display message when change is applied to at least 0 lines
 set scrolloff=0 "number of lines visible on screen above/below cursor
