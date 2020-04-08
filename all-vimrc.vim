@@ -10,7 +10,8 @@ syntax on "Activates syntax highlighting
 let g:tex_flavor = "latex"
 
 " 01 November 2018
-set formatoptions=tcqro
+" 06 April 2020 -- added 'j' to formatoptions.
+set formatoptions=tcqroj
 
 "--------------------------------------------------------------------------
 " 27 November 2018
@@ -43,7 +44,27 @@ au BufRead,BufNewFile *.pro set filetype=idlang | let Comment=";" | let EndComme
 au BufRead,BufNewFile *.tex set filetype=tex | let Comment="%" | let EndComment=""
 au BufRead,BufNewFile *.vim set filetype=vim | let Comment="\"" | let EndComment=""
 au BufRead,BufNewFile *.sh set filetype=sh | let Comment="#" | let EndComment=""
+
 "--------------------------------------------------------------------------
+
+"
+" 08 April 2020
+"
+" PROBLEM:
+" :set formatoptions=tcqro
+" The above line appears at the top of this file (uncommented), but
+" the "o" option is not working for IDL files (fname.pro, filetype=idlang)
+"
+"
+" Run the following in command mode to show comment character for current filetype:
+":echo split(&commentstring, '%s')[0]
+
+"Tried the following, did not work:
+"autocmd FileType lisp setl cms=;%s
+"autocmd FileType idlang setlocal commentstring=;\ %s
+
+"--------------------------------------------------------------------------
+
 
 set autoindent "if previous line is indented, indent next line
 set autoread "Read open files again when changed outside vim
