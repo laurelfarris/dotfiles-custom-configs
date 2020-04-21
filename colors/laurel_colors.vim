@@ -133,6 +133,11 @@ hi cshDblQuote ctermfg=67
 hi tcshDQuote ctermfg=67
 hi tcshSQuote ctermfg=67
 
+
+" TeX syntax groups
+
+hi texTodo ctermfg=196 ctermbg=NONE cterm=NONE
+
 hi bibKey ctermfg=180
 
 hi texComment ctermfg=245
