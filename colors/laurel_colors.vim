@@ -178,7 +178,7 @@ hi texCite ctermfg=white
 hi texRefZone ctermfg=65
 "hi texParen ctermfg=200
 " All verbatim text?
-hi texZone ctermfg=80
+hi texZone ctermfg=67
 hi texString ctermfg=250
 hi texSpecialKey ctermfg=131
 
