@@ -136,7 +136,7 @@ hi tcshSQuote ctermfg=67
 
 " TeX syntax groups
 
-hi texTodo ctermfg=196 ctermbg=NONE cterm=NONE
+hi texTodo ctermfg=131 ctermbg=NONE cterm=NONE
 
 hi bibKey ctermfg=180
 
