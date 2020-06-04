@@ -93,6 +93,31 @@ function pdfpages() {
 #--------------------------------------------------------------------------------
 
 
+# Download pdf from INTERNET, e.g. nasaads or arxiv
+# open in preview, and immediately delete.
+#   --> to download pdf from external machine via ssh and scp cmd,
+#        see function getpaper() below
+#  Changed save directory to ~/Dropbox/References/, where I'm more likely to
+#   see the pdfs I often "get" and then forget about... (16 May 2019)
+# Looks like variable "dir" isn't even used anymore, probably since I
+#   condensed things by setting file name as full path-to-file, and then
+#   using the --create-dirs option with curl in order to make the dir in
+#   the path if it doesn't already exist... aw gee  (17 May 2019)
+function get() {
+    #dir=${HOME}/Temp/
+    #dir=${HOME}/Dropbox/References/
+
+    filenumber=`date +'%s'`
+    #file=${HOME}/Temp/temp${filenumber}.pdf
+    file=${HOME}/Dropbox/References/temp${filenumber}.pdf
+    curl --create-dirs -o ${file} $1
+    chmod 444 ${file}
+    open -g ${file}
+    # Add an option to save if desired, and to not remove until Preview
+    #    window containing this file is closed> open --args (maybe...)
+    # Or just delete from Temp/ after 24 hours...
+    # rm ${file}
+}
 
 function getfigures() {
     figurepath=${HOME}/Dropbox/Figures/Temp/
@@ -104,15 +129,9 @@ function getfigures() {
     #open ${figurepath}/*.pdf
 }
 
-function getvideos() {
-    videopath=${HOME}/Dropbox/Videos/Temp/
-    scp laurel07@astronomy.nmsu.edu:~/Videos/\*.mp4 $videopath
-    echo ${videopath}
-    find ${videopath} -mtime -1m -type f -exec open {} \+
-}
-
-
-## Copied getfigures, just need one document (probably)
+# Copied getfigures, just need one document (probably)
+# 6/04/2020 -- can probably delete this function; I never use it.
+#    Ditto for "getvideos"
 function getpaper() {
     paperpath=${HOME}/
     scp laurel07@astronomy.nmsu.edu:~/Dissertation.pdf $paperpath
@@ -120,6 +139,14 @@ function getpaper() {
     find ${paperpath} -mtime -1m -type f -exec open {} \+
     #open ${paperpath}/*.pdf
 }
+
+function getvideos() {
+    videopath=${HOME}/Dropbox/Videos/Temp/
+    scp laurel07@astronomy.nmsu.edu:~/Videos/\*.mp4 $videopath
+    echo ${videopath}
+    find ${videopath} -mtime -1m -type f -exec open {} \+
+}
+
 
 
 
@@ -202,29 +229,6 @@ function rename() {
         ext="${f#*.}"
         mv $f wrong_writeup.$ext
     done
-}
-
-# Download pdf, open in preview, and immediately delete.
-#  Changed save directory to ~/Dropbox/References/, where I'm more likely to
-#   see the pdfs I often "get" and then forget about... (16 May 2019)
-# Looks like variable "dir" isn't even used anymore, probably since I
-#   condensed things by setting file name as full path-to-file, and then
-#   using the --create-dirs option with curl in order to make the dir in
-#   the path if it doesn't already exist... aw gee  (17 May 2019)
-function get() {
-    #dir=${HOME}/Temp/
-    #dir=${HOME}/Dropbox/References/
-
-    filenumber=`date +'%s'`
-    #file=${HOME}/Temp/temp${filenumber}.pdf
-    file=${HOME}/Dropbox/References/temp${filenumber}.pdf
-    curl --create-dirs -o ${file} $1
-    chmod 444 ${file}
-    open -g ${file}
-    # Add an option to save if desired, and to not remove until Preview
-    #    window containing this file is closed> open --args (maybe...)
-    # Or just delete from Temp/ after 24 hours...
-    # rm ${file}
 }
 
 

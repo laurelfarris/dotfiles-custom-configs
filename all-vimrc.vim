@@ -9,8 +9,6 @@ syntax on "Activates syntax highlighting
 "
 let g:tex_flavor = "latex"
 
-" 01 November 2018
-" 06 April 2020 -- added 'j' to formatoptions.
 set formatoptions=tcqroj
 
 "--------------------------------------------------------------------------
