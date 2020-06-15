@@ -14,9 +14,17 @@ alias c='open -a Google\ Chrome'
 # Don't really need this alias (26 March 2018).
 #alias gs='git status'
 
+#
+# 6/15/2020 : Attempts to solve XQuartz problem... so far, no luck
+#alias astro='ssh laurel07@astronomy.nmsu.edu'
+#alias astro='ssh -Y laurel07@astronomy.nmsu.edu'
+#alias astro='ssh -X laurel07@astronomy.nmsu.edu'
+alias astro='ssh -X -Y laurel07@astronomy.nmsu.edu'
+#
+
+
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias astro='ssh -X laurel07@astronomy.nmsu.edu'
 alias work='cd ${HOME}/Dropbox/Research/Codes/'
 alias ll='ls  -dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
