@@ -25,7 +25,9 @@ alias astro='ssh -X -Y laurel07@astronomy.nmsu.edu'
 
 # My aliases
 alias src='source ~/dotfiles/custom-configs/zshrc.sh'
-alias work='cd ${HOME}/Dropbox/Research/Codes/'
+alias work='cd ${HOME}/Dropbox/Coding/'
+alias paper1='cd ${HOME}/Dropbox/Article/A1/'
+alias paper2='cd ${HOME}/Dropbox/Article/A2/'
 alias ll='ls  -dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
