@@ -76,7 +76,7 @@ set incsearch "Move cursor to string as you type it
 set nojoinspaces "Don't add extra space between sentences for 'J' and 'gq' commands
 set noswapfile "Ain't nobody got time for swap files
 
-" NOTE: setting textwidth also turns on wrap... bleh.
+" NOTE: if textwidth is set, wrap is also set.
 "set textwidth=70
 set nowrap "long lines continue off screen instead of wrapping
 

@@ -22,16 +22,30 @@ alias c='open -a Google\ Chrome'
 alias astro='ssh -X -Y laurel07@astronomy.nmsu.edu'
 #
 
-
+#---------------
 # My aliases
-alias src='source ~/dotfiles/custom-configs/zshrc.sh'
+#--
+
+# Easy navigation aliases
+alias diss='cd ${HOME}/Dropbox/Dissertation/'
 alias work='cd ${HOME}/Dropbox/Coding/'
+#   Matches alias on solarstorm that navigates to directory with this github repo.
 alias paper1='cd ${HOME}/Dropbox/Article/A1/'
 alias paper2='cd ${HOME}/Dropbox/Article/A2/'
+
+
+# Misc aliases
+alias src='source ~/dotfiles/custom-configs/zshrc.sh'
 alias ll='ls  -dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias l1='ls -1dFHGP ^*.(aux|bbl|blg|cb|cb2|fff|lof|log|lot|maf|mtc*|nav|out|snm|toc)'
 alias mv='mv -i'
 alias cp='cp -i'
+
+
+#--
+#--
+#---------------
+
 
 # Neither of these works (01 November 2018)
 alias jup='jupyter notebook'
@@ -135,7 +149,16 @@ function getfigures() {
     echo ${figurepath}
     # 10/19/2018 - Using 'find' to only open the files that were just downloaded,
     #  rather than every figure in directory.
+    #--------
+    #-- 21 July 2020 --> Preview keeps quitting, need to specify a different app
+    #find ${figurepath} -mtime -1m -type f -exec open -a Adobe\ Acrobat\ Reader\ DC {} \+
+    #--
+    #--------
     find ${figurepath} -mtime -1m -type f -exec open {} \+
+    # all better now, seemingly (24 July 2020)
+    #
+
+
     #open ${figurepath}/*.pdf
 }
 
