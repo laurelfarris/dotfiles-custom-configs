@@ -63,7 +63,7 @@ setenv IDL_STARTUP '/home/users/laurel07/idl/idl_startup.pro'
  
 if ($?prompt) then
 #setenv SSW_INSTR "AIA EVE HMI IRIS HESSI BCS HXT SXT XRT EIS SXI-GOES12 EUVI WBS MDI EIT CDS SUMER LASCO TRACE ETHZ Nancay Nobeyama SOON SOT COR1 COR2 HI"
-setenv SSW_INSTR "AIA HMI"
+setenv SSW_INSTR "AIA HMI HESSI"
 
 #source $SSW/gen/setup/setup.ssw endif
 source $HOME/setup.ssw endif
