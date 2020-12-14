@@ -114,9 +114,8 @@ function pdfpages() {
 }
 
 
-#--------------------------------------------------------------------------------
-
-
+#================================================================================
+#
 # Download pdf from INTERNET, e.g. nasaads or arxiv
 # open in preview, and immediately delete.
 #   --> to download pdf from external machine via ssh and scp cmd,
@@ -127,13 +126,35 @@ function pdfpages() {
 #   condensed things by setting file name as full path-to-file, and then
 #   using the --create-dirs option with curl in order to make the dir in
 #   the path if it doesn't already exist... aw gee  (17 May 2019)
+
+#--
+#------------------------------------------
+# 07 October 2020
+# TEST:
+function test_get() {
+    #filenumber=`date +_%Y%m%d`
+    #filename=temp_`date +%Y%m%d`
+    filename=temp_`date +%Y%m%d.pdf`
+    echo $filename
+        }
+# WORKS!! :)
+#------------------------------------------
+#--
+
 function get() {
     #dir=${HOME}/Temp/
     #dir=${HOME}/Dropbox/References/
 
-    filenumber=`date +'%s'`
+    # 07 October 2020 -- changed format of date used in pdf filename.
+    #filenumber=`date +'%s'`
+    filename=temp_`date +%Y%m%d.pdf`
+    echo filename
+
     #file=${HOME}/Temp/temp${filenumber}.pdf
-    file=${HOME}/Dropbox/References/temp${filenumber}.pdf
+    #file=${HOME}/Dropbox/References/temp${filenumber}.pdf
+
+    pdfpath=${HOME}/Dropbox/References/${filenumber}.pdf
+
     curl --create-dirs -o ${file} $1
     chmod 444 ${file}
     open -g ${file}
@@ -143,8 +164,12 @@ function get() {
     # rm ${file}
 }
 
+#================================================================================
+
+
+
 function getfigures() {
-    figurepath=${HOME}/Dropbox/Figures/Temp/
+    figurepath=${HOME}/Dropbox/Figures/_Temp/
     scp laurel07@astronomy.nmsu.edu:~/Figures/\*.pdf $figurepath
     echo ${figurepath}
     # 10/19/2018 - Using 'find' to only open the files that were just downloaded,
@@ -174,7 +199,7 @@ function getpaper() {
 }
 
 function getvideos() {
-    videopath=${HOME}/Dropbox/Videos/Temp/
+    videopath=${HOME}/Dropbox/Videos/_Temp/
     scp laurel07@astronomy.nmsu.edu:~/Videos/\*.mp4 $videopath
     echo ${videopath}
     find ${videopath} -mtime -1m -type f -exec open {} \+
