@@ -9,7 +9,7 @@ alias sm='./manage.py schemamigration'
 alias mm='./manage.py makemigrations'
 #alias ipy='ipython --matplotlib --pylab'
 alias activate='source env/bin/activate'
-alias c='open -a Google\ Chrome'
+#alias c='open -a Google\ Chrome'
 
 # Don't really need this alias (26 March 2018).
 #alias gs='git status'
@@ -169,7 +169,7 @@ function get() {
 
 
 function getfigures() {
-    figurepath=${HOME}/Dropbox/Figures/_Temp/
+    figurepath=${HOME}/Dropbox/Figures/Temp/
     scp laurel07@astronomy.nmsu.edu:~/Figures/\*.pdf $figurepath
     echo ${figurepath}
     # 10/19/2018 - Using 'find' to only open the files that were just downloaded,
@@ -198,8 +198,8 @@ function getpaper() {
     #open ${paperpath}/*.pdf
 }
 
-function getvideos() {
-    videopath=${HOME}/Dropbox/Videos/_Temp/
+;function getvideos() {
+    videopath=${HOME}/Dropbox/Videos/Temp/
     scp laurel07@astronomy.nmsu.edu:~/Videos/\*.mp4 $videopath
     echo ${videopath}
     find ${videopath} -mtime -1m -type f -exec open {} \+
